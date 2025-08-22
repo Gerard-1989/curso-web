@@ -10,6 +10,9 @@ body {
     justify-content: center;
 }
 
+
+/* 2 FORMAS DE COMO CREAR COMPONENTES RESPONSIVE */
+
 /* FORMA 1 */
 .contenedor {
     width: 90%;          /* Le digo al navegador que ocupe el 90% del ancho del body (o del contenedor que lo rodee)  */
@@ -31,7 +34,10 @@ body {
         Si la imagen es más grande que la tarjeta:
 
                     Con overflow: hidden → la parte que se sale se oculta, y la tarjeta mantiene su forma limpia.
-                    Resumen simple: corta cualquier cosa que se salga del borde de la tarjeta para que todo se vea ordenado.*/
+                    Resumen simple: corta cualquier cosa que se salga del borde de la tarjeta para que todo se vea ordenado.
+                    
+                    Cuándo se usa: cuando quieres mantener los bordes limpios, por ejemplo, en tarjetas con imágenes, 
+                    contenedores con bordes redondeados (border-radius), o cajas donde el contenido no debería desbordarse.*/
 
         img {
             width: 100%; /* La imagen ocupa todo el ancho del contenedor padre, .card */
@@ -62,7 +68,7 @@ body {
             }
         }
 
-        /* 1️Esto es un media query: le dice al navegador "aplica estas reglas solo si se cumple esta condición" */
+        /*  media query: le dice al navegador "aplica estas reglas solo si se cumple esta condición" */
         @media screen and (max-width: 500px) {
             & { /*  & → el selector padre más cercano (el que envuelve este bloque)  .card  */
                 .textos { /* dentro de .textos aplica estos estilos: */
@@ -89,6 +95,7 @@ body {
 }
 
 
+/* FORMA 2 */
 .contenedor {
     width: 90%;          
     max-width: 500px;    
@@ -98,24 +105,38 @@ body {
         background: white;
         box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2); 
         border-radius: 5px;
-
         overflow: hidden; 
+        font-size: 16px;     /* Explicación clara sobre em:
+
+       - 1em se basa en el font-size del contenedor padre inmediato.
+       - h3 está dentro de .textos, pero .textos NO tiene font-size declarado.
+       - Por eso, h3 hereda el font-size del siguiente contenedor padre que sí tenga valor, en este caso .card.
+       - .card tiene font-size: 16px, por lo que 1em = 16px aquí.
+       - Entonces: 1.875em × 16px = 30px
+       
+       🔹 Regla general: 
+         Si el padre no tiene font-size, em sube un nivel hasta encontrar un valor.
+         Por defecto, el body tiene 16px.
+       🔹 Cuando cambiamos el font-size del padre (por ejemplo en media query), todos los em de los hijos se recalculan automáticamente.*/
+        
+
         img {
             width: 100%; 
-            max-height: 250px;  
+            max-height: 15.62em; /* 250px */ 
         }
 
         .textos {
-            padding: 20px;
+            padding: 1.25em; /* 20px */
 
             h3 {
-                font-size: 30px;
-                margin-bottom: 20px;
+                font-size: 1.875em; /* 1em hace referencia al FONT-SIZE del contenedor padre. En este caso seria de .textos pero .textos no tiene un 
+                       FONT-SIZE declarado va a buscar al siguiente contenedor padre en este caso .card  (ahora el h3 tendra el tamaño del font-size de .card [1em = 16px]) */
+                margin-bottom: 0.625em; /* 10px */
             }
 
             p {
-                font-size: 20px;
-                margin-bottom: 10px;
+                font-size: 1.25em; /* 20px */
+                margin-bottom: 1.25em; /* 20px */
             }
 
             a {
@@ -123,34 +144,18 @@ body {
                 color: white;
                 text-decoration: none;
                 display: inline-block;  
-                padding: 10px 30px;
-                font-size: 20px;
-                border-radius: 5px;
+                padding: 0.625em 1.875em;  /* 10px 30px */
+                font-size: 1.25em; /* 20px */
+                border-radius: 0.315em; /* 5px */
             }
         }
 
       
-        @media screen and (max-width: 500px) {
-            & { 
-                .textos { 
-                    padding: 10px;
-
-                    h3 { 
-                        font-size: 20px;
-                        margin-bottom: 5px;
-                    }
-                    
-                    p { 
-                        font-size: 14px;
-                        margin-bottom: 10px;
-                    }
-
-                    a { 
-                        padding: 5px 15px;
-                        font-size: 12px;
-                    }
-                }
+        @media screen and (max-width: 500px) { 
+            & { /* Representa el selector actual donde estás escribiendo. No apunta al “padre”, sino al mismo selector que estás anidando ( .card )*/
+                font-size: 10px;
+                /* Cuando cambiamos el font-size del contenedor padre (.card), todos los elementos hijos que usan em se recalculan automáticamente según este nuevo tamaño.*/
             }
-        }
     }
+  }
 }
