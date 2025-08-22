@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>audio</title>
+</head>
+
+<body>
+  <audio src="canço/I Got a Stick Arr Bryan Teoh.mp3" controls></audio>
+  <!--controls: Hace que se muestren los controles de reproducción (play, pausa, volumen, etc).
+  sin CONTROLS no se vera nada en la web, aparecera vacio.-->
+
+
+
+  <!--una altra forma de fer-ho:-->
+
+  <!-- <source> Indica cada archivo de audio disponible para que el navegador intente reproducirlo.
+       Se pueden poner varios formatos para que funcione en distintos navegadores.
+
+        <src> Es la ruta o ubicación del archivo de audio que se va a reproducir. 
+        type=""  Indica el formato o tipo de archivo de audio, para que el navegador sepa si puede reproducirlo o no.-->
+
+
+  <audio controls>
+    <source src="canço/I Got a Stick Arr Bryan Teoh.mp3" type="audio/mpeg" />
+    <!--si es MP3 = mpeg-->
+    <source src="canço/I Got a Stick Arr Bryan Teoh.ogg" type="audio/ogg" />
+    <!--si es OGG-->
+    <source src="canço/I Got a Stick Arr Bryan Teoh.wav" type="audio/wav" />
+    <!--si es WAV-->
+
+
+    <!-- ☑️☑️☑️¿Cómo funciona?☑️☑️☑️
+        El navegador lee las etiquetas <source> en orden y usa el primer archivo que puede reproducir según su soporte.
+        Así, si no soporta .mp3, prueba con .ogg y luego con .wav. -->
+
+    <!--https://incompetech.com/music/royalty-free/music.html-->
+    <!--web para descargar musica sin copyright-->
+  </audio>
+</body>
+
+</html>

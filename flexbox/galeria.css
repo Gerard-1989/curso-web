@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101010;
+    font-family: "REM", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.contenedor {
+    width: 1000px;
+    margin: 50px auto; /*50px → margen arriba y abajo, auto → margen izquierda y derecha automáticos (eso es lo que lo centra horizontalmente) Solo funciona si el elemento tiene un ancho definido (width)*/
+    text-align: center; /*Centra todos los elementos de tipo linea, las img tmb las centra xq son de tipo linea*/
+    
+
+
+    .titulo {
+        margin-bottom: 40px;
+    }
+
+    .galeria {
+        display: flex; /*💥💥 Convierte al contenedor en una caja flexible  que pone sus hijos en línea, uno al lado del otro, para organizarlos fácil y ordenadamente.💥💥 */
+        gap: 30px; /*💥💥 Deja un espacio fijo de 30px entre cada hijo,  tanto horizontal como vertical (si hay varias filas).💥💥 */
+        flex-wrap: wrap; /*💥💥 Cuando no caben todos los hijos en una fila, los que sobran pasan a una nueva línea debajo.💥💥 */
+       
+
+            a {              
+                /* display: block; MINUT 8:17 -- ell diu q veu un problema per aixo posa DISPLAY BLOCK, jo en el inspector no veig cap problema */
+                color: #f2f2f2;
+                 text-decoration: none; /*controla si el texto está subrayado, tachado, etc, lo deja limpio, sin nada.*/
+            }
+
+        figure {   
+            flex-basis: 300px; /* 💥💥 Define el tamaño inicial de cada caja (ancho o alto, según cómo estén colocadas)cada caja empieza con 300px antes de que crezcan o se encojan.💥💥 */
+            flex-grow: 1; /*💥💥 ocupa todo el espacio vacio 💥💥*/
+            img {
+                width: 100%; /*la imagen ocupará el 100% del ancho del figure, que en este caso son 300px*/
+                vertical-align: top; 
+             /*VERTICAL-ALING: Se usa con elementos en línea o inline-block, Alinea el borde superior del elemento con el borde superior de otros elementos cercanos.*/
+                border-radius: 5px;
+                filter: grayscale(100%); /* Convierte un elemento (como una imagen) en blanco y negro, el 100% = Significa que la imagen se convierte en blanco y negro completamente.*/
+                transition: 0.3 ease all; /* El cambio se anima despacio (no de golpe) y tarda 0.3 segundos */
+                /* ease → Hace que el cambio no sea lineal, sino suave (empieza lento, acelera, y frena). */
+                /* all → Aplica esa suavidad a todas las propiedades que cambien (como filtro, color, borde…). */
+                padding: 5px;
+                border: 1px solid transparent;
+            }
+
+            &:hover img {   /* el hover va sobre el figure, pero el cambio se aplica a su img */
+                filter: grayscale(0%); /* vuelve a color al pasar el ratón */
+                border: 1px solid #ffffff;
+
+            }
+
+            figcaption {
+                margin-top: 10px;
+                color: #424242;
+                transition: 0.3s ease all;
+            }
+
+            &:hover figcaption {
+                color: #f00808;
+
+            }
+        }
+
+    }
+}

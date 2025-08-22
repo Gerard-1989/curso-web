@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(48, 48, 48, 0.092);
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    font-size: 12px;
+
+}
+
+
+form {
+    background: white;
+    height: 550px;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.main {
+    width: 1000px;
+    margin: 0 auto;
+
+
+
+    .titulo {
+        margin: 0px 180px 15px 180px;
+        text-align: left;
+
+
+    }
+
+    .mensaje {
+        margin: 0 180px 15px 180px;
+        text-align: left;
+
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 600px;
+        height: 30px;
+
+        &:hover {
+            border: 2px solid blue;
+        }
+    }
+
+
+
+    label {
+        padding: 10px 0px 0px 0px;
+        display: block;
+        color: black;
+        vertical-align: middle;
+    }
+
+
+    .radios {
+        display: flex;
+        gap: 10px;
+
+    }
+
+    .radio-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px none black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background: rgb(240, 223, 240);
+        cursor: pointer;
+    }
+ 
+
+    label[for="notas"] {
+        padding: 0px;
+        margin: 25px 0px 8px 0px;
+
+    }
+
+    textarea[name="notas"] {
+        width: 600px;
+        height: 150px;
+
+        &:hover {
+            border: 2px solid blue;
+        }
+    }
+
+
+    .sub {
+        /* display: flex            hace que el contenedor sea flexible, pero sigue ocupando todo el ancho (como un bloque).
+           display: inline-flex     hace que el contenedor sea flexible pero solo ocupe lo que necesita. */
+        display: inline-flex;
+        align-items: center;
+        border: 1px none black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background: rgb(240, 223, 240);
+        cursor: pointer;
+        margin: 15px 0px;
+    }
+
+    input[type="submit"]{
+        display: block;
+        padding: 5px 30px;
+        margin-top: 10px;
+        color: white;
+        background: rgb(94, 72, 241);
+        border: none;
+        border-radius: 5px;
+    }
+
+}

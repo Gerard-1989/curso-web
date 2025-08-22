@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentencia Break</title>
+</head>
+
+<body>
+    <script>
+        //Break y continue ens permet alterar el comportament del cicle.
+        var amigos = ['Gerard', 'Ramon', 'Nuria', 'Aran'];
+        //ara lo q volem es extreure cada amic dintre de la variable AMIGOS
+        for (amigo in amigos) {
+            document.write(amigos[amigo] + '<br>');
+            //La sentencia BREAK ens permet tallar la execucio, ej: nomes volem que dels 4 noms nomes surti Gerard i Ramon i els altres 2 no els executi:
+            if (amigos[amigo] == 'Ramon') {
+                break;
+            }
+        }
+        //fican la sentencia de BREAK; ens talla TOTA la execucio i pasa directament a llegir el codi de console.log, llavors nomes apareix en pantalla Gerard i Ramon.
+        console.log('fin de cicle');
+
+    </script>
+</body>
+
+</html>

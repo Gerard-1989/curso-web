@@ -1,0 +1,42 @@
+body {
+    background: #000;
+    background-image: url('https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg');
+    background-size: cover;
+    background-attachment: top;
+    /* background-attachment controla si el fondo se mueve al hacer scroll
+              scroll = el fondo se mueve (por defecto)
+              fixed  = el fondo se queda fijo en pantalla
+              local  = el fondo se mueve con el contenido (si tiene scroll) */
+
+}
+
+.contenedor {
+    background: white;
+    background-image: url('./../html/imatges/carreteras.jpg');
+    background-repeat: no-repeat;
+    width: 1300px;
+    height: 720px;
+    background-size: auto;
+    background-position: center center;
+
+    /* background-size cambia el tamaño de la imagen de fondo
+            cover   = cubre todo el fondo (puede recortarse)
+            contain = se ajusta entera dentro del fondo (puede sobrar espacio)
+            auto    = tamaño original 
+                   También puedes usar medidas:
+                        100px 200px: ancho y alto.
+                        100% auto: ancho al 100%, alto automático.*/
+
+    /* background-position coloca la imagen de fondo
+            Palabras clave: left, right, top, bottom, center
+            Ej: center center = imagen centrada
+            También puedes usar medidas: 
+            ej. 50px 100px o 50% 50% */
+}
+
+article {
+    color: white;
+    background: #000;
+    padding: 20px;
+    width: 500px;
+}

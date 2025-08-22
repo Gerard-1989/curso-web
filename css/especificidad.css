@@ -1,0 +1,24 @@
+         
+         
+         
+         /* Los @media ya los explicara mas adelante pero aqui hay un ejemplo para entenderlo mas o menos */
+.blog .post .titulo {
+    color: blue;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background: black;
+    color: white;
+  }
+  .blog .titulo {   /*No se aplica el red xq la linea 5 es mas especifica y gana vs esta linea*/
+    color: red;
+  }
+}
+
+            /* Solo cuando el ancho de la pantalla sea igual o menor a 700px se aplican estos estilos
+                (fondo negro y texto blanco para el body, texto rojo para .blog .titulo).
+
+                     Cuando la pantalla sea más grande que 700px,  no se aplican esos estilos
+              y se mantienen los estilos por defecto o los que hayas definido fuera del media query. */
+

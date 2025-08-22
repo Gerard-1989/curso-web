@@ -1,0 +1,35 @@
+/*                                                                       auto-fill y auto-fit en CSS Grid
+                              Se usan sobre todo con repeat() para crear columnas o filas automáticas que se adapten al tamaño disponible.
+
+1. auto-fill
+Crea todas las columnas posibles del tamaño indicado, aunque queden huecos vacíos
+Incluso si no hay contenido, las columnas “vacías” siguen existiendo y ocupan espacio.
+
+2. auto-fit
+También crea todas las columnas posibles según el tamaño indicado. Pero si hay columnas vacías, estas se estiran para llenar el espacio disponible.*/
+
+
+
+
+.contenedor-principal{
+    max-width: none;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
+  
+ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));/* Pone columnas de mínimo 200px una al lado de otra.  Si sobra espacio, deja huecos "fantasma" como si hubiera más columnas*/
+
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Pone columnas de mínimo 200px una al lado de otra. Si sobra espacio, quita las columnas vacías y estira las que tienen contenido.*/
+
+
+/*                                                   Muy usado en galerías y grids responsivos.
+
+                                        El número de columnas no es fijo, depende del ancho disponible.
+
+                                 Cada columna tiene un mínimo garantizado pero puede crecer proporcionalmente.*/
+
+}

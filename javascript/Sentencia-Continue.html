@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue</title>
+</head>
+
+<body>
+    <script>
+        var amigos = ['Gerard', 'Ramon', 'Nuria', 'Aran'];
+
+        for (amigo in amigos) {
+            if (amigos[amigo] == 'Gerard') {
+                continue;
+            }
+            document.write(amigos[amigo] + '<br>');
+        }
+        //lo q fa la sentencia CONTINUE; en aquest cas es: si troves el nom de Gerard el saltas, escomençaria el cicle amb Ramon.
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maquetado</title>
+</head>
+
+<body>
+                                              <!-- ⚠️⚠️⚠️ejemplo SIN semantica ⚠️⚠️⚠️-->
+    <div class="header">
+        <div class="nav"> <!--amb el class NAV indiquem que sera el menu de navegacio-->
+            <a href="">Menu1</a>
+            <a href="">Menu2</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="articulo">
+            <H1 class="titulo">Este es el titulo</H1>
+            <p>class="fecha">17 de septiembre de 2025</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat atque alias incidunt illo nulla quas!</p>
+            <img src="imatges/skyline-1751179.svg" width="1000" alt="">
+        </div>
+        <div class="sidebar">
+            <p>Texto sidebar</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>texto del footer</p>
+    </div>
+                                              <!-- ⚠️⚠️⚠️ejemplo SIN semantica ⚠️⚠️⚠️-->
+
+
+
+
+                                                <!--✅✅✅ejemplo CON semantica✅✅✅-->
+<main>
+    <!-- <main>: Contenido principal de la página, único y central (excluye menús, encabezado, pie de página…). -->
+</main>
+    <header><!--Encabezado de una página o sección (normalmente contiene el logo, menú, etc.).-->
+        <nav> <!--Sección que contiene enlaces de navegación.
+                 Usas <nav> cuando el contenido está compuesto principalmente por enlaces de navegación, 
+                es decir, enlaces que llevan a otras partes del sitio o a otras páginas.--> </nav>
+    </header>
+
+    <section>
+        <!--aqui dintre van les seccions de la web. ej: Acerca de... zona de treball, zona de fotos etc..
+            <section> se usa cuando el contenido tiene un tema concreto y no necesariamente contiene enlaces.
+             Suele ir acompañado de un encabezado (<h2>, <h3>, etc.)..-->
+    </section>
+
+    <figure>
+        <!--FIGURE: Contenedor de contenido visual o multimedia (imagen, gráfico, etc.) -->
+        <figcaption>
+            <!-- FIGCAPtiON: Título o descripción de la figura. Se coloca dentro de <figure> -->
+                <img src="imatges/carreteras.jpg" alt="">
+        </figcaption>
+    </figure>
+
+    <time datetime="2025-07-17">17 de septiembre de 2025
+        <!-- Representa una hora o fecha específica. Se puede usar para mejorar el SEO y accesibilidad.
+         SEO: Es el conjunto de técnicas que se usan para que una página web aparezca más arriba en Google
+          y otros buscadores, cuando alguien busca algo relacionado -->
+    </time>
+
+    <code>
+           <!-- Muestra fragmentos de código informático (con estilo monoespaciado como la que usan los editores de códigox). -->
+            <p>Para mostrar texto en JavaScript, usa <code>console.log("Hola");</code></p>
+    </code>
+
+    <kbd>
+        <!-- Representa texto que el usuario debe escribir en el teclado 
+         (como atajos o comandos, Indica que eso es una tecla que el usuario debe pulsa). -->
+         <p>Para copiar, presiona <kbd>Ctrl</kbd> + <kbd>C</kbd></p>
+    </kbd>
+
+    <article>
+        <!--Contenido independiente y reutilizable (como una noticia o post).-->
+        <h2>Artículo sobre gatos</h2>
+        <p>Los gatos son mascotas muy populares por su independencia y cariño.</p>
+    </article>
+
+    <aside>
+        <!-- Contenido relacionado al principal (como una barra lateral o publicidad).-->
+    </aside>
+
+    <footer>
+        <!-- Pie de página de un documento o sección (suele tener contacto, enlaces legales, etc.).-->
+         <p>&copy; 2025 Mi Web. Todos los derechos reservados.</p>
+         <!-- &copy; es un entidad HTML que representa el símbolo de copyright (©), es decir, el símbolo de derechos de autor. -->
+    </footer>
+
+
+                                            <!--✅✅✅ejemplo CON semantica✅✅✅-->
+
+</body>
+
+</html>

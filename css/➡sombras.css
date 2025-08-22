@@ -1,0 +1,48 @@
+body {
+    background: #f2f2f2;
+}
+
+.card {
+    background: #fff;
+    width: 400px;
+    margin: 60px;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 5px;
+
+    &.card-2 {
+        /* box-shadow: horizontal vertical blur(difuminado) spread(expandir) inset(interna) */
+        box-shadow: 15px 10px 0px 0px #000;
+    }
+
+    &.card-3 {
+
+        box-shadow: 0px 0px 0px 10px #d6adad;
+    }
+
+    &.card-4 {
+
+        box-shadow: 0px 0px 50px 5px #f80000;
+    }
+
+    &.card-5 {
+        transition: .3 ease all;
+        &:hover {
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px inset;
+        }
+    }
+}
+/*
+                             ✅ ✅   Para que :hover funcione:✅ ✅ 
+
+            El elemento debe estar visible (no display: none)
+            El selector debe estar bien escrito (ej: .boton:hover)
+            Tiene que tener al menos una propiedad CSS que cambie (color, fondo, etc.)
+
+Ejemplo válido:
+.boton:hover {
+  background: blue;
+  color: white;
+}
+*/
+

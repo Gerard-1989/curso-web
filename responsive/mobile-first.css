@@ -1,0 +1,41 @@
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 40px 0;
+    gap: 20px;
+
+    h3 {
+        font-size: 32px;
+    }
+
+    img {
+        width: 100%; /* SIN ESTO ESTARIAN TODAS LAS IMG DESBORDADAS.
+        
+                                                            ¿Por qué se acomoda perfectamente?   Cada <article> tiene una columna de tu grid.
+                                                 Con img { width: 100%; }, la imagen se ajusta automáticamente al ancho de la columna, sin romper el diseño.
+                                         Así, aunque cambies el tamaño de la ventana o el grid tenga menos espacio, la imagen siempre se mantiene dentro del contenedor. */
+    }
+
+    @media screen and (min-width: 500px) { /* screen → indica el tipo de medio donde se aplica la regla (pantalla en este caso) 
+
+                                              and → funciona como un “y” lógico. Es decir: la regla solo se aplica si se cumplen ambas condiciones:
+                                                      Es una pantalla (screen).
+                                                      La anchura mínima es 500px (min-width: 500px). */
+        & {
+            grid-template-columns: 1fr 1fr; /* Cuando la pantalla tenga 500px o más, el grid cambia a 2 columnas. */
+        }
+    }
+
+      @media screen and (min-width: 1000px) { 
+        & {
+            grid-template-columns: repeat(4, 1fr); /* Cuando la pantalla tenga 1000px o más, el grid cambia a 4 columnas. */
+        }
+    }
+}

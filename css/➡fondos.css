@@ -1,0 +1,41 @@
+body {
+/* Diferencia entre background y background-color
+                        background-color
+                        Solo cambia el color de fondo de un elemento.
+
+                        background
+                        Es una propiedad abreviada que puede incluir:
+                        color de fondo
+                        imagen de fondo (background-image)
+                        posición (background-position)
+                        repetición (background-repeat)
+                        tamaño (background-size)
+                        y más.
+*/
+/* RUTA ABSOLUTA */
+background-image: url('https://padelworldpress.es/wp-content/uploads/2019/12/54520259_2223187111035700_112667205606309888_o.jpg');
+
+
+
+/* RUTA RELATIVAS */
+background-image: url('./../html/imatges/mario.webp');
+background-repeat: no-repeat;
+/* background-repeat: repeat | no-repeat | repeat-x | repeat-y;
+
+              repeat = imagen se repite en filas y columnas
+              no-repeat = imagen aparece solo una vez
+              repeat-x = se repite solo horizontalmente
+              repeat-y = se repite solo verticalmente */
+
+/* EJEMPLO Nº1 - SVG */
+background-color: #DFDBE5;  /*si el BGC lo ponemos en la linea 32 cargaria primero la imagen y luego el color y la imagen no se veria*/
+background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+
+/* EJEMPLO Nº2 - FONDOS CSS PURO    -   RECURSOS*/
+background-color: #e5e5f7;
+opacity: 0.8; /*a de 0 (completamente transparente) a 1 (completamente opaco) | opacity: 0.8 significa que el elemento es un 80% visible y un 20% transparente.*/
+background-image: linear-gradient(-45deg, #e5e5f7, #e5e5f7 50%, #444cf7 50%, #444cf7);
+background-size: 10px 10px;
+
+}

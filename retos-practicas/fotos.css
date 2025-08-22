@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.galeria {
+    position: relative;
+    left: 700px;
+    top: 50px;
+}
+
+.container {
+    position: relative;
+    width: 4000px;
+    height: 4000px;
+}
+
+.imagen-1 {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
+    position: absolute;
+    top: 100px;
+    left: 350px;
+}
+
+.imagen-1:hover {
+    border-radius: 10px;
+    border: 5px solid black;
+    filter: grayscale(0%);
+}
+
+.imagen-2 {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
+    position: absolute;
+    top: 100px;
+    left: 670px;
+}
+
+.imagen-2:hover {
+    border-radius: 10px;
+    border: 5px solid black;
+    filter: grayscale(0%);
+}
+
+.imagen-3 {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
+    position: absolute;
+    top: 100px;
+    left: 1050px;
+}
+
+.imagen-3:hover {
+    border-radius: 10px;
+    border: 5px solid black;
+    filter: grayscale(0%);
+}
+
+.imagen-4 {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
+    position: absolute;
+    top: 350px;
+    left: 350px;
+}
+
+.imagen-4:hover {
+    border-radius: 10px;
+    border: 5px solid black;
+    filter: grayscale(0%);
+}
+
+.imagen-5 {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
+    position: absolute;
+    top: 350px;
+    left: 670px;
+}
+
+.imagen-5:hover {
+    border-radius: 10px;
+    border: 5px solid black;
+    filter: grayscale(0%);
+}
+
+.imagen-6 {
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
+    position: absolute;
+    top: 350px;
+    left: 1100px;
+}
+
+.imagen-6:hover {
+    border-radius: 10px;
+    border: 5px solid black;
+    filter: grayscale(0%);
+}

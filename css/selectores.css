@@ -1,0 +1,45 @@
+/* SELECTOR UNIVERSAL.
+se escribe con un asterisco: *, Sirve para seleccionar todos los elementos del documento HTML, sin importar su tipo (div, p, h1, img, etc.).*/
+
+* {
+    color: red;
+}
+
+/* SELECTORES SIMPLES: 
+Son formas para elegir qué partes de la página quieres cambiar*/   
+
+h1 {
+    color:aqua;
+}
+/* SELECTOR DE GRUPOS: 
+Sirve para aplicar los mismos estilos a varios selectores a la vez, separándolos con comas.*/
+
+h1,h2,h3,h4,h5,h6 {
+    color:brown
+}
+
+/* SELECTOR DESCENTENDE: */
+/* accedemos a MAIN luego a los PARRAFOS y luego a los ENLACES <a>  */
+main p a {
+    font-size: 30px;
+}
+
+/* SELECTOR DE CLASES: 
+se usa para aplicar estilos a todos los elementos que tengan una clase específica. Se representa con un punto (.) seguido del nombre de la clase.*/
+
+.enlaces {
+    color:cornflowerblue;
+}
+
+/* SELECTOR DESCENDENTE + SELECTOR DE CLASES */
+
+header .enlaces {
+    font-size: 25px;
+}
+
+/* SELECTOR ID:                  ((((⚠️⚠️⚠️NO TREBALLAR ID amb CSS millor amb el class, els ID nomes per JAVASCRIPT)⚠️⚠️⚠️)))
+se usa para aplicar estilos a un único elemento que tenga un identificador único en la página. Se representa con una almohadilla (#) seguida del nombre del ID.*/
+
+#especial {
+    color:beige;
+}

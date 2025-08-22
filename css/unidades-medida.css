@@ -1,0 +1,33 @@
+/* Unidades de medida en CSS:
+   - px   : píxeles
+   - %    : porcentaje relativo al tamaño del elemento padre
+   - em   : relativo al tamaño de fuente del elemento padre
+   - rem  : relativo al tamaño de fuente raíz (html)
+   - vw/vh: relativo al 1% del tamaño del viewport  || EL viewport es el area que vamos a tener visible dentro del navegador web.
+   */
+
+.caja {
+    background: lightsalmon;
+    width: 50vw;
+    height: 50vh;
+    font-size: 40px;
+
+    .parrafo-uno { /*Podemos trabajar con PORCENTAJES porque el contenedor padre (.caja) tiene un alto y un ancho*/
+        background: lightblue;
+        width: 50%;
+        height: 70%;
+        font-size: 2em;
+        /* em = unidad relativa al tamaño de fuente del elemento padre.
+                  Si el padre tiene 16px, entonces:
+                   - 1em = 16px
+                   - 2em = 32px
+                   - 0.5em = 8px
+        */
+    }
+}
+/* Parrafo-dos no tiene contenedor padre y no tiene especificado el font-size, lo q hace es buscar el font-size de la etiquea HTML 
+en cambio el Parrafo-uno si tiene contenedor padre .caja y tiene puesto el font-size entonces multiplica 2emx40px y tendra el tamaño de 80px */
+.parrafo-dos {
+    font-size: 2em;
+
+}

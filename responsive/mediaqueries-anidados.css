@@ -1,0 +1,55 @@
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 1000px){
+        & { /* Aquí dentro aplica las reglas al mismo selector donde estoy ahora → en este caso, body */
+            background: black;
+            color: white;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: 40px 0;
+    gap: 20px;
+
+    h3 {
+        font-size: 32px;
+    }
+
+    img {
+        width: 100%; /* SIN ESTO ESTARIAN TODAS LAS IMG DESBORDADAS.
+                                                            ¿Por qué se acomoda perfectamente?   Cada <article> tiene una columna de tu grid.
+                                                 Con img { width: 100%; }, la imagen se ajusta automáticamente al ancho de la columna, sin romper el diseño.
+                                         Así, aunque cambies el tamaño de la ventana o el grid tenga menos espacio, la imagen siempre se mantiene dentro del contenedor. */
+    }
+
+    @media screen and (max-width: 1000px){
+        & { /* Aquí dentro aplica las reglas al mismo selector donde estoy ahora → en este caso, .grid */
+            grid-template-columns: 1fr 1fr;
+
+            a { /* Estoy accediendo a los enlaces <a> que estén dentro de .grid cuando la pantalla sea de 1000px o menos    cambiar el color de los <a>*/
+                color: red;
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px){  /* screen → indica el tipo de medio donde se aplica la regla (pantalla en este caso) 
+
+                                              and → funciona como un “y” lógico. Es decir: la regla solo se aplica si se cumplen ambas condiciones:
+                                                      Es una pantalla (screen).
+                                                      La anchura maxima es 500px (max-width: 500px). */
+        & {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
+
+

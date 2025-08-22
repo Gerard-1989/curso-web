@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+
+<body>
+
+    <script>
+        //Una FUNCION son blocs de codis q ens son util quan volem utilitzar el codi varies vegades
+        // funcions q poden realitzar altres objectes????
+
+        //-------- exemple de una suma sense utilitzar una FUNCTION-----------
+        var numero1 = 10;
+        var numero2 = 5;
+        var resultado = numero1 + numero2; //aixo es una simple suma entre nº1 y nº2 i el valor l'estem guardan a la variable RESULTADO.
+
+        document.write(resultado); //apareix en pantalla 15.
+
+        numero1 = 10; // no escribim "VAR" perque ja teniam reservat aquesta VAR en la linea 16 i 17.
+        numero2 = 5;
+        resultado = numero1 + numero2;
+
+        document.write(resultado);
+
+        
+        //si que funcionaria aixi pero esta mal optimitzat, per aixo estan les funcions (si duplicas codi es que estas fent algo malament....):
+
+
+        function sumar(numero1, numero2) {
+            document.write(numero1 + numero2);
+            document.write('<br>');
+        }
+
+        suma(10, 5); //aqui dintre li donem el valor q volem q valgui numero1 i numero2, 10 per numero1 i 5 per numero2
+        suma(3, 5);
+        suma(60, 40);
+
+
+        
+        //comentar al RAMON, no entenc la SENTENCIA RETURN.
+
+        function suma(numero1, numero2) { //creem una funcio q es diu suma, amb els parametros nº1 i nº2.
+            var resultado = numero1 + numero2; // guardem la suma de nº1 i nº2 dins la variable RESULTADO.
+            return resultado; //returns es permet tornar el valor (en aquest cas RESULTADO) a lo q seria la funcio
+        }
+        suma(10,10);    
+
+
+
+        //comentar al RAMON tambe aixo que no ho he entes molt be:
+
+        var suma = function (numero1, numero2) { //guardar la funcio dintre de una variable 
+            return numero1 + numero2;
+        }
+        var resultado = suma(15,15); //Llamamos a la función suma con 15 y 15, y guardamos el resultado en 'resultado'
+        console.log(resultado); // Esto mostrara 30 que es resultado de la suma.
+
+            //FUNCIONS AUTOINVOCADA:(serveix x protegir el nostre codi (las variables), per si fiquem plugins de una altre persona i es comparteixin variables no accedeixin a ellas):
+
+            (function () {
+                alert('Hola mundo');
+            }());
+
+
+    </script>
+
+</body>
+
+</html>

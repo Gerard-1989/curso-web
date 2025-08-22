@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="contendor">
+    <form action="">
+      <input type="text" id="casilla1" />
+      <!--fer una ID per accedir a JS (ej: vull q el valor del imput nº1 el sumis amb el imput nº2 i el mostris al imput nº3-->
+      <p>+</p>
+      <input type="text" id="casilla2" />
+      <p>=</p>
+      <input type="text" id="resultado" readonly />
+      <!--READONLY= es xq el usuari no puji escriure en aquesta casella (ja q es la del resultat)-->
+      <input type="button" onclick="suma()" class="btn" value="Resultado" />
+    </form>
+  </div>
+
+  <script src="calculadora.js"></script>
+</body>
+
+</html>

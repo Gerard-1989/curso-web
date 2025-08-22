@@ -1,0 +1,38 @@
+[data-id] {
+    /*Los elementos q tengan un DATA-ID queremos que tengan los siguientes valores (en este caso los 2 <p>)*/
+    font-size: 20px;
+    color: blue;
+}
+
+[data-id="2"] {
+    /*con estos parametros solo aplicaremos estilos al segundo parrafo, ya q estamos accediendo exclusivamente a el*/
+    font-weight: bold;
+}
+
+a {
+    color: blueviolet;
+    font-size: 30px;
+}
+
+[href="https://wwww.premierpadel.com"],  /*aixo es duplicar codi, hi ha una forma mes facil per fer-ho (linea 24*/
+[href="https://www.premierpadel.com/en/tournaments"],
+[href="https://www.premierpadel.com/en/tourfinals"] {
+    text-decoration: none;
+    color: red;
+} 
+
+[href*="https://www.premierpadel.com"] {  
+/*Le damos estilos a todos los elementos que tengan el atributo HREF y que tengan esta direccion al menos de inicio https://www.premierpadel.com*/
+    text-decoration: none;
+    color: yellow;
+}
+
+
+input { /*Aqui aplicamos a todos los inputs*/
+    outline: 2px solid green;
+    /* Es una línea que se dibuja alrededor del borde de un elemento, pero no ocupa espacio (no afecta al tamaño o al flujo del documento). */
+}
+
+input[type="email"]{ /*Aqui solo lo aplicamos al input de tipo email*/
+    outline: 2px solid blue;
+}

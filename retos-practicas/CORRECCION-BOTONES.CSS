@@ -1,0 +1,127 @@
+body{
+    background: #f3f3f3;
+}
+
+.contenedor {
+    margin: auto;
+    width: 1000px;
+    /*el DIV ocupa el 100% por defecto, poniendo estos 1000px centramos la pagina*/
+    padding: 20px 0px;
+    /*20px arriba y abajo y 0px a los lados*/
+}
+
+
+
+button, a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500px;
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 20px;
+    border: none; /*por defecto los botones tienen bordes, con NONE quitamos los bordes.*/
+    cursor: pointer;/* Cambia el cursor a una mano para indicar que el elemento es clicable */
+    transition: 0.1 ease-in all;
+
+    /*                              ⚠️transition: 0.1 ease-in all⚠️
+Cambia todas las propiedades suavemente en 0.1s,
+            0.1 → Duración: 0.1 segundos (100 milisegundos)
+            ease-in → Tipo de aceleración: empieza despacio y luego acelera
+a           ll → Aplica la transición a todas las propiedades que cambien */
+
+}
+
+button:focus, a:focus {
+    /* button:focus   Aplica estilo cuando el botón está seleccionado (clic o Tab) */
+    outline: 1px rgb(0, 254, 59) solid;
+    /*
+                          EJEMPLOS:
+  outline: 2px solid rgb(0, 123, 255);       Borde externo azul brillante
+  border: 2px solid rgb(0, 200, 100);        Borde verde alrededor del botón
+  background-color: rgb(224, 240, 255);      Fondo azul muy claro
+  box-shadow: 0 0 8px rgb(0, 123, 255);      Sombra azul difusa para resaltar
+*/
+}
+
+.cuadrado {
+    background: blue;
+    color: white;
+
+    &:hover {
+        background: lightblue;
+    }
+}
+
+.redondo {
+    background: orange;
+    border-radius: 100px;
+    color: aliceblue;
+
+    &:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+}
+
+.outline {
+    color: #000;
+    background: none;
+    border-radius: 7px;
+    border: 2px solid currentColor;
+
+    /*currentColor hace referencia al color que le habiamos especificado (color: #000;)*/
+    &:hover {
+        background: #000;
+        color: white;
+    }
+}
+
+.gradiente {
+    color: white;
+    background: #ad5389;
+    background: #41295a;
+    background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+    background: linear-gradient(to right, #2F0743, #41295a);
+    border-radius: 5px;
+
+    /* primero le hemos puesto un gradiente, luego con el HOVER le hemos dicho que active un cambio visual mientras el cursor está encima */
+    &:hover {
+        background: #41295a;
+        background: -webkit-linear-gradient(to left, #2F0743, #41295a);
+        background: linear-gradient(to left, #2F0743, #41295a);
+    }
+}
+
+.sombras {
+    background: #077307;
+    color: white;
+    box-shadow: 5px 5px #055805;
+
+    &:hover {
+        box-shadow: 2px 2px #055805;
+    }
+    /* para que la sombra "venga hacia nosotros" simplemente le poenmos menos pixeles a lo que teniamos de base.
+    teniamos 5px de base le hemos puesto 2px. */
+}
+
+.icono {
+    border-radius: 3px;
+    border: 1px solid rgba(67, 80, 9, 0.301);
+    background: linear-gradient(0deg, rgb(152, 172, 63) 0%, rgb(94, 94, 31, 0.563) 100%);
+    &:hover{
+        background: linear-gradient(0deg, rgb(94, 94, 31, 0.563) 0%, rgb(152, 172, 63) 100%);
+    }
+}
+
+svg {
+    margin-right: 5px;
+    height: 12px;
+}
+
+.enlace {
+    color: #5839ac;
+    text-decoration: none;
+    border-radius: 3px;
+
+    &:hover{
+        background: #d4d0df;
+    }
+}

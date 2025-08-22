@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condicionales</title>
+</head>
+
+<body>
+    <script>
+        /*Condicional: Es una estructura q nos permite tomar decisiones dependiendo de una condicion que le pongamos,
+        basicament es la forma q nuestro programa,app,web podra decidir dependiendo de lo que haga el usuario*/
+
+        /*if(condicion){
+            codigo
+        }*/
+
+        var edad = 18;
+
+        if (edad > 18) { //aixi no faria res, xq li estem dient que la edad te que ser MAJOR a 18 y la VAR es 18.
+            document.write('Eres mayor de edad');
+        }
+        //si el VAR EDAD es 19 si que funcionaria
+        if (edad > 17) {
+            document.write('Eres mayor de edad');
+        }
+        //un altre ej: el VAR ara es 17
+        if (edad < 18) { //aqui li diem: EDAD es menor a 18? Si, perque EDAD es 17.
+            document.write('Eres menor de edad');
+        }
+
+        //Optimitzar:
+        var edad = 18;
+
+        if (edad >= 18) { //si la edad es MAYOR o igual a 18, llavors 'Eres mayor de edad'
+            document.wirte('Eres mayor de edad');
+
+            if (edad <= 18) { //si la edad es MENOR o igual a 18 llavors 'Eres menor de edad'
+                document.write('Eres menor de edad');
+            }
+        }
+
+        //*****ALGO MES FACIL PER FER-HO (CREC) I MES NET SERIA AIXI:*****
+
+        var edad = 18;
+        if (edad >= 18) { //Si la edad es MAJOR o igual a 18 llavors s'executa el codi ERES MAYOR DE EDAD, si no es aixi s'executa l'altre codi.
+            document.write('Eres mayor de edad');
+        } else {
+            document.write('Eres menor de edad');
+        }
+
+        //CONDICIONALS ELSE - IF
+
+        var pais = 'catalunya';
+        if (pais == 'catalunya') {
+            document.write('Ets catala');
+        } else if (pais == 'Andorra') {
+            document.write('Ets andorra');
+        }
+
+        //Una altre forma de fer-ho 'SWITCH'
+
+        var pais = 'Portugal'; //si hi ha una MAYUS o MINUS i no esta igual abaix, no funcionara el codi.
+
+        switch (pais) {//variable que volem comparar
+            case 'Portugal': //el CASE es com dir: "en caso de q seas portugues ejecutame el DOCUMENT.WRITE Ets portugues i el break d'abaix talla tota l'ejejecuccio del SWITCH"
+                document.write('Ets Portugues');
+                break; //nos permite cortar la ejecucion si se ejecuta el document.write
+            case 'Andorra':
+                document.write('Ets Andorra');
+                break;
+            case 'Suiza':
+                document.write('Ets Suizo');
+                break;
+            default: // Se ejecuta este VALOR si no es ninguno de: PORTUGAL - ANDORRA - SUIZA. (seria com el ELSE quan fem if/ else if/ else)
+                document.write('no sabemos de donde eres ')
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/*                     FLOAT (FORMA ANTIGUA, CASI NO SE USA AHORA SE USA FLEXBOX)
+
+- float: left → el elemento se pega a la izquierda.
+- float: right → el elemento se pega a la derecha.
+- Los demás elementos fluyen a su lado (lo rodean).
+- Sirve para colocar elementos uno al lado del otro. */
+
+
+
+body {
+    background: #f2f2f2;
+}
+
+
+.contenedor {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+
+    img {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .caja {
+        background: #000;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+
+        &:nth-child(1) {
+            float: left;
+        }
+
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+
+    .bug {
+        clear: both;
+    }
+
+}
+
+
+/* 
+         CLEAR: BOTH;
+
+Tienes 2 cajas flotando:
+
+🟥 (izquierda)    🟦 (derecha)
+
+Si no haces nada, el siguiente bloque puede intentar meterse entre ellas.
+
+Pero si le pones clear: both;, le estás diciendo:
+
+🗣️ “No te metas entre ellas, baja y ponte después.” */

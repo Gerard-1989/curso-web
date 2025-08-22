@@ -1,0 +1,33 @@
+.caja {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    font-size: 24px;
+    background: #728ef1;
+    border-radius: 5px;
+    margin: 20px;
+    vertical-align: top; /* sirve para subir o bajar un elemento cuando está junto a otro, como una imagen con texto.*/
+
+    box-sizing: border-box;
+    /* El tamaño que pongas ya incluye todo (contenido + padding + borde)"
+                Ideal para diseños limpios y ordenados. */
+
+
+    /*
+    
+    *, *::after,*::before {                              muy usado hoy en dia
+        box-sizing: border-box;
+
+      Porque esos ::before y ::after también tienen cajas (espacio, tamaño, padding, borde...),
+       y pueden afectar el tamaño y diseño si no les dices cómo medir.
+
+    } */
+
+    &.padding {
+        padding: 20px;
+    }
+
+    &.borde {
+        border: 10px solid red;
+    }
+}

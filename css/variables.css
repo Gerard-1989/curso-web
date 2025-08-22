@@ -1,0 +1,43 @@
+/*                                      Ejemplo SIN variables
+
+h1 {
+color red;
+}
+
+header nav a {
+color: red;
+}
+
+main a{
+color: red
+}*/
+
+                                          /* EJEMPLO CON VARIABLES 
+                         Las variables en CSS te permiten guardar valores (como colores, tamaños, fuentes...) 
+                         en una especie de "etiqueta", para poder reutilizarlos fácilmente en varias partes del código.
+                                           📦 Las variables siempre empiezan por --
+                                           📦 Se suelen declarar en :root para que estén disponibles en todo el documento.*/
+
+:root { /*:root define variables globales que se pueden usar en todo el CSS.*/
+    --color-primario: orangered;
+    --color-secundario: lightblue;
+    --fuente-primaria: 'Arial', sans-serif;
+    --fuente-secundaria: 'Times New Roman', 'serif';
+    --padding: 20px;
+    --margin: 20px;
+}
+
+h1 {
+color: var(--color-primario); /*VAR: Sirve para usar una variable CSS que ya definiste*/
+font-family: var(--fuente-primaria);
+}
+
+header nav a {
+color: var(--color-primario);
+font-family: var(--fuente-secundaria);
+}
+
+main a{
+color: var(--color-primario);
+font-family: var(--fuente-secundaria);
+}

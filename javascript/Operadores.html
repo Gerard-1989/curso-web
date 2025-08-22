@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operadores</title>
+</head>
+
+<body>
+  <script>
+    /* Tipus d'Operadors:
+              · Asignacion =
+              · Matematicos o Aritmeticos  + - * /
+              · Incremento y Decremento  ++ --
+              · Operadores Logicos o de Comparacion
+                  · Negacion
+                  · AND 
+                  · OR
+      */
+
+    //Matematicos - Aritmeticos
+    var numero1 = 10;
+    var numero2 = 5;
+    var resultado = numero1 + numero2;  
+    var resultado = numero1 - numero2;
+    var resultado = numero1 * numero2;
+    var resultado = numero1 / numero2;
+    var resultado = numero1 % numero2; //AQUEST OPERADOR NO l'HE ENTES MOLT BE, COMENTAR AMB RAMON
+    console.log(resultado);
+
+    //Incremento - Decremento
+    var numero = 2;
+    var resultado = numero - 1;
+    console.log(resultado);
+
+    /*
+   == permet comparar variables
+
+      ej true:
+      var numero1 == 5;
+      var numero2 == 5; 
+      seria TRUE perque son dos varibles que son de EL MATEIX numero (si es un string "5" tmb es true)
+
+      ej true:
+      var numero1 == 5;
+      var numero2 == "5";
+
+      ej false:
+      var numero1 == 5;
+      var numero2 == 9;
+      seria FALSE perque no tenen el mateix numero
+  
+  === permet comparar entre VALOR y tipus de VARIABLE
+
+     ej true:
+     var numero1 === "hola";
+     var numero2 === "hola";
+  
+      ej: false:
+      var numero1 = 5;  (numero)
+      var numero2 = '5';  (string)
+
+  != no son iguals (nuemero1 es diferent a numero2?)
+      ej true:
+      var numero1 = 5;
+      var numero2 = 10;
+
+  !== no son iguals ni en valor ni en tipo
+      ej true:
+      var numero1 = 5;
+      var numero2 = '5';
+  no son iguals en TIPOS pero si son iguals en VALOR (numeric)
+
+  > mayor
+  < menor
+  <= es menor o igual
+  >= es mayor o igual
+
+  OPERADORS:
+
+  ! NEGAR UN VALOR
+  &&  AGREGAR 2 COMPARACIONS
+  || Que es cumpleixi una o l'altre
+  
+  */
+  </script>
+</body>
+
+</html>

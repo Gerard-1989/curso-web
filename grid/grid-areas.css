@@ -1,0 +1,57 @@
+/* grid-template-areas es una forma visual de decirle al navegador cómo organizar las celdas de un Grid usando nombres en vez de números. 
+
+                    2️⃣ Cómo funciona
+                            Cada nombre que escribes es como una “etiqueta” para un espacio del grid.
+
+                            Cada fila del grid se escribe entre comillas "".
+
+                            Los elementos con el mismo nombre se juntan formando un área.
+
+                            Poner Un punto . en lugar de un nombre (body) significa celda vacía. “Aquí no va ningún elemento asignado, deja el hueco vacío”. */
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 20px;
+    gap: 20px;
+    grid-template-areas: 
+    'header      header      header     header'
+    'body        body        body        sidebar'
+    'body        body        body        sidebar'
+    'footer     footer       footer      footer';
+}
+
+.header {
+    grid-area: header;
+
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+}
+
+.body {
+    grid-area: body;
+
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+}
+
+.sidebar {
+    grid-area: sidebar;
+
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+}
+
+.footer{
+    grid-area: footer;
+
+    /* grid-column-start:1;
+    grid-column-end: 5; */
+}
+
+

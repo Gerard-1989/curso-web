@@ -1,0 +1,54 @@
+@charset "UTF-8";
+.caja {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 28px;
+  border-radius: 5px;
+  background: #43ae75;
+  animation-name: cambiarAncho; /*aqui solo ESPECIFICAMOS que queremos trabajar con el KETFRAMES que hemos creado cambiarAncho*/
+  animation-duration: 3s; /* Quiero que la animacion dure 3seg */
+  animation-delay: 0; /* fins q no pasin 5seg no escomençara */
+  animation-timing-function: ease; /* EASE -> empieza lento, acelera, y termina lento */
+  /* animation-iteration-count: infinite;  cuántas veces quieres que se repite la animación. */
+  /* animation-direction: alternate; */
+  /*   animation-direction: Suele ser util cuando el iteration-count: INFINITE 
+              reverse: se reproduce al reves
+              alternate: la animación se reproduzca ida y vuelta
+              alternate-reverse:  la animación se reproduzca en sentido alterno, pero empezando al revés.    */
+  animation-fill-mode: forwards; /*  permite que el elemento mantenga los estilos de la animación en ciertos momentos (antes, después o ambos)
+
+forwards	Mantiene los estilos del último KEYFRAMES (to) después de la animación.
+backwards	Aplica los estilos del primer KEYFRAMES (from) y los mantendra durante el periodo de delay (animation-delay).
+both        Combina forwards y backwards: mantiene estilos antes y después.  */
+}
+.caja:hover {
+  animation: agitar 0.3s ease-in 0s infinite forwards;
+}
+
+/*  @keyframes es una regla de CSS que se usa para crear animaciones. (solo se trabajan con FROM y TO, pero con los % se trabaja del 0 al 100)
+      Define cómo deben cambiar los estilos de un elemento en diferentes momentos del tiempo.*/
+@keyframes cambiarAncho { /* @keyframes NOMBRE-DE-LA-ANIMACION,   Aqui estamos DEFINIENDO la animacion */
+  from { /* From -> inicio de la animación */
+    width: 200px;
+    /* background: black; */
+  }
+  to { /* To-> Fin de la animación */
+    width: 400px;
+    /* background: blue; */
+  }
+}
+@keyframes agitar {
+  0% {
+    transform: translateY(0px); /*Al iniciar la animación (fotograma 0%), el elemento está en su posición original, sin desplazamiento vertical.*/
+    /*transform: translateY(0px) significa “no moverme hacia arriba ni hacia abajo”.*/
+  }
+  100% {
+    transform: translateY(5px);
+    /*Al finalizar la animación (fotograma 100%), el elemento se ha desplazado 5 píxeles hacia abajo respecto a su posición original.*/
+  }
+}
+/*                        ¿Qué hace en total    (porqu?
+     👉 El elemento se mueve de su posición normal hacia abajo 5 píxeles.
+   Si la animación se repite (por ejemplo, infinite), parece que tiembla o se sacude.*//*# sourceMappingURL=animaciones.css.map */

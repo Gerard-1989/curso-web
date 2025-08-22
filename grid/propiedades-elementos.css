@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.especial {
+    background: red;
+    color: white;
+
+    grid-column-start: 1; /* Indicamos en qué columna empieza el elemento (de izquierda a derecha). */
+    grid-column-end: 3;  /* Indicamos en qué columna termina el elemento. */
+    /*grid-column: 1 / 3;  forma abreviada de start y end. */
+
+
+
+
+    grid-row-start: 1; /* Indicamos en qué fila empieza el elemento (de arriba hacia abajo). */
+    grid-row-end: 4; /* Indicamos en qué fila termina el elemento . */
+    /* grid-row: 1 / 4; forma abreviada de start y end. */
+
+
+
+    
+} 
+ 

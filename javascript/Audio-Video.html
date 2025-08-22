@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlando Audio y Video de HTML5 con JS</title>
+</head>
+
+<body>
+    <video id="video" src="Video/y2mate.is - INVESTIDURA Segunda RONDA de CONSULTAS sin los INDEPENDENTISTAS que reiteran un REFERÉNDUM RTVE-EOtv-kv64e0-144pp-1696347689.mp4"
+        width="500" controls>
+        <!--controls: fica els controls de pujar/baixar volum, pause etc-->
+        <p>Tu navegador no soporta videos en HTML5, actualizalo.</p>
+    </video><br>
+    <audio src="Audio/random-acoustic-electronic-guitar-136427.mp3" id="audio" controls>
+        <p>Tu navegador no soporta audios en HTML5, actualizalo.</p>
+    </audio><br>
+
+    <button id="play">Reproducir</button>
+    <button id="pause">Pausar</button>
+
+    <input type="range" value="1"  min="0" max="1" step="0.1" id="volumen">
+    <!--range = barra de sonido 
+    step="0.1": el slider avanzará en saltos de 0.1 
+    los valores van de 0 a 1 con pasos de 0.1, es decir: 0, 0.1, 0.2, ..., 0.9, 1-->
+
+    <script>
+        let video = document.getElementById("video"); //accedim als id's de las lineas 11,20,21 y 23
+        let btnPlay = document.getElementById("play");
+        let btnPause = document.getElementById("pause");
+        let volumenSlider = document.getElementById("volumen");
+
+        btnPlay.addEventListener('click', function () { //quan la funcio no te nom, li diem q executi una funcio anonima
+            video.play(); // aqui accedim a VIDEO (linea 8 -14) y li fiquem el METODO play. (permet reproduir)
+        }); // explicacio linea 27: quan el boton de repoducir reciba un CLICK m'executes lo q seria la funcio VIDEO.PLAY
+
+        btnPause.addEventListener('click', function () {
+            video.pause(); //accedim a video i li fiquem la funcio + metodo de pause per parar el video.
+            document.body.style.background = '#225525';
+
+        })
+
+        volumenSlider.addEventListener('change', function () {  
+            video.volume = volumenSlider.value;
+
+            /*Estamos diciendo que el control de volumen (volumenSlider) debe estar pendiente de cualquier cambio.
+
+            Cuando ocurra un cambio, el video debe actualizar su volumen para coincidir con el valor del control.
+            
+            Así el video siempre suena al volumen que el usuario quiere.*/
+        })
+        
+    </script>
+
+</body>
+
+</html>

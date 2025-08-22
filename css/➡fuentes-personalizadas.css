@@ -1,0 +1,46 @@
+                                               /* TRABAJANDO CON @IMPORT */
+                                               
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@500&family=Playwrite+VN+Guides&display=swap');
+
+/* @IMPORT: Subsitueix als link que hi ha al HTML, es pot fer de les 2 maneras */
+
+body { 
+     font-family: "Bitcount Single", system-ui;
+    /* de la web googlefons es d'on copio el FF (fontfamily) */
+ } 
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+
+                                            /* Trabajando CON @font-face */
+
+
+/*                                                 @FONT-FACE
+               Se usa para cargar fuentes personalizadas en tu web (tipografías que no vienen por defecto en el navegador). */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Fuentes/Roboto-Medium.ttf') format('truetype');  /* format(truetype): le confirmas al navegador que ese archivo es .ttf. */
+    font-weight: 500;
+        /* Nomes amb aixo no cargaria, hem de dir a quina part del document ho volem cargar (en aquest cas al BODY) */
+}
+
+
+              /* Si volem agregar mes FONTS hem de cargar un per un (copiar y pegar i canviar la font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Fuentes/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+body{
+    font-family: 'Roboto';
+    font-weight: 500;
+   /* font-weight: 400 es el valor por defecto en todos los navegadores.
+   Si no se indica peso, el navegador usa 400 (Regular). 
+
+   EN ESTE CASO CARGARA EL ROBOTO-MEDIUM, YA QUE AQUI EN EL BODY LE ESTAMOS DICIENDO QUE CARGUE ESE PESO.
+   */
+
+}

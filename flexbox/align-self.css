@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.contenedor {
+    width: 90%; /* mide siempre el 90% de tu contenedor padre (en este caso body) si el body mide mas de 1000px quedate en 1000px. Si mide 700px quedate al 90% de esos 700px */
+    max-width: 1000px;
+    margin: 40px auto;
+    border: 5px solid black;
+    /* AUTO en margin: margen izquierdo y derecho se calculan automáticamente para que el elemento quede centrado horizontalmente dentro de su contenedor.
+    Esto solo funciona cuando el elemento es de bloque y tiene un ancho fijo o limitado (width o max-width).
+    Vamos, que el auto es como decir: “haz tú las cuentas para dejarlo igual de separado a izquierda y derecha”. */
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.caja {
+    background: blue;
+    color: white;
+    padding: 40px;
+    font-size: 24px;
+    border-radius: 5px;
+
+}
+
+
+
+
+/* 
+                        align-self sirve para mover solo una caja diferente a las otras. (Se ponen estos valores en el contenedor padre y los hijos se mueven)
+                        
+                     Dependiendo de cómo estén organizadas las cajas (en fila o en columna), 
+                        la caja puede moverse hacia arriba, abajo, izquierda o derecha.
+*/
+
+.align-self {
+    height: 700px;  
+   
+    .uno {
+        align-self: stretch; /*(por defecto) Estira el elemento para ocupar todo el alto disponible*/
+    }
+
+    .dos {
+        align-self: start; /*lo pones arriba del todo*/
+    }
+
+    .tres {
+        align-self: center; 
+    }
+
+    .cuatro {
+        align-self: end; /*lo pones abajo del todo*/
+    }
+}
+
+    /* .cinco {
+
+        align-self: baselina;  Alinea segun la linease base del texo */
+        

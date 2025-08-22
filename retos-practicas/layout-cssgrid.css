@@ -1,0 +1,52 @@
+.contenedor-principal {
+    max-width: 100%;
+    margin-top: 0 !important;
+}
+
+.caja {
+    text-align: left;
+    border-radius: 5px;
+    padding: 0 !important;
+}
+
+
+.grid {
+    display: grid;
+    border: none;
+    height: 100vh;
+    /* o cualquier valor fijo */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 2fr 2fr 0.5fr;
+    gap: 20px;
+    grid-template-areas:
+        'header       header         header         header           header        header'
+        'contenido    contenido     contenido       contenido        aside          aside'
+        'contenido    contenido     contenido        contenido       aside         aside'
+        'footer       footer        footer           footer          footer        footer';
+}
+
+
+.header {
+    grid-area: header;
+    background: black;
+    color: white;
+
+}
+
+.contenido {
+    grid-area: contenido;
+    background: black;
+    color: white;
+}
+
+.aside {
+    grid-area: aside;
+    background: black;
+    color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background: black;
+    color: white;
+}

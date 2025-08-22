@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos</title>
+  <style>
+    .caja {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      background: #226fc1;
+      margin: 10px;
+      display: inline-block;
+      text-align: center;
+      font-size: 30px;
+      color: #fff;
+      font-family: Arial;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="saludo()">Saludo</button> <!--MODELO BASICO DE EVENTOS -->
+  <!--Queremos q al boton cuando le den un click (onclick) queremos ejecutar la
+    funcion //(saludo) cuando el usuario presione el boton ejecuta la funcion de
+    saludo de abajo creada.-->
+
+
+
+
+  <button id="btn-saludar">Saludar</button> <!--MODELO DE EVENTOS ESTANDAR-->
+
+
+
+
+
+  <!-- ---------- Crear caixes en pantalla quan fem click a CREAR CAJA ---------- -->
+  <button id="btn-caja">Crear Caja</button>
+  <section id="contenedor"></section>
+
+
+
+  <script>
+    /* Existen 3 modelos de eventos diferentes:
+
+           - Modelo basico de eventos.
+              Caracteristicas limitadas.
+              Pero Funciona en todos los navegadores.
+
+           - Modelo de eventos estandar.
+              Podemos hacer mas cosas con el
+              todos los navegadores lo soportan.
+           
+              Las versiones anteriores de Internet Explorer como IE7 no lo soportan.
+          
+           - Modelo de eventos de Internet Explorer.
+              Modelo creado por Microsoft exclusivamente para IE.
+
+                         -------- Algunos de los eventos mas usados --------
+                         
+                                              'click'
+                                              'focus'
+                                              'blur'
+                                              'change'
+                                              'onload'
+                                              'mouseover'
+                                              'mouseout'
+                                              'resize'
+                                              'submit'
+      */
+
+
+    // ---------- MODELO BASICO DE EVENTOS ----------
+    function saludo() {
+      alert("Jelow");
+    }
+
+    // ---------- MODELO DE EVENTOS ESTANDAR ----------
+    let btnsaludar = document.getElementById('btn-saludar')
+    btnsaludar.addEventListener('click', saludo);
+    /*accedim al nostre boton amb el nostre let, accedim a ell amb el getElementById i ho guardem dintre del let.
+    el nostre boton (btnsaludar) li estem agregan una "escucha de eventos" (addEventListener)
+    el EventListener s'encarga de revisar quan el usuari fagi 'click' en el boton 'btnsaludar' i quan ho fasi s'executara
+    la nostre funcio de saludo q es la funcio q esta en MODELO BASICO DE EVENTOS.*/
+
+
+    // ---------- ELIMINAR UNA ACCIÓN ----------
+    btnsaludar.removeEventListener('click', saludo);
+    /* aquest seria el comando x eliminar un EventListener, lo primer fiquem es quin tipus de event volem eliminar 'click'
+     y despues la funcio que volem borrar en aquest cas, saludo.*/
+
+    // ---------- EJECUTAR FUNCIONES ANONIMAS / FALLBACKS ----------
+    btnsaludar.addEventListener('click', function () {
+      /*aqui podem agregar tot el codi que volem q s'executi quan l'usuari fasi click
+      en el btnsaludar*/
+    })
+
+
+    // ---------- Crear caixes en pantalla quan fem click a CREAR CAJA ----------
+
+    function crearCaja() {
+      let contenedor = document.getElementById('contenedor'); //1º
+      let caja = document.createElement('div'); //2º
+      caja.className = 'caja'; //3º
+      contenedor.appendChild(caja); //4º
+    }
+
+    let btncaja = document.getElementById('btn-caja'); //5º
+    btncaja.addEventListener('click', crearCaja); // 6º
+
+
+    /* 1º Crear la nostre caixa i agregarla al contenedor PADRE en aquest cas sera el <section> que te la id de contenedor
+    guardem la ID de contenedor dintre de la variable
+
+    2º fem una altre variable, en aquesta variable volem guardar el element nou q crearem.
+    document.createElement('div');
+
+    3º ara a la variable caja li agreguem una className.
+                       
+    4º ara agreguem aquesta caja a lo q seria el nostre <section id='contenedor'></section>
+    volem que al contendor  li agreguis un element fill (appendChild) i dintre dels () li diem que volem insertar 
+    que seria la caja.
+
+    5º creem una variable per accedir a la id de btncaja (on esta la etiqueta de button) 5º
+
+    6º volem q quan presionem btncaja li volem agregar un EventListener de tipo click i q ens executi la funcio crearCaja
+    (primer selecionem quin TYPE volem, en aquest cas de tipo 'click' i despres li creem la funcio en aquest cas crearCaja
+    despres creem la funcio, q seria function crearCaja )
+
+    (ara falta nomes donarli estils CSS, es pot fer aqui dintre del HEAD amb la estiqueta STYLE)*/
+
+  </script>
+</body>
+
+</html>

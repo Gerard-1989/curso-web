@@ -1,0 +1,56 @@
+body {
+    background: #f2f2f2;
+    font-family: serif;
+}
+
+.tabla {
+    border: 1px solid black;
+    width: 100%; /*Hace que el elemento (por ejemplo, una tabla, un div, una imagen...) ocupe todo el ancho disponible dentro de su contenedor padre.*/
+    border-collapse: collapse; /*Hace que los bordes de las casillas de la tabla se juntan y no se ven dobles.*/
+
+    tr,th,td {
+                   /* dentro de .tabla pone bordes a:
+                          Cada fila (tr)
+                          Cada celda de título D(th)
+                          Cada celda de datos (td)
+                          Así toda la tabla y sus celdas quedan con bordes visibles. */
+
+
+        border: 1px solid black;
+
+        padding: 10px; /*Separa el texto o lo que haya dentro, de las "paredes" que lo rodean.*/
+
+        text-align: center;
+
+        overflow-x: auto; /*Es útil en móvil para que el contenido ancho se vea bien sin romper el diseño
+                          y se pueda arrastrar con scroll horizontal si es necesario.*/
+    }
+
+    thead {
+        background: black;
+        
+        th{
+            color: white;
+            padding: 10px 0px;
+        }
+    }
+   
+    tbody {
+        tr{
+            background: white;
+
+            &:nth-child(even){  /*CAMBIAMOS EL COLOR DE LOS ELEMENTOS PARES DE LOS TR:  Queremos buscar los elementos TR (las filas) y con nth-child(even) buscamos los elementos pares*/
+                background: #f2f2f2;
+            }
+
+            &:hover { /*Queremos que cuando pasemos el mouse dentro de las filas (TR) cambie el color de fondo*/
+                background: lightblue;
+            }
+
+            &.ramon { /*Accedemos a las filas (TR), accedemos a la fila q tiene la clase ramon y le cambiamos el fondo solo a esa fila.*/
+                background: lightgreen;
+                color: red;
+            }
+        }
+    }
+}

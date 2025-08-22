@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ES RELATIVAMENT NOU I NO TOTS ELS NAVEGADORS HO SOPORTEN, en la web CANIUSE.com podem veure quins navegadors ho soporten -->
+     
+    <!-- DATALIST: es una lista de sugerencias/recomendaciones que aparece cuando el usuario empieza a escribir en una caja de texto. -->
+    <!-- Es como cuando vas a escribir algo en Google y te salen opciones debajo. -->
+
+    <form action="">
+        <label for="color">Escribe un color:</label>
+        <input type="text" name="color" id="color" list="colores">
+
+        <!-- El <datalist> tiene id="colores", que coincide con el list="colores" del input. -->
+        <!-- Es como decir: “Este input usará esta lista de sugerencias”. -->
+
+        <datalist id="colores">
+
+            <!-- ✅ Cada <option> representa una sugerencia que se mostrará 
+            en la lista desplegable cuando el usuario empiece a escribir en el campo de texto. -->
+
+            <option value="azul"></option>
+            <option value="rojo"></option>
+            <option value="amarillo"></option>
+            <option value="verde"></option>
+        </datalist>
+    </form>
+</body>
+
+</html>

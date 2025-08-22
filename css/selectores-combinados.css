@@ -1,0 +1,37 @@
+.menu {
+    background: grey;
+}
+
+.menu a {
+    color: red;
+}
+
+/* SELECTOR DE HIJOS
+ Selecciona solo los elementos que están justo dentro de otro elemento, no los que están más adentro.*/
+
+.menu > a {
+    font-size: 25px;
+}
+
+/* en este ejemplo solo se hacen grande los enlaces 1,2,3 porque la clase MENU q esta dentro del NAV y los enlaces 4,5,6 estan dentro
+de un DIV y no son hijos directos de la class MENU. Los hijos directos en este caso es el H1 y los enlaces 1,2,3. */
+
+/* SELECTOR DE HERMANOS
+Se usa para seleccionar elementos que están al lado de otro, es decir, en el mismo nivel (como hermanos). */
+
+ h3 + p {
+    color:chartreuse;
+    font-size: 22px;
+ }
+
+ /* aqui le decimos seleciona el h3 con el + seleciona el primer elemento q seria el <p>, solo SELECIONA EL PRIMER HERMANO, osea solo el primer parrafo en este caso */
+
+
+ /* SELECTOR HERMANOS GENERALES
+  Selecciona todos los hermanos que vienen después de un elemento, pero solo si están en el mismo nivel (no dentro de otro). */
+
+ h3 ~ p {
+    color:darkolivegreen;
+    font-size: 22px;
+ }
+/* Aqui seleciona el h3 y los parrafos siguientes */

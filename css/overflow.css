@@ -1,0 +1,33 @@
+/* OVERFLOW: controla qué pasa cuando el contenido es más grande que su caja */
+
+body {
+    background: #f2f2f2;
+}
+
+.contenedor {
+    width: 500px;
+    height: 500px;
+    /*ponemos esta propiedad para hacer el problema y arreglarlo con OVERFLOW*/
+    background: #fff;
+    margin: auto;
+    /*auto: Pon el mismo espacio a la izquierda y a la derecha para que el elemento quede en el centro*/
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+/* 
+                 VISIBLE (por defecto): el contenido que no cabe se muestra fuera de la caja 
+                 HIDDEN: oculta el contenido que sobresale (no se ve) 
+                 SCROLL: muestra barras de desplazamiento siempre (aunque no sea necesario) 
+                 AUTO: muestra barras solo si el contenido no cabe 
+ 
+
+           También existen: 
+overflow-x: controla el desbordamiento horizontal 
+overflow-y: controla el desbordamiento vertical 
+
+si el contenido sobrepasa el ANCHO (overflow-x) o la ALTURA (overflow-y) del contenedor, 
+entonces aplican las reglas que pongas (hidden, scroll, auto, etc.)
+*/

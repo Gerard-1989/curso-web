@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+
+<body>
+    <script>
+        /*LocalStorage:
+           nos permite guardar informacion en el pc del usuari 
+           q estigui visitan la web per poder guardar informacio q podamos utilizar mas adelante*/
+
+
+
+        //comprobamos q el navegador soporte LocalStorage
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem("nombre", "Gerard España"); // Establecemos un nuevo valor
+            console.log("si soporta");
+        } else {
+            console.log("tu nav no soporta LocalStorage");
+        }
+
+ // -------- ----------- ------------ ------------
+        // Llamamos al nombre guardado en localStorage
+        //   console.log(localStorage.nombre);
+
+        // Eliminamos el elemento localStorage
+        // localStorage.removeItem("nombre");
+
+  // --------- ------------ ---------- Session Storage (la info s'esborrar quan el usuari tanqui la finestra, [amb localStorage no])
+        sessionStorage.nombre = "Gerard"; //guardem Gerard dintre de sessionStorage.nombre
+        console.log(sessionStorage.nombre); //accedim al nom (Gerard)
+
+        //un cop el usuari tanqui la finestra s'esborra el valor, i quan obras la pestaña de nou lo q mostra es UNDEFINED.
+
+
+
+
+    </script>
+</body>
+
+</html>

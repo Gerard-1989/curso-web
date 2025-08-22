@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="formulario" id="formulario">
+        <input type="text" name="nombre" placeholder="nombre">
+
+        <input type="radio" name="sexo" id="hombre">
+        <label for="hombre">Hombre</label>
+
+        <input type="radio" name="sexo" id="mujer">
+        <label for="mujer">Mujer</label>
+
+        <input type="checkbox" name="terminos" id="terminos">
+        <label for="terminos">Terminos</label>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        let formulario = document.getElementById('formulario');
+        //obtenim tots els elements de la pagina q tinguin un NAME,
+        //com ens portara un arreglo li tenim q dir q volem accedir al primer formulari, hi ho guardem en una variable (let)
+
+        let nombre = formulario.nombre;
+        let sexo = formulario.sexo;
+        let terminos = formulario.terminos;
+
+
+
+        //            ------------ VALIDAR SI EL USUARIO ENVIO ALGO en el INPUT TYPE SUBMIT ---------------
+
+        function validar(e){ //ficar sempre la variable E com a parametro en la funcio. 
+            if(nombre.value > 18){ //agreguem un condicional IF, accedim a formulario.nombre. i li fiquem un maxim de 18 caracters x escriure.
+                alert('te has pasado escribiendo chaval xd');                                
+            } else if (nombre.value == ''){ //else if = vull q em comprovis si nombre.value no estigui vuit, i si esta vuit creem un alert xq ingresin un nom
+                alert('ingresa un nom');
+            }
+         
+        //            ------------- VALIDAR LOS RADIO BUTTON ------------------
+
+        if(sexo[0].checked == false && sexo[1].checked == false){ //lo q fem aqui es q si ni HOMBRE ni MUJER han sido selecionados x el usuario salti la seguent alerta.
+            alert('seleciona hombre o mujer');
+        }
+
+        //            -------------- VALIDAR TERMINOS Y CONDICIONES ------------
+        
+        if(!terminos.checked){ //RAMON NO ENTENC AIXO, NEED HELP!!!
+            alert('Acepta los terminos');
+        }
+           e.preventDefault(); //aquesta funcio ens permet q si el usuari fica mes de 18 caracters no s'envii el formulari.
+        }
+
+        formulario.addEventListener('submit', validar); //lo q fem es: quan el formulari hagi sigut enviat, s'executara la funcio q hem creat (validar)
+    </script>
+</body>
+</html>

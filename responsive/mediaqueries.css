@@ -1,0 +1,77 @@
+
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: 40px 0;
+    gap: 20px;
+
+    h3 {
+        font-size: 32px;
+    }
+
+    img {
+        width: 100%; /* SIN ESTO ESTARIAN TODAS LAS IMG DESBORDADAS.
+                                                            ¿Por qué se acomoda perfectamente?   Cada <article> tiene una columna de tu grid.
+                                                 Con img { width: 100%; }, la imagen se ajusta automáticamente al ancho de la columna, sin romper el diseño.
+                                         Así, aunque cambies el tamaño de la ventana o el grid tenga menos espacio, la imagen siempre se mantiene dentro del contenedor. */
+    }
+}
+
+
+
+
+
+
+
+/*                                            Los MEDIAQUERIES son reglas de CSS que sirven para decirle al navegador:
+              "Oye, aplica estos estilos solo si la pantalla cumple ciertas condiciones" (por ejemplo, cierto ancho, altura, orientación o tipo de dispositivo). */
+
+@media print {/* Aplica los estilos siguientes solo cuando el usuario imprima la página (o la vea en vista previa de impresión) */
+    .grid {
+        grid-template-columns: 1fr;
+
+        img {
+            height: 200px; /* La imagen siempre se mostrará con 200px de alto, aunque sea más grande o más pequeña. */
+            width: auto;  /* El ancho se calcula solo, para que la imagen no se deforme y mantenga la proporción original. */    
+            filter: grayscale(100%); /* Convierte la imagen a blanco y negro (sin color) */
+        }
+
+        a {
+            display: none; /* leer más -> no se ven ni ocupan espacio cuando imprimes. */
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {  /* “Aplica los estilos siguientes solo si la pantalla es un dispositivo con pantalla (screen) y mide 1000px o menos”.
+
+                      screen = pantallas (móvil, tablet, ordenador).
+                      max-width: 1000px = desde 1000px hacia abajo (ej: tablets y móviles).
+                      Es típico para diseño responsive, cuando quieres que tu web cambie en pantallas más pequeñas. */
+
+    body {
+        background: #000;
+        color: white;
+    }
+
+    a {
+        color: red;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: 'montserrat', serif;
+    font-size: 18px;
+}
+
+.principal {
+    width: 400px;
+    margin: 40px auto;
+}
+
+.formulario .contenedor-inputs {
+    
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 6px 6px 0 0;
+}
+
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    display: block;
+    /* abarca el 100% del tamany que puguin i un es fiqui abaix de l'altre*/
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    /* 15px adalt i abaix i 10px dreta i esquerra*/
+    /*outline: none;*/
+    border: none;
+    /*no em funciona i no entenc el perque*/
+    border-bottom: 2px solid #ccc;
+    font-family: 'montserrat' serif;
+    font-size: 18px;
+}
+
+.formulario input[type="text"]:focus,
+/*para cuando tengan la seudoclase focus en el tipo text y email cambien simplemente el estilo [no entiendo RAMON]*/
+.formulario input[type="email"]:focus {
+    border-bottom: 2px solid #246eb9;
+}
+
+.formulario input[type="radio"] {
+    display: none;
+    /*amb aixo treiem les boles del tipo radio q venen x defect amb html*/
+}
+
+.formulario .sexo {
+    display: flex;
+    /*display ni flex ni justify NO tinc idea quina funcio fan*/
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* el espacio sobrante se divide entre los elementos*/
+    margin-bottom: 20px;
+}
+
+.formulario .sexo .hombre {
+    border-radius: 3px 0 0 3px;
+}
+
+.formulario .sexo .mujer {
+    border-radius: 0 3px 3px 0;
+}
+
+.formulario .label-radio {
+    background: rgba(249, 160, 63, .4);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 49.5%;
+    /* el .5% es el petit espai que hi ha en Hombre (espai) Mujer*/
+}
+
+.formulario input[type="radio"]:checked+.label-radio {
+    /*queremos q cuando el input de tipo radio este selecionado queremos darle los siguientes estilos a lo q era label-radio */
+    background: #f9a03f;
+}
+
+.formulario .terminos {
+    text-align: center;
+    color: #424242;
+}
+
+.formulario .terminos label {
+    margin-left: 10px;
+}
+
+.formulario .error {
+    display: none;
+    margin-top: 20px;
+    border-radius: 3px;
+    background: #ce1818;
+    color: #fff;
+    padding: 15px 10px 15px 40px;
+}
+
+.formulario .btn {
+    width: 100%;
+    text-align: center;
+    background: #246eb9;
+    color: #fff;
+    border: none;
+    display: block;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 0 0 6px 6px;
+    font-family: 'montserrat', serif;
+    font-size: 18px;
+}
+
+.formulario .btn:hover {
+    background: #4257ad;
+}

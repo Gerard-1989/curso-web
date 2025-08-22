@@ -1,0 +1,38 @@
+.grid {
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 300px);
+
+
+
+
+    grid-auto-rows: 150px; /* Las filas que se crean automáticas serán de 150px de alto */
+
+    grid-auto-flow: column; /* Coloca los elementos automáticamente en columnas (por defecto es ROW, filas.) */
+    
+    grid-auto-columns: 150px; /* Las columnas que se crean automáticas serán de 150px de ancho. Para que funcione debe tener grid-auto-flow */
+    
+}
+
+
+/*                                       Grid explícita
+              Es la rejilla que tú defines claramente en tu CSS con propiedades como:
+
+                                    grid-template-columns
+                                    grid-template-rows
+                                    
+
+
+
+
+                                        Grid implícita
+Es la rejilla que el navegador crea automáticamente cuando colocas más elementos de los que caben en la grid explícita.
+
+Por ejemplo, si tienes 7 elementos pero tu grid explícita solo tiene 2 filas y 3 columnas (6 celdas), y colocas un elemento en la fila 4 o en la columna 5,
+el navegador crea filas o columnas extras para poder colocar ese elemento. Esas filas o columnas extras son la grid implícita.
+
+El tamaño de esas filas o columnas implícitas se controla con:
+
+                                                                    grid-auto-rows
+                                                                    grid-auto-columns
+*/

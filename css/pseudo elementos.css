@@ -1,0 +1,110 @@
+/*
+                  Un pseudo-elemento en CSS permite aplicar estilos a una parte específica de un elemento html, 
+                      como el primer carácter, la primera línea o crear contenido antes o después.
+
+Se escribe con dos puntos :: y ejemplos comunes son:
+
+&::before   -> crea contenido antes del elemento
+&::after    -> crea contenido después del elemento
+&::first-letter  -> selecciona la primera letra
+&::first-line    -> selecciona la primera línea
+&::selection    → el texto que seleccionas con el ratón
+&::placeholder  → el texto gris dentro de inputs o textareas
+&::marker       → el símbolo de listas (<li>) como el punto o número
+&::backdrop     → el fondo oscuro detrás de un <dialog> o fullscreen
+*/
+
+p {  /*Selecciona todos los párrafos*/
+    &::first-letter {  /*Estiliza solo la primera letra del <p>.*/
+
+        font-size: 40px; /*El texto medirá 20 píxeles de alto.*/
+        
+        font-weight: bold;/* Hace que el texto se vea en negrita */
+        
+    }
+
+    &::first-line { /*Estiliza la primera línea visible del texto del <p>*/
+        background: red;
+        font-size: 20px;
+        line-height: 50px;
+        /* es el alto entre las líneas de texto de arriba y abajo.*/
+    }
+}
+
+* {
+    &::selection {   /*Cuando selecciones cualquier texto de la página, el fondo de la selección será rojo y el texto se verá en blanco.*/
+        background: red;
+        color: white
+    }
+}
+
+.caja {
+    background: #f9a03f;
+    height: 150px;
+    width: 150px;
+    
+
+    &::before {
+        content: 'contenido antes de la caja';
+        display: block;
+        background: #000;
+        color: white;
+    }
+            /*Piensa en ::after como una "caja mágica" que solo existe porque tú la defines en CSS. 
+               No está en el HTML, pero se comporta como un elemento real.
+               
+              Lo puedes estilar igual que un div real (tamaño, color, posición, etc.)
+              Pero no puedes ponerle hijos HTML ni meterle etiquetas dentro.*/
+
+        &::after {
+        content: 'contenido despues de la caja';
+        display: block;
+        background: #000;
+        color: white;
+}
+}
+.lista {
+    li{ /* Seleccionas los <li> que están dentro de .lista */
+        &::marker{ /* Solo cambia el símbolo que aparece al principio de los ítems de una lista (el punto, número, guion, etc.).*/
+            content: ' + ';  /*Cambia el símbolo de la lista por un signo más (+) */
+            font-size: 22px;
+            color: rgb(245, 5, 209);
+        }
+    }
+}
+
+input { /* accedemos a input, accedemos al pseudoelemento Placeholder y luego le aplicamos los valores q quermamos */
+    &::placeholder{
+        color: blue;
+        font-weight: bold;
+    }
+}
+
+.boton {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton::before {
+  content: "→";                 /* Flecha decorativa */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.boton:hover::before {
+  left: 5px;
+  opacity: 1;
+}
+
+
+

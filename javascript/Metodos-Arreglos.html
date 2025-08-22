@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metodos y Propiedades para arreglos</title>
+</head>
+
+<body>
+  <script>
+    var familia = ["Ramon", "Mama", "Papa", "Jan"];
+
+    //----- Metodo Lenght (nos permite saber cuantos elementos tiene un arreglo)
+    document.write(familia.length);
+
+    //----- Metodo Join (nos permite juntar todo nuestro arreglo y mostrarlo en cadena de texto)
+    familia.join("+");
+    document.write(familia); //sortiria aixo en pantalla: Ramon+Mama+Papa+Jan
+
+    //----- Metodo Pop y Push (Pop=Nos permite eliminar el ULTIMO elemento de un arreglo, PUSH = agregar el ULTIMO)
+    familia.pop();
+    console.log(familia);
+    //en inspecionar y consola, si vamos poniendo familia.pop() aixi anem eliminan el ultim ELEMENTO
+    //per agregar: familia.push('Aran') console.log(familia);
+
+    //----- Metodo shift y unshift (Shift=Permite eliminar el PRIMER elemento y UNSHIFT poner un elemento ANTES)
+    familia.shift();
+    console.log(familia);
+    //ES LO MATEIX QUE POP Y PUSH PERO A LA INVERSA.
+
+    //----- Metodo concat (Permite juntar 2 arreglos)
+    var familia2 = ["Sami", "Lock"];
+    var todamifamilia = familia.concat(familia2); //lo que fem es juntar FAMILIA y FAMILIA2 y ho guardem en TODAMIFAMILIA
+    consol.log(todamifamilia);
+
+    //----- Metodo Sort y Reverse (permite ordenar alfabeticamente nuestro arreglo, REVERSE= ens permet ordenar-ho a la inversa)
+    familia.sort(); //****SORT SOLO PERMITE ORDENAR CADENAS DE TEXTO****
+    console.log(familia);
+    //aixi ja sortiria ordenat alfabeticament = Jan-Mama-Ramon-Papa
+
+    familia.reverse();
+    console.log(familia);
+    //ordenat a la inversa: Papa-Ramon-Mama-Jan
+  </script>
+</body>
+
+</html>

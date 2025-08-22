@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos y Propiedades para Cadenas de Texto</title>
+</head>
+
+<body>
+
+    <script>
+
+        let nombre = 'Gerard España';
+        let numerocaracteres = nombre.length; /*lo q estem fen es: nombre.length em calcula quants caracters tinc a la meva
+        cadena de texte (els caracters son lletra x lletra incluit els espais) i m'ho guardara a la variable q es diu NUMEROCARACTERES*/
+        console.log(nombre + ' tiene ' + numerocaracteres + ' caracteres ');
+        //"Gerard España tiene 13 caracteres"
+
+        let segundonombre = nombre.substring(7, 13); //la primera posicio (7) seria el espai i el 13 lo q falta per acabar el final de España. I es guarda en segundonombre
+        console.log(segundonombre);
+
+        let segundonombre2 = nombre.substr(7, 6);
+        console.log(segundonombre2); //no se quina diferencia hi ha entre aquest i el substring.
+
+        let nuevonombre = nombre.replace('España', 'Diez');
+        console.log(nuevonombre); //lo q fem es REEMPLAZAR el nom de ESPAÑA i en el seu lloc fiquem el de Diez.
+
+        nombre = nombre.toUpperCase(); // lo q fa es que el nom de Gerard surti en MAYUS
+        console.log(nombre);
+
+        /*per fer menys lines de codis es pot fer mes facil fican directament:
+         console.log(nombre.toUpperCase());
+         console.log(nombre.toLowerCase());  aquesta es per fer-ho tot amb minusculas xd */
+
+        let posicion = nombre.indexOf('a'); //busca desde el principi del texte en quina posicio esta la lletra A (no se xq serveix aixo)
+        let position = nombre.lastIndexOf('a'); //busca desde el final del texte en quina posicio esta la lletra A
+        console.log(posicion);
+
+    </script>
+</body>
+
+</html>

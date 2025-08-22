@@ -1,0 +1,13 @@
+
+                                      /*display: grid - Activa el modo cuadrícula para el contenedor.
+
+                               Se usa solo en el elemento padre para que sus hijos se coloquen automáticamente.
+
+                           Permite colocar a los hijos en filas y columnas como si fuera un tablero flexible. */
+
+.grid { 
+display: grid;
+grid-template-columns: 1fr 1fr 1fr; /* Define cuántas columnas verticales hay y su ancho. Puede ser (px)(auto)(fr). las filas tendrán altura automática, es decir, se ajustan al contenido de cada hijo*/
+grid-template-rows: 1fr 1fr 1fr; /* Establece el número y tamaño de las filas horizontales en la cuadrícula. Cada valor indica la altura de una fila*/
+
+}

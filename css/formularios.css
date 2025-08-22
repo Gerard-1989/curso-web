@@ -1,0 +1,85 @@
+.input {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid yellow;
+    border-radius: 5px;
+
+    &::placeholder {
+        color: blue;
+        opacity: 1; /*Placeholder por defecto tiene 0.5 de opacity*/
+        
+    }
+
+    &:hover {  /*cuando haces clic para entrar en un campo o botón. Sirve para cambiar cómo se ve mientras lo usas.*/
+
+        border: 10px solid deeppink;  /*cuando pasas el mouse x encima cambia a color rosa*/
+    }
+
+    &:focus { /*Cuando haces clic para entrar en un campo o botón.Sirve para cambiar su apariencia mientras lo estás usando.*/
+
+        outline: 10px solid green; /*Es un borde exterior, no desplaza los demas elementos*/
+        border: 10px solid transparent;
+    }
+
+    &:disabled { /*accedemos al input cuando tenga su estado de disabled  (disabled y readonly
+         Lo que comparten es que ambos tienen estilos por defecto del navegador que pueden sobrescribir tus reglas normales. )*/
+        background: grey !important;
+    }
+
+    &:invalid{  /*Se usa para seleccionar un elemento (como un input) cuando su valor no es válido.
+     Por ejemplo, si un input con REQUIRED está vacío, o un email no tiene el formato correcto, entonces se considera inválido y se aplica este estilo.*/
+
+        outline: 2px solid red;
+        border: 2px solid  transparent;
+        color:lime;
+    }
+
+    &:read-only{
+        border: none;
+        color: orange;
+        background: greenyellow;    
+    }
+
+
+
+}
+/*¿Por qué a los <button> a veces hay que ponerles display: inline-block para que el padding funcione bien?
+
+                  Por defecto, los <button> tienen un estilo especial del navegador:
+                   Aunque son inline-block en la mayoría de navegadores modernos,
+                algunos navegadores o estilos por defecto los tratan más como inline o 
+                 tienen comportamientos que limitan cómo se aplica el padding o tamaño.
+
+        Por eso, para estar seguro y tener control total, se recomienda poner explícitamente:
+*/
+
+
+button {
+    display: inline-block;
+    padding: 10px;
+
+    &:disabled{
+        color: red;
+        border: 3px dotted red;
+    }
+
+    &[type="submit"]{  /*Estamos accediendo a los BUTTONS de la pagina que tengan el type de tipo SUBMIT*/ 
+        background: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;  /*cambia el mouse de flechita a la manita*/
+    }
+}
+
+input[type="radio"] { /*Accedemos a los inputs de tipo RADIO*/
+    &:checked+label { /* Cuando el input esté marcado (checked), cambia el estilo del label que está justo después.*/
+        /*
+        checked + label significa:
+              checked — es cuando un input (checkbox o radio) está marcado.
+              El + es un símbolo que dice “el hermano justo después”.
+              label — es el texto (etiqueta) que está justo al lado del input en el código.*/
+        color: blue;
+        font-weight: bold;
+    }
+}

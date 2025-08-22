@@ -1,0 +1,47 @@
+body {
+    font-size: 20px;
+    background: #f2f2f2;
+}
+
+.lista   {
+    list-style: disc;/* 
+    Estás diciendo que quieres que las viñetas de una lista (normalmente una lista <ul>) sean del tipo "disc", es decir, el círculo sólido negro clásico.
+
+                                 Algunas opciones de list-style-type comunes:
+                                         disc → ● (círculo negro)
+
+                                         circle → ○ (círculo vacío)
+
+                                         square → ■ (cuadro negro)
+
+                                         none → sin viñetas
+    
+    li::marker { /*marker solo funciona con <li>. Sirve para modificar la viñeta o número (color, tamaño, etc) No tiene efecto en <ul> ni <ol>.*/
+        color: blue;
+    }
+
+
+
+.lista-2, .lista-2 ul { /*.lista-2 ul - lo hacemos para que tambien aplique a los SUB-ELEMENTOS q tenemos*/
+    background: white;
+    margin: 40px;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0, 0.1);
+    list-style: none;
+    padding: 0px;
+    
+    li{
+        padding: 20px;
+    }
+    
+    li:nth-child(even){  /*even = pares ||  odd = impares*/
+/*como en la linea 20 ya hemos selecionado list2 + lista2 ul, estamos diciendo q todos los elementos LI que sean PARES tengan el BG red*/
+        background: red;
+    }
+}
+
+/* Si queremos que afecte tambien a los UL que tenemos lo hariamos asi:
+
+.lista,  .lista ul{
+    list-style: circle;
+}
+    */

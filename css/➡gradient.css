@@ -1,0 +1,63 @@
+             /* Gradiente CSS
+
+- Cambia el fondo de un color a otro poco a poco, sin cortes.
+- Hace que se vea más bonito con colores que se mezclan suave.
+- Se usa para fondos de pantallas, botones, etc.
+- Ejemplo:
+  background: linear-gradient(to right, rojo, amarillo, verde);
+  Esto pinta un fondo que va de rojo a verde pasando por amarillo.
+
+*/
+
+.caja {
+    width: 500px;
+    height: 500px;
+    background: #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+.gradiente-linear {
+    background: linear-gradient(blue,black); /*es lo basico y empezaria el azul arriba y el negro abajo*/
+
+    /*
+              linear-gradient crea un fondo con varios colores que se mezclan en línea recta.
+
+                           Puedes cambiar la dirección con palabras como:
+                                to right   -> de izquierda a derecha
+                                to left    -> de derecha a izquierda
+                                to bottom  -> de arriba a abajo
+                                to top     -> de abajo a arriba
+                                o con ángulos (ej. 45deg) para diagonales.*/
+}
+
+.gradiente-radial {
+    background: radial-gradient(lime,black);
+    /*
+              radial-gradient crea un fondo donde los colores cambian desde un punto central hacia afuera en círculos.
+              Por defecto es un círculo centrado, pero puedes cambiar la forma, tamaño y posición.
+              Ejemplo: de lime en el centro a negro en los bordes*/
+}
+
+.gradiente-conico {
+    background: conic-gradient(red,orange);
+    /* 
+conic-gradient crea un fondo con colores que giran alrededor del centro en forma circular, como un reloj.*/
+}
+
+.gradiente-imagen {
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,0,1)), url('./imagenes/geranimo-qzgN45hseN0-unsplash.jpg');
+
+    /*
+En esta regla, el fondo tiene dos capas:
+
+1. Un gradiente lineal que va de transparente (arriba) a negro opaco (abajo).
+2. Una imagen debajo del gradiente.
+
+El gradiente está encima de la imagen, oscureciendo poco a poco la parte inferior, 
+lo que crea un efecto de sombra sobre la imagen.
+
+Esto ayuda a que el contenido que pongas encima (como texto) se vea mejor sobre fondos con mucho brillo.
+*/
+
+}

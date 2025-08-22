@@ -1,0 +1,119 @@
+.img { 
+    /*Cuando usas display: flex en un contenedor, el contenedor se convierte en un flex container, y todos los elementos que están
+     directamente dentro de ese contenedor pasan a ser flex items o elementos hijos flexibles.*/
+
+
+    display: flex;
+    height: 700px;
+    justify-content: center; /* Sirve para mover y distribuir los elementos hijos horizontalmente (de izquierda a derecha) dentro del contenedor flex. */
+    align-items: center;     /* Sirve para mover y alinear los elementos hijos verticalmente (de arriba hacia abajo) dentro del contenedor flex. */
+}
+
+img {
+   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+
+
+
+
+.grid {
+  display: grid; /* activa CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* crea 4 columnas iguales */
+  gap: 10px; /* espacio entre filas y columnas */
+  width: 100%; /* ocupa todo el ancho disponible */
+  max-width: 600px; /* no se pasa de 600px de ancho */
+  margin: auto; /* centra horizontalmente */
+}
+
+.grid div {
+  background: lightblue; /* color de fondo de las celdas */
+  padding: 20px; /* espacio interno del contenido */
+  text-align: center; /* centra el texto horizontalmente */
+  font-weight: bold; /* texto en negrita */
+}
+
+
+
+
+
+
+
+
+
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+
+
+  position: relative; 
+/*Esto permite que los elementos hijos con POSITION:ABSOLUTE (como el ::after que usamos para la barra) se posicionen relativamente a este .titulo.*/
+
+  display: inline-block;
+/*Hace que el elemento se comporte como un bloque pero en línea con otros elementos.
+Esto permite que tenga ancho y alto (como un bloque), pero que siga en la misma línea si quieres.
+Además, permite que el width: 100% del pseudoelemento funcione bien.*/
+
+
+  padding-bottom: 8px;
+}
+
+.titulo::after {
+  content: ""; /* Crea el pseudoelemento vacío */
+  display: block;  /* Lo convierte en caja tipo bloque */
+  width: 100%;  /* Ancho igual al elemento padre */
+  height: 4px; /* Alto fijo para ser una barra */
+  background-color: #007bff;
+  position: absolute; /* Colócame con precisión(con bottom y left en este caso) dentro del padre que tenga POSITION:RELATIVE. */
+
+
+  bottom: 0; /*"Pégame a la esquina inferior izquierda del contenedor que tenga POSITION:RELATIVE".*/
+  left: 0; /*"Pégame a la esquina inferior izquierda del contenedor que tenga POSITION:RELATIVE".*/
+
+  
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+.contenedor {
+  position: absolute; /* Como no hay ningún contenedor padre con POSITION:RELATIVE, entonces el navegador toma como referencia el body (la pantalla).
+  Si no hay POSITION:RELATIVE en ningún padre, absolute se mueve respecto a toda la ventana.*/
+
+
+  top: 50%;   /*Pone la esquina superior izquierda en el centro*/
+  left: 50%;  /*Pone la esquina superior izquierda en el centro*/
+/*Cuando un elemento tiene POSITION:ABSOLUTE, esas 4 propiedades (top, left, right y bottom) indican cuánto separarlo del borde del contenedor padre
+ (que debe tener POSITION:RELATIVE o es el BODY si no hay).
+Los valores en % se calculan respecto al tamaño del contenedor padre. (POSITION RELATIVE o BODY si no hay)*/
+
+
+
+
+  transform: translate(-50%, -50%);/*Desplaza el elemento para que su centro coincida con ese punto*/
+/* translate mueve el elemento en el eje horizontal (X) y vertical (Y).
+              El primer valor es el movimiento horizontal.
+              El segundo valor es el movimiento vertical.
+
+                                         Valores negativos:
+              Si el valor es negativo en X (-50%), mueve el elemento hacia la izquierda.
+              Si el valor es negativo en Y (-50%), mueve el elemento hacia arriba.
+
+                                              ¿Por qué?
+              En CSS, el eje horizontal positivo va hacia la derecha, y negativo hacia la izquierda.
+              El eje vertical positivo va hacia abajo, y negativo hacia arriba.
+
+ */
+  background: red;
+  padding: 20px;
+}
+
+
+
+

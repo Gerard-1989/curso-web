@@ -1,0 +1,37 @@
+/* 
+                                                                            grid-auto-flow: 
+
+         Propiedad que indica en qué dirección se colocan automáticamente los elementos dentro de un grid cuando no tienen posición asignada. (row | column | row dense | column dense)
+
+                      row → Coloca las cajas de izquierda a derecha y, cuando ya no caben, baja a la siguiente fila.
+
+                      column → Coloca las cajas de arriba hacia abajo y, cuando ya no caben, pasa a la siguiente columna.
+
+                      dense → Es como jugar al Tetris: intenta rellenar huecos moviendo cajas pequeñas a esos sitios libres. */
+
+
+
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 20px;
+    padding: 20px;
+
+    grid-auto-flow: row dense;                     /*Los elementos se colocan por filas, y el grid intenta rellenar huecos donde pueda, incluso si altera un poco el orden */
+    /* grid-auto-flow: column dense;                 Los elementos se colocan por columnas, y el grid rellena huecos donde puede, aunque cambie un poco el orden*/
+}
+
+.span-2 {
+    grid-column: span 2;
+    /* grid-row: span 2; */
+}
+
+.span-3 {
+    grid-column: span 3;
+    /* grid-row: span 3; */
+}

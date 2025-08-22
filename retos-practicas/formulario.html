@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+VN+Guides&family=REM:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="titulo">Hola, formulario de practica</h1>
+        <p class="mensaje">Mandame un mensaje y te respondere</p>
+
+        <form action="">
+            <label for="nombre"><b>Nombre:</b> <em>(obligatorio)</em></label>
+            <input type="text" class="nombre" name="nombre" placeholder="ej: Gerard" required>
+
+            <label for="correo"><b>Correo</b> <em>(obligatorio)</em></label>
+            <input type="email" class="correo" name="correo" placeholder="correo@correo.com" required>
+
+            <label for="pais"><b>Pais:</b></label>
+            <select name="pais">
+                <option value="Catalunya">Catalunya</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Suiza">Suiza</option>
+            </select>
+
+            <label for="asunto"><b>Asunto:</b></label>
+            <div class="radios">
+                <div class="radio-item">
+                    <input type="radio" name="radio" id="info" value="Solicito info"><label for="info"><b>Solicito
+                            Informacion</b></label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" name="radio" id="contactar" value="Contactar"><label for="contactar"><b>Me
+                            gustaria contactar</b></label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" name="radio" id="otro" value="otro"><label for="otro"><b>Otro</b></label>
+                </div>
+            </div>
+
+            <label for="notas"><b>Notas adicionales:</b></label>
+            <textarea name="notas" placeholder="Mensaje adicional"></textarea>
+
+            <div class="sub">
+                <input type="checkbox" name="suscrito"><label for="suscrito"><b>Suscribirse a los correos
+                        promocionales</b></label>
+            </div>
+
+
+            <input type="submit" value="Enviar">
+
+         
+        </form>
+    </div>
+</body>
+
+</html>

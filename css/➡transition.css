@@ -1,0 +1,37 @@
+
+/*                          TRANSITION: hace que los cambios en los estilos se vean de forma gradual, no de golpe
+                   (Solo se activa cuando hay un cambio en la propiedad indicada.Por ejemplo: cuando usas :hover, :focus, :checked etc...)
+*/
+
+
+
+
+button {
+    background: #000;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 30px 60px;
+    margin: 20px;
+    border-radius: 10px;
+
+
+    /* transition-property: background;  -> Define qué propiedad CSS quieres que tenga transición.
+    transition-duration: 1s;             -> Indica cuánto tiempo dura la transición (la animación del cambio).                
+    transition-timing-function: ease;  -> Controla la velocidad de la transición a lo largo del tiempo.*/
+
+    transition: all 2s ease 3s;  /* ES TREBALLA MILLOR NOMES AIXI X NO PICAR TANT DE CODI "un todo en uno XD"
+
+    all = transition-property
+    2s = transition-duration
+    ease = transition-timing-function
+    Y si vols pots posar un DELAY que serien els 3s
+    */
+    
+
+    &:hover{
+        background: #158215;
+    }
+}
+

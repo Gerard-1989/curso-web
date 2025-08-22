@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>formularios</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+</head>
+
+<body class="container">
+
+  <!--FORM es el contenedor que le sirve al usuario para interectuar (botones,campos de texto etc..)-->
+  <form action="info.php" name="contacto" id="contacto" method="POST / GET">
+
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </di>
+
+    <!--ACTION: es la direccio on volem enviar tota la informacio del usuari-->
+    <!-- METODH: Permite establecer que metodo queremos utilizar para mandar los datos Post o GET -->
+    <input type="text" placeholder="Nombre:" maxlength="10" name="infotext" size="50" required />
+    <!-- INPUT: se usa para crear campos donde el usuario puede escribir o seleccionar datos (como texto, contraseñas, fechas, etc.) -->
+    <!-- TYPE: define el tipo de dato que pide, TEXTO-,PASSWORD,EMAIL etc -->
+    <!--PLACEHOLDER  sirve para mostrar un texto dentro de un campo <input>, Solo es una ayuda visual.-->
+    <!--MAXLENGHT: maxim de lletres que pots introduir-->
+    <!--SIZE: fa el camp de text mes llarg (millor fer-ho amb CSS)-->
+    <!--REQUIRED: SI o SI el usuari te que omplir el camp-->
+    <!--NAME: serveix per rebre els datos, quan tinguem els datos saber de quin INPUT son, en aquest cas del INPUT INFOTEXT.-->
+    <br>
+    <br>
+
+
+    <input type="submit" value="ENVIAR" />
+    <!--SUBMIT: crea un botón que, al pulsarlo, envía el formulario al servidor o al destino que tenga definido el formulario.-->
+    <!--VALUE: fica el nom al boto "enviar"-->
+    <br>
+    <br>
+
+
+    <input type="email" placeholder="email@gmail.com" name="correo" required /><input type="submit"
+      value="Enviar correo">
+    <!--nomes es poden ficar emails en aquest INPUT, si no te el @ no funcionara-->
+    <!--el element required lo q fa es q SI o SI el usuari te q ficar un email-->
+    <br>
+    <br>
+
+
+    <textarea name="missatge" placeholder="mensaje"></textarea>
+    <!--TEXTAREA: tipica caixa de comentaris com la de youtube-->
+    <br>
+    <br>
+
+
+    <label for="pais">Pais:</label>
+    <!--LABEL:  Es una etiqueta que le pone nombre a una caja para escribir o seleccionar. (como "Nombre", "Pais", "Email", etc.).-->
+    <select name="pais" id="pais"> <!--FOR: "PAIS" se conecta con el campo que tiene id="PAIS".-->
+      <option value="catalunya">catalunya</option>
+      <option value="españita">españita</option>
+      <option value="andorra">andorra</option>
+    </select>
+    <!--l'element SELECT: tipic desplegable per escollir pais etc..-->
+    <!--la etiqueta option son les diferents opcions que vols ficar (en aquest cas paisos)-->
+    <!--VALUE es la informacio que s'envia a ·form ACTION· -->
+    <!--LABEL: relaciona els inputs o selects (sempre que hi hagi ID, i sigui el mateix for="" i el ID de select)-->
+    <br>
+    <br>
+
+
+    <input type="radio" name="genero" value="hombre" id="hombre" /><label for="hombre">Hombre</label>
+    <input type="radio" name="genero" value="mujer" id="mujer" /><label for="mujer">mujer</label>
+    <!-- NAME: Se utiliza para relacionarlo con la informacion que vas a enviar -->
+    <!-- ID: Se utiliza para relacionarlo con CSS,JS -->
+    <!-- RADIO: crea un botón para elegir una opción. -->
+    <!-- NAME: Sin esta etiqueta se podrian selecionar los 2 botones a la vez, con name hace que solo puedas selecionar uno.-->
+    <!-- VALUE: esto es lo que se enviará si eliges esta opción. -->
+    <!--  El id="hombre" y el <label for="hombre"> están conectados.Esto hace que si clicas en la palabra Hombre, se active el botón de elegir. -->
+    <input type="checkbox" name="terminos" id="terminos" /><label for="terminos">terminos y condiciones</label>
+    <!--tipica casilla de terminos y condiciones del usuari-->
+    <br>
+    <br>
+
+
+    <input type="password" name="contraseña" id="contraseña" placeholder="contraseña" maxlength="15" />
+    <!--amb el type PASSWORD no es veu lo q escrius-->
+    <br>
+    <br>
+
+
+    <input type="color" />
+    <!--amb el type COLOR pots escollir una taula de colors-->
+    <!--caniuse.com aquesta web es pot veure quins elements soporten els navegadors (es millor utilitzar un type"TEXT" i ficar els colors amb decimals)-->
+    <br>
+    <br>
+
+
+    <input type="number" min="10" max="250" name="rango" /><input type="submit" value="Enviar numero">
+    <!--comprobar a caiuse.com quines webs soporten aquest TYPE NUMBER-->
+    <!--sempre incloure el valor NAME per rebre els valors-->
+    <br>
+    <br>
+
+    <input type="file" name="arcvivos" id="arcvivos" accept=".jpg,.png" multiple>
+    <!-- FILE: Desplegable per pujar archius (Seleccionar archivo) -->
+    <!-- ACCEPT: dius quin tipus de archius pot pujar l'usuari -->
+    <!-- MULTIPLE: pot pujar cualsevol tipus d'archiu -->
+
+    <br>
+    <br>
+
+
+    <label for="volumen">Volumen</label>
+    <input type="range" id="volumen" min="0" max="1000" />
+    <!--barra numeral-->
+    <br>
+    <br>
+
+    <input type="date" name="" id="" value="1989-10-19" min="1980-01-01" max="2000-12-31">
+    <!-- en VALUE: estic dien q escomençi en 1989-10-19  -->
+    <!-- tambe es pot fer q l'usuari nomes tingui uns anys per selecionar amb el MIN y MAX -->
+    <br>
+    <br>
+
+    <input type="datetime-local" name="" id="">
+    <!-- Pots selecionar Dia-mes-any i tambe l'hora -->
+    <br>
+    <br>
+
+    <input type="time" name="" id="">
+    <!-- nomes seleciones l'hora -->
+    <br>
+    <br>
+
+    <input type="hidden" name="valor-oculto" value="valor-oculto">
+    <!-- es util per quan vols enviar informacio al servidor, no vols q l'usuari pugui interactuar -->
+     <!-- no l'entnec molt be, en el sentit de quan i perque utilitzar-ho xddd -->
+
+    <br>
+    <br>
+
+    <input type="image" src="imatges/montañas.jpg" alt="Foto de montañas" width="100">
+    <!-- aquesta imatge ja es un input, podriem donarli click i ejectutar una funcio -->
+
+    <br>
+    <br>
+
+    <input type="url" placeholder="sitio web" name="url" />
+    <!--Es un tipo de <input> para que el usuario escriba una dirección web -->
+    <!-- Aparece una caja para escribir, Si escribes algo que no parece una web, el formulario puede dar error al enviarlo -->
+
+    <br>
+    <br>
+
+    <button type="submit">Enviar</button>
+    <input type="submit" value="Enviar">
+    <!-- son 2 formes de fer un BOTON x enviar, les 2 son correctes :) -->
+
+    <br>
+    <br>
+
+    <input type="reset" value="reiniciar formulario">
+    <!-- reinicia tot el formulari a DEFAULT (nomes funciona si esta dintre de la etiqueta FORM) -->
+
+    <br>
+    <br>
+
+    <!--https://developer.mozilla.org/es/docs/Web/HTML/Element/input-->
+    <!--aqui surten tots els inputs que hi han per utilitzar-->
+  </form>
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
+    </tr>
+  </tbody>
+</table>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

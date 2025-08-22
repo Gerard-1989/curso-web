@@ -1,0 +1,35 @@
+.caja {
+    margin: 100px 0px;
+    width: 400px;
+    background: #ccc;
+    transition: all ease 0.5s; /* Aplica una transición suave de todos los cambios
+                                 (transformaciones, colores, tamaños, etc.)
+        con una duración de 0.5 segundos y una curva de velocidad "ease" (aceleración y desaceleración suave). */
+
+    img {
+        width: 100%;
+        vertical-align: top; /*Elimina el espacio extra bajo la imagen -  Mejora el alineado si hay más contenido inline al lado*/
+        border-radius: 15px;        
+    }
+}
+
+.checkbox:checked + .caja{ /* Accedemos al input con clase "checkbox".  
+   Cuando esté seleccionado (checked), queremos aplicar estilos al hermano inmediato con clase ".caja". 
+
+   
+    ⚠️⚠️⚠️Importante: el elemento ".caja" tiene que estar inmediatamente después del checkbox, sin nada de por medio.⚠️⚠️⚠️ */ 
+
+    /*transform solo dice: quiero transformar este elemento*/
+    transform: rotate(90deg) scale(1.2)
+}
+        /* transform sirve para modificar la forma o posición visual de un elemento sin afectar su espacio en el documento.
+
+                            🔁 Mover → translate(x, y)
+
+                            📏 Escalar (agrandar/encoger) → scale(n)
+
+                            🔄 Rotar → rotate(45deg)
+
+                            🎯 Inclinar (sesgar) → skew(x, y)
+
+                            🎛️ Combinar transformaciones → transform: translate(...) scale(...) rotate(...) */

@@ -1,0 +1,1 @@
+alert('Hola, soc JAVASCRIPT desde un archiu extern')

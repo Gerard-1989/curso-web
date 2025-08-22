@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing - Timers, Timeout e Interval</title>
+</head>
+
+<body>
+    <button id="btn">Cuenta atras</button>
+    <button id="btn-parar">Parar</button>
+    <script>
+        
+                                  //--------- setTimeout:
+        function saludo() {
+            alert('hola hola');
+        }
+
+                                  // --------- Opcio 1------
+
+        setTimeout(saludo, 4000);
+        //---> setTimout recibe 2 valores: 1-que funcion queremos ejecutar? saludo. 2- tiempo en milisegundos, 3000 = 3seg.
+
+
+                                  // ---------- Opcio 2------
+
+        let tiempo = setTimeout(saludo, 4000) // creem una variable amb el nom de tiempo y al setTimeout dintre dels parentesis fiquem el nom de la variable q volem "parar"
+        clearTimeout(tiempo);  //amb clearTimeout no es mostrara el alert de 'hola hola' ja que ho estem "netejan" amb clearTimeout
+
+                                   // --------- Opcio 3------
+
+        document.getElementById('btn').addEventListener('click', function () { //estem accedin al BUTTON atraves del ID amb document etc, li agregem un EventListener perque l'usuari quan fasi click executi la funcio de setTimeout, y la funcio setTimout mostri la alerta de la funcio saludo despres de 4segons.
+            setTimeout(saludo, 4000);
+        });
+             
+
+                                   // -------- setInterval: 
+          
+        function saludar(){
+            alert('holaquetal');
+        }
+        setInterval(saludar, 3000); //aixi s'executaria de forma infinita.
+
+        let intervalo = setInterval(saludar, 3000); //cada 3seg s'executara la alerta de 'holaqtal' despres al presionar el boton PARAR s'executara las lineas 45 y 46 i ja es pararia el cicle infinit.
+        document.getElementById('btn-parar').addEventListener('click', function(){ 
+            clearInterval(intervalo);
+        });
+        
+
+
+    </script>
+</body>
+
+</html>

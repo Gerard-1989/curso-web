@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.caja {
+    background: blue;
+    color: white;
+    padding: 40px;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+
+.contenedor {
+    width: 90%;    /* mide siempre el 90% de tu contenedor padre (en este caso body) si el body mide mas de 1000px quedate en 1000px. Si mide 700px quedate al 90% de esos 700px */
+    max-width: 1000px;
+    margin: 40px auto;
+    border: 5px solid black;
+    /* AUTO en margin: margen izquierdo y derecho se calculan automáticamente para que el elemento quede centrado horizontalmente dentro de su contenedor.
+    Esto solo funciona cuando el elemento es de bloque y tiene un ancho fijo o limitado (width o max-width).
+    Vamos, que el auto es como decir: “haz tú las cuentas para dejarlo igual de separado a izquierda y derecha”. */
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+
+.shrink {
+    .caja {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 400px; /* Porque las cajas no miden los ¿¿¿400px???*/
+
+
+        /* 
+                flex-basis: 400px → tamaño ideal de cada caja.
+
+               Pero si no hay suficiente espacio en el contenedor, las cajas se encogen 
+               porque flex-shrink está activado (flex-shrink: 1).
+
+               Por eso las cajas terminan más pequeñas que 400px para que quepan todas 
+               en la fila dentro del contenedor.*/
+
+
+
+        /* flex: 1 1 400px; Flex sustituye a los 3 de arriba para hacer solo 1 linea (jo prefereixo les 3 lines xd) */
+    }
+
+    .especial {
+        flex-shrink: 5;
+         /* encogete 5 veces mas rapido que la caja 1 y caja 3 */
+    }
+}
+/*                 flex-shrink → hace que las cajas se encojan si no caben.
+                        - Con flex-wrap: wrap → solo se encogen las que están en la misma fila.
+                        - Con flex-wrap: nowrap → se encogen todas para caber en una sola fila.
+                        - Con flex-shrink: 0 → nunca se encogen. */
+

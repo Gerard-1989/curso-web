@@ -1,0 +1,27 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.caja {
+    background: #2da776;
+    font-size: 32px;
+    height: 100px;
+    padding: 20px;
+
+    &.calc {
+        width: calc(50% - 200px);
+        /* Mida lo que mida el contenedor, el ancho será siempre el 50% de su tamaño menos 200px. */
+    }
+
+    &.min {
+        width: min(500px, 50%);
+        /* Siempre escoge el valor más PEQUEÑO. Se adapta al contenedor y nunca será mayor que 500px.*/
+    }
+
+    &.max {
+        width: max(500px, 50%);
+        /* Siempre escoge el valor más GRANDE. Se adapta al contenedor, pero nunca será más pequeño que 500px.*/
+    }
+}

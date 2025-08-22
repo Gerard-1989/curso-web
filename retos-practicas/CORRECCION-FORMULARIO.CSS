@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box; /*Explicara en un capitol especific nomes per aquesta propietat, ara mateix no se q fa*/
+}
+
+body {
+    background: #C6FFDD;  
+    background: -webkit-linear-gradient(to top, #f7797d, #FBD786, #C6FFDD);  
+    background: linear-gradient(to top, #f7797d, #FBD786, #C6FFDD); 
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    width: 700px;
+    margin: 50px auto;
+    /*🎯50px adalt i abaix🎯
+                                                 🎯 ¿Qué hace auto en este contexto?🎯
+                                El valor auto en los márgenes horizontales (left y right) le dice al navegador:
+                            “Distribuye el espacio horizontal que sobra de forma igual a la izquierda y a la derecha”.
+    */
+
+    .mensaje { /*dentro del main accedemos al div q tiene la clase mensaje*/
+        margin-bottom: 40px;
+
+                h1 {  /*dentro del DIV con class mensaje accedemos al h1.*/
+                    font-size: 34px;
+                    margin-bottom: 10px;
+                }
+    }
+
+    .formulario { /*dentro de main, accedemos al form q tiene la class de formulario*/
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(99,99,99, 0.2) 0px 2px 8px 0px;   /*0px(drcha) 2px(abajo) 8px(tamaño) 0px(difuminado)*/
+
+        .grupo { /*cada DIV tiene la misma class de grupo, entonces accedemos a todos*/
+            margin-bottom: 20px;
+        }
+
+        input, textarea { /*Dentro de main, accedemos al formulario (.formulario) y dentro de él a los input y al textarea.*/
+            width: 100%;    /*ocupa el 100% del nostra CONTENEDOR .formulario no respetan el padding de 20px.  TREURE LA LINEA 1 PER VEURE AIXO*/
+            padding: 10px;
+            border: 1px solid #e1d2ff;
+            border-radius: 3px;
+
+            &:hover{
+                border: 1px solid transparent; /*le pone transparent para luego poner un outline (borde exterior)*/
+                outline: 2px solid #be9dff; /*se pone el outline xq no afecta a los elemenots, no los desplaza*/
+            }
+
+            &:focus{
+                outline: 2px solid #6320ee;
+            }
+        }
+
+        label {   /*dentro del formulario accedemos a las etiquetas label*/
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;  /*se usa para definir el grosor de la fuente del texto. por defecto es 400 (normal)*/
+            font-size: 14px;
+
+            .leyenda { /*dentro del formulario accedemos a las etiquetas label y dentro a la class .leyenda*/
+                font-size: 12px;
+                font-style: italic;
+                color: #8d8d8d;
+                font-weight: normal;
+            }
+
+            
+        }
+            .radio {   
+                display: inline-block;
+                background: #f3edfd;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 10px;
+                
+                input { 
+                    width: auto;     /*no entenc (tmp explica xq aplican aixo ho treu) xq aplican AUTO es posa en el lloc correcte el radio*/
+
+                    &:focus { /*Aplica estilos cuando un elemento está seleccionado y listo para recibir interacción*/
+                        outline: none; /*No muestres ese contorno visual aunque el elemento esté enfocado.*/
+                    }
+
+                    &:checked+span { /*Cuando el Input este marcado queremos acceder a su elemento hermano SPAN y le queremos dar estilos*/
+                        color: #6320ee;
+                    }
+                }
+                
+                &:hover { /* Cuando pasas el ratón por encima del contenedor .radio, accede al input que está dentro y aplica outline: none */
+
+                    background: #e5d9fc; /* Cambia el color de fondo del contenedor .radio cuando pasas el ratón por encima */
+
+                    input {
+                        outline: none;
+                    }
+                }
+            }
+
+            textarea {
+                height: 200px;
+                min-height: 200px; /* Establece la altura mínima del textarea. No podrá hacerse más pequeño que 200px aunque el usuario intente redimensionarlo. */
+                max-height: 300px; /* Establece la altura máxima. El textarea no podrá crecer más allá de 300px aunque tenga mucho contenido. */
+                resize: vertical; /* Permite que el usuario cambie la altura del textarea arrastrando, pero no el ancho. */
+            }
+
+            button[type='submit'] {
+                    display: inline-block;
+                    background: #6320ee;
+                    border: none;
+                    padding: 10px 35px;
+                    color: white;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background: #7c41f1;
+                    }
+            }
+
+            [data-invalid] {   /* Selecciona cualquier elemento que tenga el atributo 'data-invalid', usado para marcar un campo con error */
+
+                label {
+                    color: red; /* Cambia el color del texto del label a rojo para indicar visualmente que hay un error asociado */ 
+                }
+
+                input {
+
+                    outline: 2px solid red; /* Añade un borde externo rojo para destacar que el input tiene un error */
+                    color: red; /* Cambia el color del texto dentro del input a rojo, reforzando la señal visual de error */
+                }
+            }
+    } 
+}

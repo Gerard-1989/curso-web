@@ -1,0 +1,86 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box; /*hace que todo (contenido + padding + borde) quepa dentro del tamaño que dices, para que no se te descontrole el tamaño.*/
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            min-height: 100vh; /*hace que el <body> sea tan alto como toda la ventana, facilitando centrar cosas verticalmente en cualquier tamaño de pantalla.*/
+            display: flex; /*Convierte el <body> en un contenedor flexible.*/
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px;
+
+            /*
+            Le dije que todo lo que haya dentro (el formulario) se centre horizontalmente y verticalmente con:
+                                justify-content: center; (centra de izquierda a derecha)
+                                align-items: center; (centra de arriba a abajo)*/
+
+
+        }
+
+        form {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #4b3bff;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+        }
+
+        label {
+            display: block; /*<label> tiene display: inline; por defecto, es decir, ocupa solo el ancho del texto y está en línea con otros elementos.*/
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="password"]:focus {
+            border-color: #4b3bff;
+            outline: none; /*borde exterior alrededor de un elemento que no ocupa espacio. Se usa para resaltar, especialmente en FOCUS. Puede tener color, grosor y estilo.*/
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #4b3bff;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 700; /*700 o poner BOLD es lo mismo */
+            font-size: 17px;
+            cursor: pointer;
+            transition: background 0.3s ease; /*¿Qué hace el ease en transition? Hace que la animación empiece lenta, luego se acelere, y termine lenta otra vez.*/
+            letter-spacing: 1px; /* añade un espacio extra de 1 píxel entre cada letra del texto.*/
+        }
+
+        button:hover {
+            background: #362fcc;
+        }

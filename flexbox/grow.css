@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.caja {
+    background: blue;
+    color: white;
+    padding: 40px;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+
+.contenedor {
+    display: flex;
+    width: 90%;    /* mide siempre el 90% de tu contenedor padre (en este caso body) si el body mide mas de 1000px quedate en 1000px. Si mide 700px quedate al 90% de esos 700px */
+    max-width: 1000px;
+    margin: 40px auto;
+    border: 5px solid black;
+    /* AUTO en margin: margen izquierdo y derecho se calculan automáticamente para que el elemento quede centrado horizontalmente dentro de su contenedor.
+    Esto solo funciona cuando el elemento es de bloque y tiene un ancho fijo o limitado (width o max-width).
+    Vamos, que el auto es como decir: “haz tú las cuentas para dejarlo igual de separado a izquierda y derecha”. */
+    padding: 40px;
+    gap: 40px;
+}
+
+
+
+
+
+.basis {
+
+    flex-direction: row;
+
+    .caja {  /* selecciona elementos .caja que estén dentro de .basis */
+
+        flex-basis: 150px ;
+        
+        /*Es el tamaño que tendrá el elemento al empezar, en la dirección en la que se acomodan las cajas.(que depende de flex-direction).
+             Si flex-direction: row (fila horizontal), entonces flex-basis controla el ancho del elemento.
+             Si flex-direction: column (columna vertical), entonces flex-basis controla la altura del elemento.. */
+    }
+
+    .especial {
+
+        flex-basis: 300px;
+    }
+}
+
+
+
+
+
+/* GROW es una propiedad que se usa en los hijos dentro de un contenedor con display: flex.
+
+Define cómo crecerá proporcionalmente un elemento para ocupar el espacio vacio dentro del contenedor flexible. */
+
+
+.grow {
+    .caja {
+        flex-grow: 1;
+    }
+    .especial {
+        flex-grow: 15;
+    }
+}

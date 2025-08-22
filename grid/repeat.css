@@ -1,0 +1,36 @@
+
+ 
+ 
+ 
+ 
+ 
+    /*🟪🟪🟪 repeat() es una función que te ayuda a escribir menos cuando quieres repetir columnas o filas con el mismo tamaño. 🟪🟪🟪*/  
+
+.grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+
+
+
+       
+  /*                                               🟩🟩      Tambien se puede hacer asi  :🟩🟩                               */
+
+
+
+    
+                                                 /* grid-template-columns: auto repeat(4, 1fr) 200px;   */
+
+
+/*                                                                🟨auto (primero):🟨
+                                  La primera columna tiene ancho automático, se ajusta al contenido que tenga dentro.
+
+                                                                 🟨repeat(4, 1fr):🟨
+                  Las siguientes 4 columnas tienen cada una un ancho proporcional igual, repartiendo el espacio disponible en partes iguales.
+     
+                                                                 🟨200px (último):🟨
+                                               La última columna tiene un ancho fijo de 200 píxeles.*/
+

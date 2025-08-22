@@ -1,0 +1,18 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 300px);
+
+    justify-items: end; /* Controla cómo se alinean todos los elementos dentro de sus celdas, en sentido horizontal */
+    align-items: start; /* Controla cómo se alinean todos los elementos dentro de sus celdas, en sentido vertical */
+}
+
+.especial {
+
+    justify-self: start; /* Esta propiedad controla cómo se alinea un elemento dentro de su celda en el eje horizontal */
+    align-self: start; /* Esta propiedad controla cómo se alinea un elemento dentro de su celda en el eje vertical (de arriba a abajo). */
+}
+
+
+/*                   El control de la alineación es muy importante para crear diseños ordenados, estéticos y funcionales,
+     porque permite que los contenidos se ubiquen de forma precisa dentro de su espacio, mejorando la apariencia y la experiencia de usuario.*/

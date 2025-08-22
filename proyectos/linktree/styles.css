@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(./../img/pajaro.jpg); 
+    background-size: cover; /*  Hace que la imagen de fondo llene todo el elemento, ajustando su tamaño y recortando lo que sobra si es necesario */
+    background-position: center;/* Centra la imagen de fondo horizontal y verticalmente dentro del elemento. */
+    
+
+    &::after { /*Piensa en ::after como una "caja mágica" que solo existe porque tú la defines en CSS. 
+               No está en el HTML, pero se comporta como un elemento real.*/
+               
+        content: ""; /* Content es obligatorio para que ::after funcione.*/
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255, 0.5);
+        position: absolute;               /*Si un elemento con position: absolute no encuentra ningún contenedor padre 
+                                       con position: relative, absolute, fixed o sticky, se posicionará respecto al body*/
+
+                                       
+        top: 0px; /*desde el borde superior del contenedor: 0 píxeles = pegado arriba.*/
+        left: 0px;  /*desde el borde izquierdo: 0 píxeles = pegado a la izquierda.*/
+
+        backdrop-filter: blur(50px);/*Es como si tuvieras un vidrio empañado: El contenido que está detrás se sigue viendo, pero borroso.
+
+            El pseudo-elemento debe tener fondo translúcido (como rgba(0, 0, 0, 0.3) o background: transparent) 
+           Para que funcione debe estar encima de algo visible (como una imagen, un video, un fondo...).*/
+
+        z-index: 0; /* Si leemos el codigo hasta esta linea 33 todavia no se mostraria el contenido q hemos creado antes */        
+    }
+
+}
+.contenedor {
+    position: relative; /* Hace que el ::after se coloque dentro de este contenedor */
+    z-index: 1;   /*Para que z-index funcione en un elemento, este debe tener un position q no sea el q tiene por defecto */
+/* background: #ccc; Cuando ya hemos creado todo podemos borrar esta linea. */
+    width: 90%; /* No tiene height, pero coge altura del contenido que hay dentro (imagen, textos, etc.). */
+    max-width: 700px; /* el ancho maximo que tendras sera 700px */
+    margin: auto; /* Si el elemento tiene un ancho fijo o porcentaje, poner margin: auto lo centra en medio del contenedor */
+    padding: 40px 0px; 
+
+    .bio {
+        text-align: center; /* Centra el texto incluyendo la imagen*/
+        margin-bottom: 40px;
+
+        .foto {
+            width: 150px;
+            height: auto;
+            aspect-ratio: 1/1;    /* Hace que el alto sea igual que el ancho (cuadrado) */
+            object-fit: cover;    /* Recorta la imagen para que no se deforme y llene el cuadro */
+            border-radius: 100px; /* con los 2 valores de arriba ahora es 100% redonda mi carita */ 
+            margin-bottom: 20px; 
+            /*  no me enterao de nah hulio*/
+        }
+        
+        .nombre {
+            margin-bottom: 5px;
+            font-size: 32px;
+        }
+
+        .descripcion{
+            font-size: 18px;
+        }
+    }
+
+    .links {
+
+        .link {
+
+            color: black;
+            border: 3px solid black;
+            border-radius: 10px;
+            text-align: center;
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none; /* Quita subrayados, tachados, etc. */
+            text-transform: uppercase;  /* Convierte todo el texto a MAYÚSCULAS */
+            padding: 20px;
+            font-weight: 700;
+            transition: 0.2s ease all; /* q todos los enlaces cuando pases el mouse tarde 0.2seg y lo haga suave (ease)*/
+            box-shadow: 1px 1px 0px 0px black, 2px 2px 0px 0px black, 3px 3px 0px 0px black, 4px 4px 0px 0px black, 5px 5px 0px 0px black;
+            /* Cada sombra está un poco más desplazada que la anterior → da sensación de profundidad o volumen */
+
+            transform: translate(-5px, -5px); /* Mueve el enlace 5px hacia arriba y 5px hacia la izquierda. */
+
+            &:hover {
+                color: white;
+                box-shadow: 0px 0px 0px 0px; /* Elimina todas las sombras → el enlace parece hundirse o aplastarse al pasar el ratón. */
+                transform: translate(-0px, -0px); /* Vuelve el enlace a su posición original*/
+            }
+
+            &.web:hover {
+                background: #ccc;
+              
+            }
+            &.youtube:hover {
+                background: #FF0000;
+                
+            }
+            &.facebook:hover {
+                background:  #1877F2;
+                
+            }
+            &.x:hover {
+                background: #000;
+                
+            }
+            &.instagram:hover {
+                background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                
+            }
+        }
+    }
+}

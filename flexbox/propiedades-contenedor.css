@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.caja {
+    background: blue;
+    color: white;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+
+.contenedor {
+    display: flex;
+    width: 90%;  /* mide siempre el 90% de tu contenedor padre (en este caso body) si el body mide mas de 1000px quedate en 1000px. Si mide 700px quedate al 90% de esos 700px */
+    max-width: 1000px;
+    border: 5px solid black;
+    margin: 40px auto;
+
+    /* AUTO en margin: margen izquierdo y derecho se calculan automáticamente para que el elemento quede centrado horizontalmente dentro de su contenedor.
+
+    Esto solo funciona cuando el elemento es de bloque y tiene un ancho fijo o limitado (width o max-width).
+
+    Vamos, que el auto es como decir: “haz tú las cuentas para dejarlo igual de separado a izquierda y derecha”. */
+
+    padding: 40px;
+    gap: 40px;
+    flex-direction: row;
+    /*Valores de flex-direction:
+                 row (valor por defecto)
+                 Los elementos se colocan en una fila, de izquierda a derecha.
+
+                 row-reverse
+                 Los elementos se colocan en una fila, pero en orden invertido, de derecha a izquierda.
+
+                 column
+                 Los elementos se colocan en una columna, de arriba hacia abajo.
+
+                column-reverse
+                Los elementos se colocan en una columna, pero en orden invertido, de abajo hacia arriba.*/
+    
+        flex-wrap: nowrap;
+
+        /*Valores de flex-wrap:
+                       nowrap (valor por defecto)
+                       Los elementos se quedan en una sola línea, aunque se reduzcan mucho.
+
+                       wrap
+                       Los elementos que no quepan pasan a una nueva línea (fila o columna según el flex-direction).
+
+                       wrap-reverse
+                       Igual que wrap, pero la nueva línea se coloca en el lado contrario (por ejemplo, arriba si es horizontal o izquierda si es vertical).*/
+    
+    justify-content: space-between;
+    
+    /* Controla cómo se distribuyen los elementos (depende de flex-direction).
+              flex-start:  [A][B][C]                   
+              flex-end:                        [A][B][C]
+              center:                [A][B][C]
+              space-between:  [A]          [B]          [C]   Pone el primer elemento al inicio, el último al final, y reparte el espacio restante solo entre los huecos del medio.
+              space-around:    [A]     [B]     [C]
+              space-evenly:   [A]    [B]    [C]      Reparte espacio igual entre todos los huecos, incluyendo bordes y entre elementos.    */
+    height: 90vh;
+    align-items: start;
+
+     /* align-items: Nos permite cambiar el alineado de todos los elementos dentro del contenedor.  (se puede combinar con justify-content)
+
+            stretch (por defecto): los elementos se estiran para llenar el contenedor en el eje transversal.
+            start: se alinean al inicio del eje transversal.
+            end: se alinean al final del eje transversal.
+            center: se centran en el eje transversal.
+            baseline: se alinean según la línea base del texto.*/
+
+    align-content: start;
+
+    /*  align-content: Nos permite cambiar el alineado de los elementos cuando estos ocupan MULTIPLES lineas. Por ejemplo cuando tienen flex-wrap: wrap;
+
+    stretch — las líneas se estiran para llenar el espacio disponible (por defecto)
+    start — las líneas se juntan al inicio (arriba o izquierda)
+    end — las líneas se juntan al final (abajo o derecha)
+    center — las líneas se centran
+    space-between — las líneas se distribuyen con espacio entre ellas
+    space-around — las líneas se distribuyen con espacio alrededor 
+
+    🔔🔔align-items mueve los elementos en una sola línea🔔🔔
+    🔔🔔align-content: mueve todas las líneas cuando hay varias🔔🔔*/
+
+
+}

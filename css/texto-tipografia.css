@@ -1,0 +1,77 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: 'Times New Roman', Arial;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    /* FONT-WEIGHT: Es una propiedad de CSS que controla el grosor (peso) de las letras en un texto, Cuanto mayor es el valor, más gruesas se ven las letras.*/
+
+    text-align: justify;
+    /*  text-align: justify; sirve para que el texto se alinee tanto a la izquierda como a la derecha, dejando los dos márgenes rectos y uniformes */
+
+    text-decoration: underline red 5px dotted;
+    /*  es una propiedad CSS que se usa para añadir decoraciones al texto.
+
+    Valores más comunes:
+          underline → subraya el texto.
+          line-through → pone una línea que cruza el texto (tachado).
+          overline → pone una línea encima del texto.
+           none → quita cualquier decoración (sin líneas).*/
+}
+
+p {
+    text-transform: uppercase;
+    /* se usa para cambiar la forma (mayúsculas/minúsculas) del texto sin modificar el texto original.
+
+
+     Valores más comunes:
+            none → el texto se muestra tal cual, sin cambios.
+            uppercase → convierte todo el texto en mayúsculas.
+            lowercase → convierte todo el texto en minúsculas.
+            capitalize → convierte la primera letra de cada palabra en mayúscula. */
+
+
+
+
+    color: #b14bc3;
+
+
+
+    line-height: 30px;
+    /*  controla la altura de cada línea de texto, es decir, el espacio vertical entre las líneas dentro de un párrafo o bloque.
+
+                   Si pones un valor pequeño, las líneas estarán muy juntas.
+                   Si pones un valor más grande, habrá más espacio entre las líneas, haciendo el texto más “aireado” y fácil de leer. */
+
+
+
+    letter-spacing: 2px;
+    /* es una propiedad CSS que controla el espacio horizontal entre las letras de un texto.
+                        Si pones un valor positivo, las letras se separan más.
+                        Si pones un valor negativo, las letras se acercan más.*/
+
+
+
+    word-spacing: 10px;
+    /* es una propiedad CSS que controla el espacio horizontal entre las palabras (no entre letras, eso es letter-spacing).
+
+                   Si pones un valor positivo, aumenta el espacio entre palabras.
+                   Si pones un valor negativo, disminuye el espacio entre palabras (las palabras quedan más pegadas). */
+
+
+
+    text-shadow: 5px 6px 7px rgba(0, 0, 0, 0.9);
+    /* Sirve para añadir sombra al texto, creando un efecto visual que puede darle profundidad o estilo.
+                 Desplazamiento X: 5px
+                 La sombra se mueve 5 píxeles hacia la derecha respecto al texto original.
+
+                 Desplazamiento Y: 6px
+                  La sombra se mueve 5 píxeles hacia abajo respecto al texto original.
+
+                 Difuminado: 7px
+                 La sombra tiene un desenfoque de 5 píxeles, por lo que no es una sombra con bordes duros, sino suave y difusa.
+     */
+}

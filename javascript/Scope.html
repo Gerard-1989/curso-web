@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body>
+    <script>
+        /*Nuestras variables pueden ser de 2 tipos: Global y Local
+
+Variable Local: son aquellas q han sido creadas dentro de una funcion (una funcion dentro de otra)
+y solo pueden hacer dentro de ellas, como este ej. fuera de esta funcion no funcionaria.*/
+
+        function saludo() {
+            var texto = 'Hola Mundo';
+            console.log(texto);
+        }
+
+        saludo();
+
+        //Variables local con funciones anidadas:
+
+        /*el SCOPE funciona por niveles, si no encuentra una variable en el mismo nivel
+        subira de nivel hacia fuera y buscara. Si no encuentra subira otro nivel y
+        asi sucesivamente.
+        
+        Si tenemos una funciona anidad (una funcion dentro de otra) podemos buscar variables
+        desde dentro hacia fuera, pero desde una funcion NO PODEMOS buscar variables
+        hacia dentro de otra funcion.*/
+
+        function saludo() {
+            var texto = 'Hola Mundo'
+
+            function mensaje() {
+                console.log(texto);
+            }
+
+            mensaje();
+        }
+
+        saludo();
+
+        //Todas las variables que esten dentro de una funcion estan protegidas, para q nadie de afuera de la funcion pueda acceder a ellas.
+
+
+        //Variables Globales:Pueden ser accedidas desde cualquier parte del codigo, incluyendo cualquier funcion.
+
+        var texto = 'Hola World'
+        function saludo() {
+            console.log(texto);
+
+            texto = 'Hola Mundillo';
+            console.log(texto);
+
+        }
+        saludo();
+
+
+//----------------IMPORTANTE:------------
+/*Si una variable se declara fuera de una funcion es global.
+Pero las variables dentro de una funcion pueden ser globales tambien.
+
+Si dentro de la funcion declaramos una variable mediante la palabra "var" sera local.
+pero si no le ponemos "var" sera global.*/
+        funcion saludo(){
+            mensaje = 'Hola Gerard';
+        }
+        saludo();
+        console.log(mensaje);
+
+        //----------COMO PROTEGER NUESTRAS VARIABLES DE CODIGO DE TECEROS-----------
+        (funcion(){
+            var mensaje = 'Hola que tal'
+        } ())
+
+        console.log(mensaje); /*Como estamos fuera de la variable no podemos acceder, nuestro codigo tendria q
+        estar dentro de nuestra variable, desde aqui sera acceder desde terceros*/
+    </script>
+</body>
+
+</html>

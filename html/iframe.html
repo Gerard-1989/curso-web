@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+</head>
+
+<body>
+    <!--iframe permet agregar una pag web dintre de una altre, incrustar una dintre de l'altre-->
+    <!--Mostrar contenido externo sin salir de tu web (por ejemplo, un vídeo de YouTube, un mapa de Google Maps, o una página web completa).-->
+
+    <iframe src="https://www.premierpadel.com" width="500" height="500" title="web premierpadel"
+        frameborder="0"></iframe>
+    <!-- TITLE: fa q surti una leyenda sota el cursor quan ho pasas x sobre-->
+    <!-- frameborder: treu el borde -->
+
+    <p>Lorem <span class="texto">ipsum</span> dolor sit amet consectetur, adipisicing elit.</p>
+    <!--la etiqueta SPAN lo q fa es poder ficar una class o una ID 
+    a una paraula i donarli estils dintre de un texte i poder modificar-ho amb css despres-->
+
+
+
+    <!-- ¿Por qué no carga la web de premierpadel.com dentro de tu <iframe>?
+        
+        Muchos sitios web bloquean ser cargados dentro de un iframe en dominios externos por seguridad. 
+        Esto se hace usando la cabecera HTTP llamada X-Frame-Options o políticas similares (Content-Security-Policy).
+
+        Si el servidor de premierpadel.com envía esa cabecera para impedir que su web se incruste en iframes de otros sitios, 
+        el navegador simplemente no la mostrará y el iframe quedará vacío o en blanco. -->
+
+</body>
+
+</html>

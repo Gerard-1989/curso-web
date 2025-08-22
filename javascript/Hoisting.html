@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JavaScript solo posicionara al inicio las "declaraciones", no las "inicializaciones."
+
+        //este ej si que funciona:
+        nombre = 'Gerard'; // Inicializacion
+        console.log(nombre);
+        let nombre; // Declaracion
+
+// ----- ----- ----- ----- ----- ----- ----- -----
+        //este ej da UNDEFINED
+        let nombre2;
+        console.log(nombre2);
+        nombre2 = 'GerardEspaña';
+    </script>
+</body>
+</html>

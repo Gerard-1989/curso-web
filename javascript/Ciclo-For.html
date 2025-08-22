@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CicloFor</title>
+</head>
+
+<body>
+  <script>
+    //el CICLO FOR nos permite repetir numeros del 1 al 1000 etc (para recorrer arreglos)
+
+    for (var y = 1; y < 10; y++) {// inicio - condicion - actualizacion
+      //aixi sortiria del 1 al 9 xq li estem dient q Y sigui MENOR a 10, xq sigui del 1 al 10 es te q ficar q sigui MENOR e IUAL a 10.
+      var y = 1; y <= 10; y++  // aixi si sortiria del 1 al 10.
+      document.write(y + "<br>");
+    }
+
+    for (var x = 10; x >= 0; x--) {   //x sigui MAJOR o IGUAL a 0
+      document.write(x + "<br>")
+    }
+
+    //fer un arreglo amb ciclos
+
+    var meses = ['Gener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juny', 'Juliol', 'Agost', 'Septembre', 'Octubre', 'Novembre', 'Desembre']
+
+    for (var t = 0; t <= meses.length; t++) { //meses.length equival a tots els "numeros" d'element q tenim al nostre arreglo
+      document.write(meses[t] + "<br>");
+      
+    }
+
+    //Algo mes facil crec seria aixi:
+
+    for (mes in meses) { //dintre del meu arreglo de MESES etreu a cada mes, i per cada MES m'executes el codi de document.write (es pot dir MES o JUASLOL pero el arreglo si q es te q dir igual)
+      document.write(meses[mes] + "<br>");
+      
+    }
+
+  </script>
+</body>
+
+</html>

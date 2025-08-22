@@ -1,0 +1,54 @@
+.caja {
+    font-size: 20px;
+    background: #65a665;
+}
+
+.inline {
+    /* display: inline
+        Se coloca uno al lado del otro y solo ocupa el espacio que necesita.
+        No se pueden modificar width,height,margin y padding . */
+
+    display: inline;
+}
+
+.block {
+    /* display: block
+      Los Elementos de tipo bloque ocupan el 100% del ancho disponible (de lado a lado),
+       empieza en una nueva línea y puede tener
+       ancho, alto, margen y padding personalizados. */
+
+    display: block;
+    margin: 10px;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.inline-block {
+    /* display: inline-block
+       El elemento se comporta como inline se colocan uno al lado del otro (no salta de línea)
+       permite modificar width, height, margin y padding. */
+
+    display: inline-block;
+    margin: 10px;
+    padding: 30px;
+    width: 200px;
+    height: 200px;
+    vertical-align: top;
+    /* vertical-align
+        sirve para decir cómo se colocan los elementos (como texto o imágenes) arriba o abajo, cuando están en la misma línea
+        Solo afecta a elementos que están en línea o que tienen display: inline o inline-block
+
+   Valores comunes de vetical-align:
+   - baseline (por defecto): el elemento se alinea justo en esa línea base, para que quede a la misma altura que el texto normal que está a su lado..
+   - top: alinea la parte superior.
+   - middle: centra verticalmente.
+   - bottom: alinea la parte inferior.*/
+}
+
+.none {
+    /* display: none
+         Oculta completamente un elemento.
+         No ocupa espacio en la página y no se ve. */
+    display: none;
+}

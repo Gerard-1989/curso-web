@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: silver;
+}
+
+.grid {
+    min-height: 80vh;
+    margin: 60px;
+
+    &>* {  /* &>* selecciona TODOS los hijos directos del elemento .grid (sin importar la etiqueta). aplica los estilos a cada hijo que está  justo dentro de .grid, pero no a los nietos ni más abajo. */
+        background: black;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
+
+/* Primera forma para hacer el layout */
+
+/* .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(150px, auto) 1fr auto; */
+    /* grid-template-rows:
+             1ª fila = mínimo 150px, crece si hace falta
+             2ª fila = ocupa el espacio sobrante (1 fracción)
+             3ª fila = se ajusta al contenido */
+
+/* 
+    .header {
+        grid-column: 1/-1;
+    }
+
+    .main {
+        grid-column: 1/ 3;
+    }
+
+    .footer {
+        grid-column: 1/-1;
+    }
+
+} */
+
+/* Segunda forma para hacer el layout */
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(150px, auto) 1fr auto;
+/* minmax(150px, auto) = La primera fila nunca puede medir menos de 150px. Puede crecer más si el contenido lo necesita (auto). */
+
+    grid-template-areas: 
+        'header header header'
+        'main main aside'
+        'footer footer footer';
+
+    .header {
+        grid-area: header;
+    }
+
+    .main {
+        grid-area: main; 
+    }
+
+    .aside {
+        grid-area: aside;
+    }
+    
+    .footer {
+        grid-area: footer;
+    }
+
+
+}

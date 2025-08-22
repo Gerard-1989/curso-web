@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Cargat React -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script> <!--Libreria propia de REACT-->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> <!--Libreria que se encarga en la parte del navegador web-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> <!--Babel convierte codigo JS moderno a una version mas antigua para q funcione en diferentes navegadores-->
+
+    <title>React App</title>
+</head>
+
+<body>
+
+    <div id="root"></div> <!--¿Donde le decimos a nuestra app de React DONDE queremos RENDERIZAR la linea 25? aqui, con un DIV.-->
+    <!--ahora necesitamos la referencia a este elemento (linea 23)-->
+
+    <script type="text/babel"> //con este type "configuramos" el script para que sea procesado por BABEL.
+    //BABEL se encarga de hacer la traducion de un codigo moderno a lo q es un codigo q sea soportado por cualquier navegador web.
+
+        const divRoot = document.querySelector('#root'); // aqui tenemos la refencia.
+        const nombre = "Gerard";
+        const h1Tag = <h1>Hola, soy { nombre } </h1>; //dentro de {} colocamos codigo de JS
+
+        //¿como le decimos a React que renderize este h1Tag dentro de este div id="root"? en la linea 29 lo renderizamos.
+
+        ReactDOM.render(h1Tag, divRoot);
+        //ReactDOM libreria que se encarga de HTML (linea 9)
+        // mandamos nuestro h1Tag y lo renderizamos en el div="root"
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CORRECCION-FORMULARIO.CSS">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+VN+Guides&family=REM:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="mensaje">
+            <h1>Hola!</h1>
+            <p>Mandame un mensaje y te respondere lo antes posible.</p>
+        </div>
+
+        <!-- 🎯🎯Para vincular un <label> con un <input>:🎯🎯
+        El atributo for="nombre" en un <label> se enlaza con el id="nombre" del campo correspondiente. 
+        Esto mejora la accesibilidad: al hacer clic en el texto del <label>, el campo se enfoca automáticamente.-->
+
+        <form action="" class="formulario">
+            <div class="grupo">
+                <label for="nombre">Nombre: <span class="leyenda">(Obligatorio)</span></label>
+                <input type="text" name="nombre" id="nombre" placeholder="Gerard España">
+            </div>
+
+            <div class="grupo" data-invalid>
+                <label for="correo">Correo: <span class="leyenda">(Obligatorio)</span></label>
+                <input type="email" name="correo" id="correo" placeholder="correo@correo.es">
+            </div>
+
+            <div class="grupo">
+                <label for="pais">Pais:</label>
+                <select name="pais" id="pais">
+                    <option value="Catalunya">Catalunya</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Suiza">Suiza</option>
+                </select>
+            </div>
+            <div>
+                <label>Asunto</label>
+                <label for="opcion1" class="radio">
+                    <input type="radio" name="opcion" id="opcion1" value="Informacion">
+                    <span>Solicito informacion</span>
+                </label>
+
+
+                <label for="opcion2" class="radio">
+                    <input type="radio" name="opcion" id="opcion2" value="Contratacion">
+                    <span>Me gustaria contratarte</span>
+                </label>
+
+
+                <label for="opcion3" class="radio">
+                    <input type="radio" name="opcion" id="opcion3" value="Otro">
+                    <span>Otro</span>
+                </label>
+            </div>
+
+            <div class="grupo">
+                <label for="mensaje">Mensaje: </label>
+                <textarea name="mensaje" id="mensaje" placeholder="Mensaje adicional"></textarea>
+            </div>
+
+            <div class="grupo">
+                <label for="terminos" class="radio">
+                    <input type="checkbox" name="terminos" id="terminos">
+                    <span>Suscribirse a la lista de correos promocionales</span>
+                </label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>

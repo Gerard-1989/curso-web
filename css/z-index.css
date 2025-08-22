@@ -1,0 +1,38 @@
+.caja {
+    width: 200px;
+    height: 200px;
+    background: #f2f2f2;
+    font-size: 40px;
+    margin: 40px;
+    color: black;
+    border: 2px solid currentColor;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute; /*📝📝📝 necesario para que funcione z-index📝📝📝 */
+    
+    &.caja-1 {
+        top: 0px;
+        left: 0px;
+        z-index: 2;  /*el valor que sea mas alto es la que quedara por encima*/
+    }
+
+    &.caja-2 {
+        top: 100px;
+        left: 100px;
+        z-index: 1;
+    }
+
+    &.caja-3 {
+        top: 200px;
+        left: 200px;
+        /* los elementos que no tengan especificado el Z-INDEX por defecto es como si tuvieran el z-index: 0 */
+    }
+}
+
+
+/* Z-INDEX: controla qué elemento queda encima de otro */
+
+/* - Solo funciona si el elemento tiene posición (relative, absolute, fixed o sticky) */
+/* - El número más alto se muestra encima */
+/* - Se pueden usar números positivos, negativos o cero */
+/* - Elementos con z-index mayor están por encima de los que tienen menor */

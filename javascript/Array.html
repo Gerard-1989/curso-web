@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arreglos</title>
+</head>
+
+<body>
+  <script>
+    //Un ARREGLO es una variable que puede guardar multiples valores 
+    //Un array, es un tipo de dato estructurado que permite almacenar un conjunto de datos homogeneo, 
+    //es decir, todos ellos del mismo tipo y relacionados.
+
+    let familia = ["Ramon", "Jan", "Mama", "Aran"];
+    //document.wirte(familia[2]); els arreglos escomençen desde el nº0 (en aquest cas el 0 seria RAMON)
+    console.log(familia);
+
+    let amigos = [];
+    amigos[0] = "Gerard";
+    amigos[1] = "padel";
+    amigos[2] = "premierPadel";
+    /*desde la consola (en inspecionar) pots agregar mes "amigos" ej:
+    amigos[8] = 'Cesar'
+
+    treure un valor ej:
+    amigos[0] = 'Jesus' (ja no seria GERARD)*/
+
+    //--------    Objeto:   ---------
+    //Son similares a los ARRAYS, los objetos nos permiten guardar informacion en parejas (propiedad y valor)
+    const persona = {
+      nombre: "gerard",
+      edad: 34,
+      coche: {
+        marca: "seat",
+        color: "negro",
+      },
+      altura: 1.81,
+    };
+
+    console.log(persona);
+    /*tambe podem accedir a algo mes en detall: 
+    console.log(persona.noombre)
+    console.log(persona.coche.color)*/
+
+
+  </script>
+</body>
+
+</html>

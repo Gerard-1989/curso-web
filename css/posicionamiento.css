@@ -1,0 +1,81 @@
+body {
+    background: #f2f2f2;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background: #262626;
+    color: white;
+    border-radius: 5px;
+    font-size: 40px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.caja-padre {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.posicionada {
+    background: #57af46;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+
+.caja-6 {
+    position: fixed;
+    top: 0px;
+    left: 600px;
+    background: yellow;
+}
+
+.caja-10{
+    position: sticky;
+    bottom: 0px;
+    left: 600px;
+    background: red;
+}
+
+
+/* 
+Tipos de position en CSS:
+
+1. position: static (por defecto)
+   - Es el valor por defecto.
+   - El elemento se posiciona según el flujo normal del documento.
+   - No acepta propiedades como top, left, etc.
+
+2. position:relative
+   - Se posiciona en relación a su posición original.
+   - Puedes moverlo con top, left, right, bottom.
+   - EL resto de elementos van a respetar su nueva posicion 
+
+3. position:absolute
+
+   - Es como una pegatina que puedes poner donde quieras.
+   - Se mueve con top, left, right, bottom.
+   - Mira si su "caja padre" tiene position: relative.
+   - Si sí,  podemos posicionar la caja a partir de las coordenadas de la caja padre
+   - Si no, se pega en la esquina de la página. 
+
+4. position:fixed
+   - Se posiciona respecto a la ventana del navegador.
+   - No se mueve aunque se haga scroll.
+   - Muy usado para menús o botones fijos.
+
+5. position:    sticky
+   - Se comporta como relative hasta que se hace scroll y alcanza cierta posición.
+   - Luego se comporta como fixed.
+   - Necesita que el contenedor tenga altura definida.
+
+*/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 🚫 🚫 ej q no se recomienda para CSS + ID 
+     <style>
+        #enlace1,
+        #enlace2,
+        #enlace3 {
+            color:red;
+        }
+     </style>
+    🚫 🚫 -->
+
+   <!-- ✔️✔️ ej que seria correcto, pero trabajar con CSS a parte, no aqui dentro ✔️✔️ -->
+
+    <style>
+        .enlaces {
+            color: goldenrod;
+        }
+    </style>
+    
+
+
+</head>
+
+<body>
+
+    <!-- ✅✅  ID: sirve para identificar de forma única un elemento dentro de una página.
+      Es como ponerle un "nombre exclusivo" a ese elemento para poder referirse a él fácilmente desde CSS o JavaScript.
+      para trabajar con CSS mejor trabajar con CLASS y para trabajar con JS mejor con ID.
+
+                           ❗Usa # seguido del nombre del id en CSS❗
+
+                           ❗En JavaScript (para modificar o acceder al elemento)
+                           Usas document.getElementById("nombreDelId").❗
+      
+      Único: no puede haber dos elementos con el mismo id en una misma página.
+      También sirve para enlazar etiquetas <label> con formularios.✅✅-->
+
+    <a href="#" id="enlace1" class="enlaces">Enllaç 1</a>
+    <a href="#" id="enlace2" class="enlaces">Enllaç 2</a>
+    <a href="#" id="enlace3" class="enlaces">Enllaç 3</a>
+
+
+
+
+    <!-- ✅ ATRIBUTO PERSONALIZADO: Siempre se empieza con data- y luego el nombre q quieras darle, en este caso ACCION✅ 
+        no viene por parte de HTML sino q nosotros lo estamos creando. Esto nos sirve para despues con JS
+        podamos acceder a el y podamos leer que lo que queriamos hacer era borrar un post o editarlo
+    --> 
+    
+    <a href="#" data-accion="borrar-post" >Enlace Personalizado</a>
+    <a href="#" data-accion="editar-post" >Enlace Personalizado</a>
+
+</body>
+
+</html>

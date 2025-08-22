@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+}
+
+.logo {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background: #157854;
+}
+
+.menu {
+    background: #14171e;
+    /* color: white;           no entenc xq el profe posa aquest color, no canvia res a la web*/
+    margin-bottom: 50px;    /*donem 20px de marge entre la barra de navegacio i el H2 de benvingut.*/
+    text-align: center;
+    padding: 10px; /*dona espai entre el titul GERARD i el H2 Benvingut a la web*/
+    position: sticky; /* hace que un elemento se quede fijo mientras se hace scroll, pero solo dentro de su contenedor padre.*/
+    top: 0px; /*hace que se quede pegado arriba cuando haces scroll vertical.*/
+    
+    a{
+        color: white;
+        display: inline-block;
+        padding: 10px 20px; /*10=Crea espacio vertical entre el texto y el borde del botón || 20= Crea espacio horizontal entre el texto y los lados del botón */
+        text-decoration: none;
+        margin: 0px 40px;
+        border-radius: 5px;
+
+        &:hover{
+            background: rgb(65, 65, 19);
+            color: rgb(8, 139, 58);
+        }
+    }
+}
+
+main {
+    width: 1000px;
+    margin: auto;
+
+                               /* perque es centre el texte en mig de la pantalla? per aixo:
+    
+                   Cuando un elemento tiene un ancho fijo, como en este caso (width: 1000px) y le pones margin: auto,
+                   el navegador reparte el espacio restante a partes iguales a izquierda y derecha.
+                                 ➡️ Resultado: el <main> queda centrado horizontalmente. */
+    .titulo {
+        margin-bottom: 20px; /*dona espai entre el titul y el tota la parrafada d'abaix*/
+    }
+    
+    p {
+        line-height: 30px; /*Esto hace que haya un poco más de espacio entre las líneas de un párrafo, lo que mejora la legibilidad.*/
+    }
+}
+
+h2 {
+    text-align: center;
+}

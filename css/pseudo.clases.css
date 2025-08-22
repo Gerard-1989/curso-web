@@ -1,0 +1,46 @@
+/* en las PSEUDO-CLASES no fa falta posar doble :: nomes es posa 1 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-size: 50px;
+
+    &:hover { /* Cambia a rojo cuando pasas el ratón encima */
+        background: red;
+        color: rgb(85, 164, 15)
+    }
+
+    &:active { /* Mientras presionas el botón, cambia a rojo */
+        background: #000;
+    }
+    &:visited{ /* Cambia el color si ya visitaste el enlace */
+        color: pink;
+    }
+}
+
+
+.cajas {
+    div{
+        background: lightblue;
+        height: 50px;
+        margin-bottom: 5px;
+
+        /* Si volem accedir a caixa 1 o 2,3,4 ho fem aixi: */
+        &:first-child{
+            background: yellow;
+        }
+        
+        &:nth-child(2){/* per accedir a les demes caixes 2,3,4,5y6 o fem amb aquesta pseudo-clase y nomes cambiem el valor de dintre del (2) */
+            background: green;
+        }
+        &:last-child{ /* Cambia el color del último <div> a rojo */
+            background: red;
+        }
+        &:nth-last-child(2){ /* Cambia el color del penúltimo <div>*/
+            background: pink;
+        }
+    }
+    
+}

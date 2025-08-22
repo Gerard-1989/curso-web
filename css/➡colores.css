@@ -1,0 +1,62 @@
+.color {
+    /* color:darkblue;    Esta forma no es la mas comun de trabajar. 
+
+      ✅Colores hexadecimales de 3 dígitos ✅
+        Formato: #RGB
+        Es una forma abreviada de los colores de 6 dígitos.
+        Cada dígito se duplica para formar el color completo. 
+
+
+
+
+
+       ✅✅Colores hexadecimales de 6 dígitos (LA MAS COMUN PARA TRABAJAR✅✅
+             Formato: #RRGGBB
+             Cada par de dígitos representa la intensidad de un color base: Rojo (RR), Verde (GG) y Azul (BB).
+             Cada par va desde 00 (mínimo) hasta FF (máximo) en hexadecimal.
+ 
+             
+
+
+
+
+        Cuándo usar uno u otro:
+             El formato de 3 dígitos es útil para colores simples donde los valores duplicados son suficientes, y es más corto para escribir.
+             El formato de 6 dígitos ofrece más variedad y precisión en los tonos. 
+
+        ✅El color hex de 8 dígitos es como el de 6✅
+              pero los últimos dos dígitos indican cuánto se ve el color (transparencia). 00 = invisible, FF = totalmente visible.
+              Ejemplo: #FF000080 es rojo medio transparente.
+
+
+
+
+        
+        ✅RGB es un color que se crea mezclando rojo, verde y azul✅
+            Cada uno va de 0 (nada) a 255 (mucho).
+            Ejemplo: rgb(255, 0, 0) es rojo fuerte.
+            rgb(0, 0, 0) es negro y rgb(255, 255, 255) es blanco.
+
+
+
+
+
+        ✅ Transparencia:✅
+            color: rgba (189, 46, 189, 0.278);
+
+
+
+
+            
+
+        ✅ Color HLS✅
+            color:hsl(0, 55%, 37%);
+      
+      */
+
+      color: pink;
+      border: 2px, solid, currentColor;
+
+      /* CURRENTCOLOR: Se usa para que otros estilos (como bordes, sombras, fondos)
+       usen el mismo color que el texto sin tener que repetir el código del color. */
+}

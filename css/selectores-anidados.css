@@ -1,0 +1,67 @@
+                                       /* EJEMPLO DE CODIGO SIN ANIDAR (FORMA ANTIGUA DE TRABAJAR) */
+
+/* .container .articulo {
+    background: lightblue;
+}
+
+.container .articulo h2 {
+    font-size: 35px;
+}
+
+.container .articulo p {
+    font-size: 18px;
+}
+
+.container .articulo a {
+    color: pink;
+    font-size: 25px;
+}
+
+.container .articulo.destacado {
+    background: blueviolet;
+     "Busca dentro de .container un elemento que tenga las clases articulo y destacado al mismo tiempo, y cámbiale el fondo a violeta." 
+}
+
+.container .articulo.destacado h2 {
+    color: red;
+}
+ */
+
+
+
+
+
+
+                                        /* EJEMPLO DE CODIGO ANIDADO ✅✅FORMA MODERNA DE TRABAJAR✅✅ */
+
+.container {
+    background: lightgreen;
+
+    .articulo {
+        background: blue;
+
+        &.destacado {
+            background: pink;
+
+            /* parlar amb el Ramon sobre el operador & a veure si m'ha quedat clar o no. */
+            h2 {
+                color: goldenrod;
+            }
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            color: brown
+        }
+
+        a {
+            color: rgb(6, 3, 200);
+            font-size: 15px;
+        }
+
+    }
+}

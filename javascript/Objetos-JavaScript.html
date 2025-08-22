@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos en JavaScript</title>
+</head>
+
+<body>
+    <script>
+        //C.R.U.D = CREATE - READ - UPDATE - DELTED
+
+        //Objeto en JS = son como variables que pueden contener muchos valores
+        //Classes = son plantillas para generar objetos a partir de ellas
+        //Instancia = accion de invocar una clase i crear un objeto a partir de ella. (paraula reservada NEW)
+
+
+
+        /*fen-ho aixi es mes engorros i fas servir moltes variables, millor utilitzar els "OBJETOS"
+        
+        let nombre = 'gerard'
+        let edad = 33;
+        let pais = 'catalunya';
+
+        let nombreHermano = 'ramon'
+        let edadHermano = 36;
+        let paisHermano = 'españa';
+
+        console.log(nombre);
+        */
+
+
+
+        //utilitzar OBJETOS:
+
+        let jan = {
+            nombre: 'Jan',
+            edad: 1,
+            pais: 'catalunya',
+            bio: function () {
+                return this.nombre + ' tiene ' + this.edad + ' año y medio'
+                //utilitzem la paraula reservada THIS perque al tindre 2 objetos (Jan i Aran, podrien ser mes)
+                //amb THIS.nombre lo q fem REFERIRNOS al nombre igual q amb THIS.edad
+            }
+        };
+
+        let aran = {
+            nombre: 'aran',
+            edad: 35,
+            pais: 'espanyita',
+            bio: function () {
+                return this.nombre + ' tiene ' + this.edad + ' años'
+            }
+        };
+        console.log(jan.bio());
+
+
+// ----- ----- ----- ----- ------ ------ ----- ------ ------ ----- ------ ------ ------- -------- ------ ------- ------
+
+        // Constructor de objetos (nos permite crear objetos conforme los necesitemos)
+
+        function persona(nombre, edad, pais) { 
+            this.nombre = nombre; // queremos la propiedad NOMBRE (el q te el THIS) sea = al VALOR i al atributo
+            this.edad = edad;
+            this.pais = pais;
+        }
+
+        let mama = new persona('Nuria', 60, 'Espanyita'); // creamos MAMA y le decimos q creamos una "nueva" persona q es la linea 53 y dentro le pasamos los valores q toquen, en este caso: nombre - edad - pais
+        let hermano = new persona('Ramon', 36, 'Portugal'); // podemos crear cuantos objetos queramos.
+
+        console.log(mama.nombre);
+        console.log('<br>');
+        console.log(hermano.pais);
+
+
+    </script>
+</body>
+
+</html>
