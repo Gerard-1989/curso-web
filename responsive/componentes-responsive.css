@@ -10,6 +10,7 @@ body {
     justify-content: center;
 }
 
+/* FORMA 1 */
 .contenedor {
     width: 90%;          /* Le digo al navegador que ocupe el 90% del ancho del body (o del contenedor que lo rodee)  */
     max-width: 500px;    /* Pero nunca quiero que supere los 500px, aunque el 90% sea más grande. */
@@ -58,6 +59,97 @@ body {
                 padding: 10px 30px;
                 font-size: 20px;
                 border-radius: 5px;
+            }
+        }
+
+        /* 1️Esto es un media query: le dice al navegador "aplica estas reglas solo si se cumple esta condición" */
+        @media screen and (max-width: 500px) {
+            & { /*  & → el selector padre más cercano (el que envuelve este bloque)  .card  */
+                .textos { /* dentro de .textos aplica estos estilos: */
+                    padding: 10px;
+
+                    h3 { /* dentro de .textos seleciona el h3 */
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    p { /* dentro de .textos seleciona el p */
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+
+                    a { /* dentro de .textos seleciona el a */
+                        padding: 5px 15px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.contenedor {
+    width: 90%;          
+    max-width: 500px;    
+    margin: 40px 0;      
+
+    .card {
+        background: white;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2); 
+        border-radius: 5px;
+
+        overflow: hidden; 
+        img {
+            width: 100%; 
+            max-height: 250px;  
+        }
+
+        .textos {
+            padding: 20px;
+
+            h3 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            a {
+                background: black;
+                color: white;
+                text-decoration: none;
+                display: inline-block;  
+                padding: 10px 30px;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+        }
+
+      
+        @media screen and (max-width: 500px) {
+            & { 
+                .textos { 
+                    padding: 10px;
+
+                    h3 { 
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    p { 
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                    }
+
+                    a { 
+                        padding: 5px 15px;
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
