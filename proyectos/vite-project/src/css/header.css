@@ -1,0 +1,79 @@
+.contenedor-header { 
+    width: 90%;
+    max-width: 1200px; /* tamaño STANDARD para una web */
+    margin: auto; /* Centra horizontalmente. Para centrar verticalmente, el contenedor debe tener altura definida o display: flex */
+}
+
+header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        display: inline-block;
+        background: var(--azul-secundario);
+        padding: 20px;
+        width: auto; /*Resumen mental: width: auto = Ocúpame el ancho que necesite mi contenido, pero sin pasarte del espacio que me deja el contenedor.*/
+        height: 70px;
+        border-radius: 10px 0px 0px 0px;
+        position: relative;
+
+        img {
+            height: 100%;  /* La imagen se estira o encoge para llenar la altura de su contenedor. (.logo) */
+        }
+
+        &::before {       /* Crea un bloque de 20px de alto debajo del .logo (bottom: -20px) con el mismo color de fondo.
+                                 Resultado: un “extensor” visual hacia abajo, mantiene la continuidad del fondo. */
+
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            background: var(--azul-secundario);
+            height: 20px;
+            bottom: -20px;
+            left: 0;
+        }
+
+        &::after {             /* Estamos creando un triángulo con bordes usando border.    border-bottom: 70px solid var(--azul-secundario) define el color del triángulo.
+                                             top y right posicionan el triángulo fuera del logo, generando un efecto de flecha o esquina decorativa. 
+                                             Los bordes transparentes (top y right) son los que “recortan” la forma del triángulo.                  */
+
+            content: '';
+            display: block;
+            position: absolute;
+            border-top: 70px solid transparent; /* Los bordes transparentes “recortan” la forma del triángulo. */
+            border-right: 70px solid transparent;           
+            border-bottom: 70px solid var(--azul-secundario);
+            right: -70px; /* → lo sube 70px por encima del borde superior del elemento. */
+            top: -70px;   /* lo mueve 70px hacia afuera a la derecha del borde derecho.
+            
+                     ¿Por qué justo -70px?
+                     Porque el triángulo se construye con border: 70px .... Eso hace que la figura "ocupe" un área de 70px.
+
+                     Imagina que tu logo es un cuadrado. El pseudo-elemento es un cuadradito invisible con un triángulo en su esquina inferior izquierda.
+                     Al moverlo -70px hacia arriba y a la derecha, ese triángulo se alinea para quedar justo como una esquina extra que sobresale del logo. */
+        }
+    }
+
+    .navbar {
+        display: flex; /* convierte el contenedor en un flexbox. Todos sus hijos se alinean en fila por defecto. */
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap; /* si no caben todos en una fila, los sobrantes pasan a la siguiente línea. */
+        justify-content: center;
+
+        a {
+            display: inline-flex; /* hace que los enlaces sean flex, así los iconos y textos dentro se alinean fácil. */
+            gap: 10px;
+            align-items: center;
+            font-weight: 700; /* letra bien gordita (negrita). */
+            border-radius: 5px;
+
+            &.boton { /* Cualquier <a> dentro de .navbar que tenga la clase .boton recibirá estos estilos */
+                font-weight: 500;
+            }
+        }
+    }
+}
+

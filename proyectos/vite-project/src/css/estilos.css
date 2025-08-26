@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    background: #e6ecf8;
+}
+
+a {
+    text-decoration: none;
+    color: var(--azul-secundario);
+
+    &:hover {
+        text-decoration: underline;  /* Cuando paso el ratón por encima, el texto se subraya. */
+    }
+}
+
+.boton {
+    display: inline-flex;
+    padding: 10px 15px;
+    background: var(--azul-primario);
+    transition: 0.2s ease all; /* cualquier cambio (color, tamaño…) será suave en 0.2 segundos. */
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 10px;
+
+        .icono {
+            width: 18px; /*tamaño fijo para el icono.*/
+            height: 18px; /*tamaño fijo para el icono.*/
+
+            svg {
+                width: 100%;/* cualquier SVG dentro del icono ocupa todo el espacio definido (18px x 18px). */
+                height: 100%;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: var(--azul-hover);
+        }
+}

@@ -1,0 +1,85 @@
+.hero {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    display: grid;
+    grid-template-columns: 55% 45%; /* divide el contenedor en 2 columnas, la primera ocupa el 55% y la segunda el 45% del ancho. */
+    gap: 20px;
+    border-radius: 20px;
+    color: white;
+    position: relative; /* para q funcione el z-index hay que poner un position: */
+    z-index: 1;
+    padding: 50px;
+
+    .col-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    
+        .titulo {
+            font-size: 48px;
+            font-weight: 400;
+            color:white;
+            text-align: left;
+            margin: 0;
+        }
+    
+        .descripcion {
+            font-size: 18px;
+            line-height: 160%; /* Hace que haya un poco más de espacio entre líneas */
+        }
+    
+        .botones {  
+            display: flex;
+            gap: 10px; /* hemos puesto FLEX solo para poder poner el gap XDDD */
+
+            .transparente {
+                background: rgba(0,0,0, 0.2); /* Los tres primeros valores (0,0,0) son el color negro (RGB). 0.2) es la transparencia */
+                padding: 15px;
+
+                &:hover {
+                    background: rgba(0,0,0, 0.4);
+                }
+            }
+
+            .secundario {
+                background: var(--azul-secundario);
+                border: 1px solid transparent; /* si no ponemos este borde transparente, el boton cambiaria de tamaño y se veria raro */
+
+                &:hover{
+                    border: 1px solid rgba(255,255,255, 0.7);
+                }
+            }
+        }
+
+        .estadisticas {
+            display: flex; /* ponemos FLEX para q una estadistica se ponga al lado de la otra */
+            gap: 40px;
+            font-size: 22px;
+            font-weight: 500; /* el grosor q nunca me acuerdo joder */
+
+            p { 
+                display: flex;
+                gap: 10px;   /* hemos puesto FLEX solo para poder poner el gap XDDD */  
+              
+                &:nth-child(1){ /* como hay 2 parrafos, con este selector le decimos de acceder al primer parrafo y le damos estilos */
+                    padding-right: 40px;     
+                    border-right: 1px solid white;   /* es la linea blanca que hay entre +1M y +100Paises  (truquitos de css xd) */
+                }
+            }
+
+            .icono {
+                display: block; /* Permite que el span tenga ancho y alto definidos y controlar el tamaño del icono fácilmente. */
+                width: 24px;
+                height: 24px;
+
+                svg {
+                    width: 100%;
+                    height: 100%; /* su contenedor padre es .icono y crecera un 24x24 q es el 100% */
+                }
+            }
+            
+        }
+}
+
+}
+
