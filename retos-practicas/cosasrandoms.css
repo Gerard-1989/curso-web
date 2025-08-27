@@ -114,6 +114,30 @@ Los valores en % se calculan respecto al tamaño del contenedor padre. (POSITION
   padding: 20px;
 }
 
+.triangulo {
+  width: 0;
+  height: 0;
+  border-top: 50px solid blue;
+  border-left: 50px solid green;
+  border-right: 50px solid yellow;
+  border-bottom: 50px solid red; /* este será visible */
+}
 
-
-
+.elipse {
+  width: 200px;
+  height: 100px;
+  background: green;
+  clip-path: ellipse(50% 50%);
+}
+.circulo {
+  width: 150px;
+  height: 150px;
+  background: blue;
+  clip-path: circle(50%);
+}
+.redonda {
+  width: 100px;
+  height: 100px;
+  background: green;
+  clip-path: circle(50%);
+}

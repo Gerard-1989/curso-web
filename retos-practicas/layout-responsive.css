@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /*    hace que los pseudo-elementos (AFTER, BEFORE) se comporten igual que cualquier elemento normal, sin sorpresas de tamaño ni espacio. 
+                            No darles las reglas deja que el navegador decida, y eso puede desordenar tu diseño.   */
+}
+
+body {
+    background: #f2f2f2;
+    font-family: "Gabarito", sans-serif;
+    display: flex;
+    justify-content: center;  /* Coloca a los hijos en el centro horizontal. */
+}
+
+.grid {
+    width: 90%; /* La caja ocupará el 90% del ancho de la pantalla. */
+    max-width: 1000px; /* Pero nunca pasará de 1000px de ancho. */
+    display: grid;
+    margin: clamp(10px, 3vw, 20px) 0;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales, cada una ocupa 1 parte del espacio. */
+    grid-template-rows: auto 1fr auto;     /* Primera fila: lo que necesite el contenido.  
+                                          Segunda fila: ocupa el espacio sobrante.  
+                                          Tercera fila: lo que necesite el contenido. */
+    gap: clamp(5px, 3vw, 20px); /* Deja 20px de espacio entre filas y columnas. */
+    min-height: 90vh; /* El alto mínimo será el 90% de la pantalla. */
+
+     @media screen and (max-width: 500px) {  /* Cuando la pantalla sea 500px o menos, aplica los estilos que están dentro de este bloque */
+            & {                
+                    grid-template-columns: 1fr;             
+            }
+        }
+
+
+    .header {
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: clamp(10px, 3vw, 20px);
+    
+        .logo {
+           font-size: clamp(30px, 4vw, 50px);        
+        }
+    
+        nav {
+            display: flex;
+            gap: clamp(5px, 3vw, 20px); /*Así queda más limpio que usar margin-left, porque no necesitas excepciones y todos los enlaces mantienen la misma separación.*/       
+        
+            
+            a {
+                text-decoration: none;
+                color: #531cb3;
+                font-size: clamp(5px, 3vw, 20px);
+            }
+        }
+        
+          @media screen and (max-width: 500px) {  /* Cuando la pantalla sea 500px o menos, aplica los estilos que están dentro de este bloque */
+            & {                
+                    flex-direction: column;
+                    align-items: center;       
+            }
+        }
+    }
+
+    .titulo {
+        font-size: clamp(25px, 3vw, 30px);
+    }
+    
+    .main {
+        grid-column: 1/span 2;
+        background: #fff;
+        padding: clamp(10px, 3vw, 20px);
+        border-radius: clamp(3px, 3vw, 10px);
+        display: flex;
+        flex-direction: column; /* hace que los elementos hijos (p y .boton) estén uno debajo del otro. */
+        gap: clamp(5px, 3vw, 20px); /* Espacio entre párrafo y botón */
+        align-items: flex-start; /* los alinea al inicio, a la izquierda */
+
+        p {
+            line-height: 30px; /* Altura de cada línea de texto. Sirve para que el texto respire y no se vea tan pegado. */
+        }
+
+        .boton {        /* Tu .boton es un <a> que, por defecto, es un elemento inline. Esto significa que:
+                        Los elementos inline solo ocupan el espacio del contenido, no respetan width, height, ni algunos padding verticales como esperarías. */
+
+
+            display: inline-block; /* Ahora el <a> se comporta como un bloque “mini”, que sigue en línea con otros elementos (no ocupa toda la fila) pero respetando padding, width, height y text-align.
+                                                        Así se ve como un botón real con espacio alrededor del texto y centrado. */
+            padding: 15px;
+            background: #531cb3;
+            color: #fff;
+            border-radius: 3px;
+            text-decoration: none;
+            text-align: center;         
+
+            @media screen and (max-width: 500px) {
+                & {
+                    width: 100%;
+                }
+            }
+
+        }
+
+    }
+
+    .aside {
+        background: #000;
+        color: #fff;
+        border-radius: 10px;
+        padding: clamp(5px, 3vw, 20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 500px) {  /* Cuando la pantalla sea 500px o menos, aplica los estilos que están dentro de este bloque */
+            & {                
+                min-height: 200px;                               
+            }
+        }
+    }
+    
+    .widgets {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 1 / -1;
+        gap: clamp(5px, 3vw, 20px);
+        cursor: pointer;
+
+        @media screen and (max-width: 500px) {
+            & {                
+                    grid-template-columns: 1fr;
+                    min-height: 150px;
+                                 
+            }
+        }
+
+        .widget {
+            background: #ccc;
+            min-height: 100px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }   
+    
+    .footer {
+        grid-column: 1 / -1;
+        padding: 40px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(5px, 3vw, 10px); /* En Flexbox, gap separa los elementos en la dirección del flujo (en este caso x la linea de arriba de arriba abajo) */
+    }
+}
+
