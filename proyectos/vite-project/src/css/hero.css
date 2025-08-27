@@ -10,7 +10,7 @@
     z-index: 1;
     padding: 50px;
 
-    .col-1 {
+    .col-1 {   /* .col-1 es la segunda columna del grid de .hero y ocupa el 55% del ancho total del hero */
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -77,9 +77,92 @@
                     height: 100%; /* su contenedor padre es .icono y crecera un 24x24 q es el 100% */
                 }
             }
-            
         }
-}
+      }
+    .col-2 {   /* .col-2 es la segunda columna del grid de .hero y ocupa el 45% del ancho total del hero */
+            position: relative;
 
+            .slideshow {
+                width: 100%; /* ocupa el 100% del contenedor padre (.col-2), es decir, el 45% de .hero */
+                border-radius: 10px;
+                position: absolute;
+                overflow: hidden; /* oculta todo el contenido que se sale del contenedor.(las demas img q habian al lado) */
+                top: -20px; /* Valores positivos → baja el elemento.
+                               Valores negativos → sube el elemento.*/
+
+                .slides {
+                    display: flex; /* pone los slides en fila horizontal */
+                    /* NOTA: No tiene width definido, así que se estira automáticamente para contener todos los .slide en línea */
+
+                    .slide {
+                        min-width: 100%;  
+                         /* Cada slide mide como mínimo el 100% del contenedor inmediato (.slideshow) */
+                         /* Esto hace que cada slide llene completamente la zona visible del slideshow */
+
+                        img {
+                            width: 100%;  /* La imagen ocupa el 100% del ancho de su contenedor inmediato (.slide) */
+                                          /* Por eso, cuando .slideshow se hace más pequeño (por ejemplo en móvil), la imagen también se reduce proporcionalmente */
+                                          /* Resumen: img → .slide → .slideshow → .col-2 → 45% de .hero → ancho total de pantalla */   
+                            height: 100%;
+                            object-fit: cover; /* Hace que la imagen llene todo el contenedor sin deformarse, recortando lo que sobresalga. */                   
+                        }
+                    }
+                }
+
+                .indicadores {
+                    display: flex;
+                    width: 100%; /* .slideshow cambia de tamaño (por ejemplo en pantallas más grandes), .indicadores también se expande automáticamente y los botones siguen centrados correctamente. */
+                    justify-content: center;
+                    gap: 10px;
+                    position: absolute; /* Saca el elemento del flujo normal de la página y permite colocarlo en cualquier posición dentro de su contenedor relativo (top, bottom, left, right). */
+                    bottom: 20px; /* Sin top, bottom, left o right, un elemento absolute aparece en la esquina superior izquierda por defecto (top: 0; left: 0). incluso quedarse fuera de la vista dependiendo de otros estilos. */                   
+                }
+
+                .indicador {
+                    width: 25px;
+                    height: 2px;
+                    border: none;
+                    background: rgba(255,255,255, 0.3);
+                    transition:  0.3s ease all;
+                    border-radius: 10px;
+
+                    &.active {
+                        background: rgba(255,255,255, 1);
+                    }
+
+                    &:hover {
+                        background: rgba(255,255,255, 0.5); /* el hover dura 0.3s con efecto natural a todos los cambios de propiedad definidos en transition */
+                    }
+                }
+
+                
+            }
+      }
+
+      .overlay-video {
+        background: rgba(0,0,0, 0.9);
+        position: fixed; /* el elemento se queda fijo en la pantalla, como una pegatina en el monitor */
+        top: 0;
+        left: 0;
+        width: 100vw; /* ocupa todo el ancho visible (viewport width) */
+        height: 100vh; /* ocupa toda la altura visible (viewport height) */
+        display: none; /* por defecto está oculto */
+        align-items: center;
+        justify-content: center;
+
+        &.active {
+            display: flex;  /* cuando tiene la clase active, se muestra centrado */
+        }
+
+        .video {
+            width: 90%;  /* mide el 90% del ancho del fondo negro (.overlay-video) */
+            max-width: 900px; /* pero nunca será más grande de 900px, aunque la pantalla sea gigante */
+
+            iframe {
+                width: 100%;
+                aspect-ratio: 16/9; /* obliga al elemento a guardar la forma rectangular de los videos (16 de ancho x 9 de alto) */
+            }
+        }   
+    }
 }
 

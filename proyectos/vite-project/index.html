@@ -45,7 +45,7 @@
         <p class="descripcion">Trabajamos con todo tipo de marcas y hacemos envíos a todo el mundo..</p>
 
         <div class="botones">
-          <button class="boton transparente">Ver demo            
+          <button class="boton transparente">Ver demo
             <div class="icono">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-play-circle" viewBox="0 0 16 16">
@@ -71,7 +71,8 @@
 
         <div class="estadisticas">
           <p>
-            <span class="icono"> <!--el <span> funciona como “contenedor” para poder estilizar el icono sin afectar el texto y mantener el código más limpio y manejable.-->
+            <span class="icono">
+              <!--el <span> funciona como “contenedor” para poder estilizar el icono sin afectar el texto y mantener el código más limpio y manejable.-->
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people"
                 viewBox="0 0 16 16">
                 <path
@@ -90,14 +91,41 @@
               </svg>
             </span>
             +100 Paises
-          </p>          
+          </p>
         </div>
       </div>
 
-      <div class="col-2"></div>
+      <div class="col-2">
+        <div class="slideshow">
+          <div class="slides">
+            <div class="slide">
+              <img src="./public/assets/img/adidas.png" alt="">
+            </div>
+            <div class="slide">
+              <img src="./public/assets/img/bullpadel.png" alt="">
+            </div>
+            <div class="slide">
+              <img src="./public/assets/img/wilson.png" alt="">
+            </div>
+          </div>
+          <div class="indicadores">
+            <button class="indicador active"></button>
+            <button class="indicador"></button>
+            <button class="indicador"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay-video"> <!--falta añadir la clase active para q se muestre el iframe-->
+        <div class="video">
+          <iframe  src="https://www.youtube.com/embed/e_EUIj8nA9Q?si=E0vgLV_XMDzMj2Cy"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-  </div>
-  <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 .contenedor-header { 
-    width: 90%;
+    width: 90%; /* En pantallas grandes: si el 90% supera max-width: 1200px, el contenedor se detiene en 1200px.
+                En pantallas pequeñas: el contenedor se reduce al 90% del ancho disponible, respetando los márgenes y manteniéndose centrado con margin: auto. */
     max-width: 1200px; /* tamaño STANDARD para una web */
     margin: auto; /* Centra horizontalmente. Para centrar verticalmente, el contenedor debe tener altura definida o display: flex */
 }
