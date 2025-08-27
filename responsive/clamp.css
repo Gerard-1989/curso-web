@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 90%;          /* Le digo al navegador que ocupe el 90% del ancho del body (o del contenedor que lo rodee)  */
+    max-width: 500px;    /* Pero nunca quiero que supere los 500px, aunque el 90% sea más grande. */
+    margin: 40px 0;      
+
+
+
+    .card {
+        background: white;
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2); /* Aplico una sombra: 
+                                                                   - 2px a la derecha (horizontal) 
+                                                                   - 2px hacia abajo (vertical) 
+                                                                   - 20px de difuminado 
+                                                                   - color negro con 20% de opacidad, para que se vea suave. */
+        border-radius: 5px;
+
+        overflow: hidden; /* Corto cualquier contenido que se salga del borde de la tarjeta, útil si hay imágenes o elementos que podrían desbordar. 
+        Si la imagen es más grande que la tarjeta:
+
+                    Con overflow: hidden → la parte que se sale se oculta, y la tarjeta mantiene su forma limpia.
+                    Resumen simple: corta cualquier cosa que se salga del borde de la tarjeta para que todo se vea ordenado.
+                    
+                    Cuándo se usa: cuando quieres mantener los bordes limpios, por ejemplo, en tarjetas con imágenes, 
+                    contenedores con bordes redondeados (border-radius), o cajas donde el contenido no debería desbordarse.*/
+
+        img {
+            width: 100%; /* La imagen ocupa todo el ancho del contenedor padre, .card */
+            max-height: 250px;  /* La imagen nunca será más alta de 250px. */
+        }
+
+
+
+
+
+
+
+        
+                /*         Me ha quedado claro que clamp(10px, 3vw, 30px)  nunca sera inferior a 10px y nunca sera superior a 30px 
+
+                                             pero no entiendo bien lo del VW, no se que valor poner....
+                */
+
+
+
+
+        .textos {
+            padding: clamp(10px, 3vw, 20px); /* padding mínimo 10px,  flexible con 3vw en pantallas medianas,   máximo 20px */
+
+            h3 {
+                font-size: clamp(20px, 3vw, 30px);
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: clamp(16px, 3vw, 20px);
+                margin-bottom: 10px;
+            }
+
+            a {
+                background: black;
+                color: white;
+                text-decoration: none;
+                display: inline-block;  /* Permite aplicar padding y tamaño como si fuera un bloque, pero sigue en línea. */
+                padding: clamp(5px, 3vw, 10px) clamp(15px, 3vw, 30px);   /* padding arriba/abajo → entre 5px y 10px según pantall, padding izquierda/derecha → entre 15px y 30px según pantalla */
+                font-size: clamp(16px, 3vw, 20px);   /* tamaño del texto del enlace: mínimo 16px, flexible con 3vw, máximo 20px */
+                border-radius: clamp(2px, 3vw, 5px);    /* esquinas redondeadas: mínimo 2px, flexible con 3vw, máximo 5px */
+            }
+        }
+    }
+}
