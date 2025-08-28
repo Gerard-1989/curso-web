@@ -48,3 +48,17 @@ a {
             background: var(--azul-hover);
         }
 }
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.titulo {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--azul-secundario);
+    text-align: center;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,75 @@
+.caracteristicas {
+    margin-top: 380px;
+    margin-bottom: 100px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        .previews {
+            border-radius: 5px;          
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* todo el contenido que se salga del tamaño del contenedor quede recortado y no se vea */
+            position: relative;
+
+            .thumb {  
+                height: 100%; /* ocupa el 100% del .preview */
+                object-fit: cover; /* la foto se agranda hasta llenar todo el cuadrado, pero se recortan los lados izquierdo y derecho para que quede ajustada. */
+                width: 100%; /* ocupara el 100% del contenedor padre (previwes) */
+                position: absolute; /* trabajamos con absolut y relative en .previews para que las imágenes se coloquen en el mismo sitio (superpuestas)  */
+                top: 0;
+                left: 0;
+                opacity: 0; /* todas estan ocultas menos la primera q tiene la class active y tiene opacity en 1 */
+                transition: 0.5s ease all; /* esto es para cuando usemos JS, para cuando pasen las imagenes */
+
+                &.active { /* accedo a los elementos que tengan la clase active */
+                    opacity: 1;
+                }
+            }
+        }
+
+        .tabs {
+            display: grid; /*  */
+            grid-template-columns: 1fr;
+            gap: 10px;
+
+            .tab {
+                background: white;
+                border-radius: 5px;
+                display: grid;
+                grid-template-columns: auto 1fr; /* atuo -> columna para el icono | 1fr -> columna para el texto */
+                cursor: pointer;
+
+                &.active { /* Cuando el elemento .tab también tenga la clase .active, aplica estos estilos”. */
+                    background: var(--azul-primario);
+                    color: white;
+
+                    .icono {  /* Cuando una pestaña (.tab) está activa (.active), su icono (.icono) se pone en blanco */
+                        color: white;
+                    }
+                }
+                
+                .icono {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20px;
+                    color: var(--azul-primario);
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .info {
+                    padding: 20px;
+                    display: flex; /* ponemos flex para poner el flex-direction y el gap basicamente */
+                    flex-direction: column; /* sin esto los <h3> y los <p> estarian de forma horizontal y no se veria bien*/
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

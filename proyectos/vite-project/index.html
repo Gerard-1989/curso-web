@@ -42,7 +42,7 @@
     <div class="hero">
       <div class="col-1">
         <h1 class="titulo">Tus palas de padel al mejor precio.</h1>
-        <p class="descripcion">Trabajamos con todo tipo de marcas y hacemos envíos a todo el mundo..</p>
+        <p class="descripcion">Trabajamos con todo tipo de marcas y hacemos envíos a todo el mundo.</p>
 
         <div class="botones">
           <button class="boton transparente">Ver demo
@@ -118,14 +118,92 @@
 
       <div class="overlay-video"> <!--falta añadir la clase active para q se muestre el iframe-->
         <div class="video">
-          <iframe  src="https://www.youtube.com/embed/e_EUIj8nA9Q?si=E0vgLV_XMDzMj2Cy"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/e_EUIj8nA9Q?si=E0vgLV_XMDzMj2Cy" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+  </div>
+  <div class="contenedor">
+    <!--creamos otro contenedor para el resto de la pagina por si queremos q el <header> + .hero cambien de tamaño 
+    solo hay q cambiar los estilos de .contenedor-header y asi el resto de la pagina (este contenedor) no se vera afectado -->
+
+    <main>
+      <section class="caracteristicas">
+        <h2 class="titulo">Características</h2>
+        <div class="grid">
+          <div class="previews">
+               <img class="thumb active" src="./public/assets/img/01.png" alt="">
+               <img class="thumb" src="./public/assets/img/02.png" alt="">
+               <img class="thumb" src="./public/assets/img/03.png" alt="">
+               <img class="thumb" src="./public/assets/img/04.png" alt="">
+          </div>
+          <div class="tabs">
+            <div class="tab active">
+              <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </div>
+              <div class="info">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
+                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </div>
+              <div class="info">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
+                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </div>
+              <div class="info">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
+                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+              </div>
+              <div class="info">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
+                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
