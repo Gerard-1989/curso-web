@@ -1,0 +1,31 @@
+.footer {
+    background: var(--azul-secundario);
+    color: white;
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between; /* con esto ponemos el logo y su <p> a la izq y el <nav> a la derecha */
+    align-items: center; /* lo centramos de forma vertical */
+    
+    .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        img {
+            width: 20vw; /* es el 20% del ancho de la pantalla */
+            max-width: 100px; 
+        }
+    }
+
+    .links {
+        display: flex;
+        gap: 20px; /* serparacion entre los terminos, politica privacidad etc */
+        flex-wrap: wrap; /* esto es para cuando este en tamaño movil cuando no quepan se pongan debajo  */
+        
+        a {
+            color: white;
+        }
+    }
+}

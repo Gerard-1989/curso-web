@@ -2,208 +2,392 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-    rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trace app</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trace app</title>
 </head>
 
 <!-- Vite: herramienta que acelera el desarrollo web moderno, muestra cambios al instante y optimiza el proyecto para producción. Ideal con JS, React o Vue -->
 
 <body>
-  <div class="contenedor-header">
+    <div class="contenedor-header">
 
-    <header>
-      <a href="#" class="logo">
-        <img src="/assets/img/logo.svg" alt="logo trace app">
-      </a>
-      <nav class="navbar">
-        <a href="#">Caracteristicas</a>
-        <a href="#">Precios</a>
-        <a href="#">Iniciar sesion</a>
-        <a href="#" class="boton">Descargar
-          <div class="icono">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-              <path
-                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-            </svg>
-          </div>
-        </a>
-      </nav>
-    </header>
+        <header>
+            <a href="#" class="logo">
+                <img src="/assets/img/logo.svg" alt="logo trace app">
+            </a>
+            <nav class="navbar">
+                <a href="#">Caracteristicas</a>
+                <a href="#">Precios</a>
+                <a href="#">Iniciar sesion</a>
+                <a href="#" class="boton">Descargar
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                        </svg>
+                    </div>
+                </a>
+            </nav>
+        </header>
 
-    <div class="hero">
-      <div class="col-1">
-        <h1 class="titulo">Tus palas de padel al mejor precio.</h1>
-        <p class="descripcion">Trabajamos con todo tipo de marcas y hacemos envíos a todo el mundo.</p>
+        <div class="hero">
+            <div class="col-1">
+                <h1 class="titulo">Tus palas de padel al mejor precio.</h1>
+                <p class="descripcion">Trabajamos con todo tipo de marcas y hacemos envíos a todo el mundo.</p>
 
-        <div class="botones">
-          <button class="boton transparente">Ver demo
-            <div class="icono">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-play-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                <path
-                  d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
-              </svg>
+                <div class="botones">
+                    <button class="boton transparente">Ver demo
+                        <div class="icono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-play-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                            </svg>
+                        </div>
+                    </button>
+
+                    <button class="boton secundario">Download
+                        <div class="icono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="estadisticas">
+                    <p>
+                        <span class="icono">
+                            <!--el <span> funciona como “contenedor” para poder estilizar el icono sin afectar el texto y mantener el código más limpio y manejable.-->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-people" viewBox="0 0 16 16">
+                                <path
+                                    d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
+                            </svg>
+                        </span>
+                        +1M de usuarios
+                    </p>
+
+                    <p>
+                        <span class="icono">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-globe-americas" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                            </svg>
+                        </span>
+                        +100 Paises
+                    </p>
+                </div>
             </div>
-          </button>
 
-          <button class="boton secundario">Download
-            <div class="icono">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
-                viewBox="0 0 16 16">
-                <path
-                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                <path
-                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-              </svg>
+            <div class="col-2">
+                <div class="slideshow">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="/assets/img/adidas.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/img/bullpadel.png" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="/assets/img/wilson.png" alt="">
+                        </div>
+                    </div>
+                    <div class="indicadores">
+                        <button class="indicador active"></button>
+                        <button class="indicador"></button>
+                        <button class="indicador"></button>
+                    </div>
+                </div>
             </div>
-          </button>
+
+            <div class="overlay-video"> <!--falta añadir la clase active para q se muestre el iframe-->
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/e_EUIj8nA9Q?si=E0vgLV_XMDzMj2Cy"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-
-        <div class="estadisticas">
-          <p>
-            <span class="icono">
-              <!--el <span> funciona como “contenedor” para poder estilizar el icono sin afectar el texto y mantener el código más limpio y manejable.-->
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people"
-                viewBox="0 0 16 16">
-                <path
-                  d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
-              </svg>
-            </span>
-            +1M de usuarios
-          </p>
-
-          <p>
-            <span class="icono">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-globe-americas" viewBox="0 0 16 16">
-                <path
-                  d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
-              </svg>
-            </span>
-            +100 Paises
-          </p>
-        </div>
-      </div>
-
-      <div class="col-2">
-        <div class="slideshow">
-          <div class="slides">
-            <div class="slide">
-              <img src="./public/assets/img/adidas.png" alt="">
-            </div>
-            <div class="slide">
-              <img src="./public/assets/img/bullpadel.png" alt="">
-            </div>
-            <div class="slide">
-              <img src="./public/assets/img/wilson.png" alt="">
-            </div>
-          </div>
-          <div class="indicadores">
-            <button class="indicador active"></button>
-            <button class="indicador"></button>
-            <button class="indicador"></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="overlay-video"> <!--falta añadir la clase active para q se muestre el iframe-->
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/e_EUIj8nA9Q?si=E0vgLV_XMDzMj2Cy" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
     </div>
-  </div>
-  <div class="contenedor">
-    <!--creamos otro contenedor para el resto de la pagina por si queremos q el <header> + .hero cambien de tamaño 
+    <div class="contenedor">
+        <!--creamos otro contenedor para el resto de la pagina por si queremos q el <header> + .hero cambien de tamaño 
     solo hay q cambiar los estilos de .contenedor-header y asi el resto de la pagina (este contenedor) no se vera afectado -->
 
-    <main>
-      <section class="caracteristicas">
-        <h2 class="titulo">Características</h2>
-        <div class="grid">
-          <div class="previews">
-               <img class="thumb active" src="./public/assets/img/01.png" alt="">
-               <img class="thumb" src="./public/assets/img/02.png" alt="">
-               <img class="thumb" src="./public/assets/img/03.png" alt="">
-               <img class="thumb" src="./public/assets/img/04.png" alt="">
-          </div>
-          <div class="tabs">
-            <div class="tab active">
-              <div class="icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-              </div>
-              <div class="info">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
-                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
-              </div>
-            </div>
-            <div class="tab">
-              <div class="icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-              </div>
-              <div class="info">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
-                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
-              </div>
-            </div>
-            <div class="tab">
-              <div class="icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-              </div>
-              <div class="info">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
-                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
-              </div>
-            </div>
-            <div class="tab">
-              <div class="icono">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-chevron-left" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-              </div>
-              <div class="info">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt necessitatibus
-                  distinctio reiciendis eveniet placeat commodi, similique vero.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        <main>
+            <section class="caracteristicas">
+                <h2 class="titulo">Características</h2>
+                <div class="grid">
+                    <div class="previews">
+                        <img class="thumb active" src="/assets/img/01.png" alt="">
+                        <img class="thumb" src="/assets/img/02.png" alt="">
+                        <img class="thumb" src="/assets/img/03.png" alt="">
+                        <img class="thumb" src="/assets/img/04.png" alt="">
+                    </div>
+                    <div class="tabs">
+                        <div class="tab active">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt
+                                    necessitatibus
+                                    distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt
+                                    necessitatibus
+                                    distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt
+                                    necessitatibus
+                                    distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                                </svg>
+                            </div>
+                            <div class="info">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quod ipsa incidunt
+                                    necessitatibus
+                                    distinctio reiciendis eveniet placeat commodi, similique vero.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  </div>
-  <script type="module" src="/src/main.js"></script>
+            <section class="precios">
+                <h2 class="titulo">Precios</h2>
+
+                <div class="grid">
+                    <div class="plan">
+                        <h3 class="nombre">Basico</h3>
+                        <p class="precio">5€ <span>eur / mes</span></p>
+                        <p class="descripcion">Pala ligera y manejable, pensada para empezar a jugar sin esfuerzo.
+                            Aporta control y
+                            comodidad en cada golpe.</p>
+                        <ul class="lista">
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 und vendidas.
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 reviws positivas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 clientes contentos
+                            </li>
+                        </ul>
+                        <a href="#" class="boton">Escoger plan</a>
+                    </div>
+                    <div class="plan destacado">
+                        <h3 class="nombre">Intermedio</h3>
+                        <p class="precio">10€ <span>eur / mes</span></p>
+                        <p class="descripcion">Equilibrio entre potencia y control, ideal para quienes ya dominan lo
+                            básico y buscan
+                            mejorar su juego.</p>
+                        <ul class="lista">
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                        </ul>
+                        <a href="#" class="boton">Escoger plan</a>
+                    </div>
+                    <div class="plan">
+                        <h3 class="nombre">Avanzado</h3>
+                        <p class="precio">20€ <span>eur / mes</span></p>
+                        <p class="descripcion">Más rígida y con mayor salida de bola, diseñada para jugadores que buscan
+                            velocidad y
+                            precisión en la pista.</p>
+                        <ul class="lista">
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                        </ul>
+                        <a href="#" class="boton">Escoger plan</a>
+                    </div>
+                    <div class="plan">
+                        <h3 class="nombre">Pro</h3>
+                        <p class="precio">50€ <span>eur / mes</span></p>
+                        <p class="descripcion">Pala de altas prestaciones, con materiales premium y gran potencia.
+                            Perfecta para
+                            jugadores expertos.</p>
+                        <ul class="lista">
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                            <li>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </svg>
+                                </div>
+                                1,000 descargas
+                            </li>
+                        </ul>
+                        <a href="#" class="boton">Escoger plan</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="logo">
+                <img src="/assets/img/logo.svg" alt="">
+                <p>© 28/08/2025 Trace todos los derechos reservados.</p>
+            </div>
+            <nav class="links">
+                <a href="#">Terminos y Condiciones</a>
+                <a href="#">Politica de privacidad</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Soporte</a>
+            </nav>
+        </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

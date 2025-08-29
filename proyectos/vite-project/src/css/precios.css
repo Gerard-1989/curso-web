@@ -1,0 +1,72 @@
+.precios {
+    margin-bottom: 100px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .plan {
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            display: flex; /* flex para poder poner espacio entre cada uno de los textos */
+            flex-direction: column;
+            gap: 30px;
+            border: 1px solid transparent; /* le ponemos este borde transparente para q cuando se selecione con el hover no haga el efecto feo de "moverse" */
+            transition: 0.5s ease all;
+
+            &.destacado {
+                background: var(--azul-secundario);
+                color: white;
+
+                .precio span {  /* eur / mes  */
+                    color: rgba(255,255,255, 0.5);
+                }
+            }
+
+            &:hover{
+                border: 1px solid var(--azul-primario);
+            }
+
+            .nombre {
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            .precio {
+                font-size: 32px;
+                font-weight: 700;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgba(0,0,0,0.5);
+                }
+            }
+
+            .descripcion {
+                line-height: 150%; /* Hace que cada línea de texto tenga más espacio hacia arriba y hacia abajo, quedando separadas entre sí para que el texto se lea con más claridad. */
+            }
+
+            .lista {
+                list-style: none; /* Quita los puntos, números o guiones que aparecen por defecto en las listas (<ul> o <ol>). */
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                li {
+                    display: flex;
+                    align-items: center; /* centramos el texto con el icono V */
+                    gap: 10px; /* espacio entre el icono V y el texto de 1,000 descargas. */
+
+                    .icono { /* aixo ja trobo q es pulir too much XD, centra el SVG dentro del div q tiene la class .icono */
+                        display: flex;
+                        align-items: center;
+                        color: var(--azul-primario);
+                    }
+                }
+            }
+        }
+    }
+}
