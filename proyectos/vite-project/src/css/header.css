@@ -1,11 +1,21 @@
 .contenedor-header { 
     width: 90%; /* En pantallas grandes: si el 90% supera max-width: 1200px, el contenedor se detiene en 1200px.
                 En pantallas pequeñas: el contenedor se reduce al 90% del ancho disponible, respetando los márgenes y manteniéndose centrado con margin: auto. */
-    max-width: 1200px; /* tamaño STANDARD para una web */
-    margin: auto; /* Centra horizontalmente. Para centrar verticalmente, el contenedor debe tener altura definida o display: flex */
+    max-width: 1200px; /* tamaño STANDARD para una web */ 
+    margin: auto; /* Centra horizontalmente. Para centrar verticalmente, el contenedor debe tener altura definida o display: flex */ 
+
+    @media screen and (max-width:820px){ /* cuando el .contenedor-header baje a 820px se aplicaran los 2 estilos. */
+        & { /*  ! UDEMY: & = para q funcione en todos los navegadores | CHATGPT: & = El & es solo una característica de SCSS/Sass, y significa “el selector padre”. */
+        width: 100%;
+        max-width: none; /* el elemento ya no tiene un límite máximo de ancho. */
+        }
+    }
 }
 
-header {
+
+
+
+header { 
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
@@ -73,6 +83,30 @@ header {
 
             &.boton { /* Cualquier <a> dentro de .navbar que tenga la clase .boton recibirá estos estilos */
                 font-weight: 500;
+            }
+        }
+    }
+
+    @media screen and (max-width: 820px){ /* estamos accediendo al HEADER */
+        & {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+
+            .logo {  
+                border-radius: 5px;
+
+                &::before { /* *quitamos el "triangulo" y "rectangulo" q creamos con el before y after */
+                    display: none;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+
+            .navbar {
+                margin-bottom: 20px;
             }
         }
     }

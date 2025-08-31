@@ -17,6 +17,12 @@
             width: 20vw; /* es el 20% del ancho de la pantalla */
             max-width: 100px; 
         }
+
+        p {
+            margin-bottom: 0;
+            color: rgba(255,255,255, 0.5);
+            font-size: 14px;
+        }
     }
 
     .links {
@@ -26,6 +32,21 @@
         
         a {
             color: white;
+        }
+    }
+
+    @media screen and (max-width: 489px) {
+        & {
+            flex-direction: column;
+            gap: 20px;
+
+            .logo {
+                align-items: center;
+            }
+
+            .links {
+                justify-content: center;
+            }
         }
     }
 }

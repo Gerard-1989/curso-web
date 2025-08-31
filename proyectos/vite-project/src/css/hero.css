@@ -164,5 +164,63 @@
             }
         }   
     }
+
+    @media screen and (max-width: 790px){
+        & {
+            display: flex; /* *de GRID pasamos a flex */
+            flex-direction: column;
+            border-radius: 0px;
+            gap: 20px;
+
+            .col-1 { /* columna dnd estan los textos */
+                order: 2;
+                text-align: center;
+                gap: 20px;
+
+                .titulo {
+                    text-align: center;
+                    font-size: 30px;
+                }
+
+                .botones { /* como ya estaba en FLEX solo le decimos de centrarlos al medio */
+                    justify-content: center;
+                }
+
+                .estadisticas {
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center; /* ! El profe de UDEMY utilitza justify-content pero a mi no em funciona i CHATGPT diu: 
+                        justify-content solo afecta a los elementos hijos directos de un contenedor flex en la dirección principal (la que marca flex-direction).
+
+                        En tu código, .estadisticas tiene flex-direction: column, así que la dirección principal es vertical.
+
+                        Cuando pones justify-content: center, intentas centrar los hijos verticalmente.
+
+                        Si quieres centrar horizontalmente, necesitas usar align-items: center. */
+                    font-size: 18px;  
+
+                    p{
+                        gap: 10px;
+
+                        &:nth-child(1){ /* *accedemos al primer parrafo que esta dentro de .estadisticas */
+                            padding-right: 0px;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+
+            .col-2 { /* columna dnd esta la imagen */
+                order: 1;
+                display: flex;
+                justify-content: center;
+                
+                .slideshow { 
+                    position: relative;  /* *el slideshow es el q tenia el position ABSOLUT por eso la imagen se veia como "sobrepuesta" ahora queda arriba y dentro del .hero  */
+                    width: 70%;
+                }
+            }
+        }
+    }
 }
 

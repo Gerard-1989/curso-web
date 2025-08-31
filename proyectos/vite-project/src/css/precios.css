@@ -69,4 +69,31 @@
             }
         }
     }
+
+    @media screen and (max-width: 822px) {
+        & {
+            margin-bottom: 20px;
+            
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+
+    @media screen and (max-width: 645px) {
+        & {                     
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+      @media screen and (max-width: 490px) {  /* la llista de preus l'hem canviat a 3 tamanys  */
+        & {                     
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    
 }
