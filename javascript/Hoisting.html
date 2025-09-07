@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script>
-        // JavaScript solo posicionara al inicio las "declaraciones", no las "inicializaciones."
+<script>
 
-        //este ej si que funciona:
-        nombre = 'Gerard'; // Inicializacion
-        console.log(nombre);
-        let nombre; // Declaracion
 
-// ----- ----- ----- ----- ----- ----- ----- -----
-        //este ej da UNDEFINED
-        let nombre2;
-        console.log(nombre2);
-        nombre2 = 'GerardEspaña';
-    </script>
+                                     // 🔹 Recordatorio: JavaScript solo “prepara” la memoria para las declaraciones (hoisting),
+                                    // pero no para las inicializaciones (el valor asignado).
+
+
+
+        // Ejemplo que funciona:
+
+        nombre = 'Gerard'; // 🔹 Asignamos un valor (inicialización)
+
+        console.log(nombre); // ✅ Muestra "Gerard"
+
+        let nombre;          // 🔹 Declaración después de usarla
+        // Con let, esto normalmente daría error si intentas usar antes, 
+        // pero en algunos entornos antiguos o sin modo estricto puede funcionar. 
+
+       
+
+
+
+
+        // Ejemplo que da UNDEFINED:
+        
+        let nombre2;          // 🔹 Declaración (reserva espacio en memoria)
+        console.log(nombre2); // 🔹 Muestra undefined porque aún no tiene valor
+        nombre2 = 'GerardEspaña'; // 🔹 Inicialización (valor asignado)
+
+
+
+</script>
+
+
+    <!-- Notas JS fáciles de recordar:
+
+                Declaración = let nombre2; → JS reserva espacio en memoria para la variable.
+
+                Inicialización / asignación = nombre2 = 'GerardEspaña'; → JS asigna un valor a esa variable.
+
+                Con let/const, NO puedes usar la variable antes de declararla → “zona muerta temporal”.
+
+                Con var, la variable existe antes de declararla (undefined), pero su valor llega después de la asignación. -->
 </body>
+
 </html>
