@@ -5,10 +5,10 @@ es decir, todos ellos del mismo tipo y relacionados.*/
 let familia = ["Ramon", "Jan", "Mama", "Papa", "Aran"];
 console.log(familia);
 
-let arreglo = ['texto', 235.21, false, { propiedad: 'valor' }, [1, 2, 3]];
+let arreglo = ['texto', 2351, false, { propiedad: 'valor' }, [1, 2, 3]];
 // Un arreglo (array) puede guardar distintos tipos de datos:
 // - string  -> 'texto'
-// - number  -> 235.21
+// - number  -> 2351
 // - boolean -> false
 // - objeto  -> {propiedad: 'valor'}
 // - otro array -> [1,2,3]

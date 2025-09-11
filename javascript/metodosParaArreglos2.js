@@ -17,7 +17,7 @@ console.log(amigos.lastIndexOf("Fran"));
     📌 .forEach()
     Nos permite ejecutar una funcion por cada elemento
 */
-amigos.forEach((persona, index) => { //le pasamos el parametro PERSONA para poder identificar cada elemento de nuestro arreglo (identificar cada nombre de nuestro array en este caso xd)
+amigos.forEach((persona, index) => { //le pasamos el parametro PERSONA para poder identificar cada elemento de nuestro arreglo i el Index es para identificar la posicion de cada amigo.
     console.log(`Hola ${persona} ${(index)}`);  //la funcion se ejectura 10 veces porque tenemos 10 nombres.
 });
 

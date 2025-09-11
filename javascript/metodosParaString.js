@@ -13,11 +13,11 @@ console.log(saludo.length); //19
      📌 .lastIndexOf() → busca la última vez que aparece lo que le digamos y devuelve su posición (index).
 */
 let texto = 'Hola yo soy Gerard!';
-console.log(texto.indexOf('o')); // 1
-console.log(texto.lastIndexOf('o')); // 9
+console.log(texto.indexOf('o')); // posicion 1
+console.log(texto.lastIndexOf('o')); // posicion 9
 
 /*
-    📌 .slice() - Devuelve un fragmento de una cadena de texto.
+    📌 .slice() - corta una parte del texto (o array) y te da solo ese trozo.
     1er parametro - index desde donde queremos cortar
     2do parametro (opcional) - index hasta donde queremos cortar
 */
@@ -50,3 +50,17 @@ console.log(convertir.toUpperCase());
 console.log(convertir.toLowerCase());
 
 
+/*
+	📌 Métodos para eliminar espaciados:
+	.trim() - Devuelve una cadena de texto (String)	
+	que elimina los espacios en blanco al inicio y final de una cadena de texto.
+
+	.trimStart() - Igual que .trim() pero solo elimina espacios del inicio.
+	.trimEnd() - Igual que .trim() pero solo elimina espacios del final.
+*/
+let teshto = '   Hola yo soy Gerard!   ';
+console.log(teshto);
+
+console.log(teshto.trim());
+console.log(teshto.trimStart());
+console.log(teshto.trimEnd());
