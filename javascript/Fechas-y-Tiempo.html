@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fechas y Tiempo</title>
 </head>
-<body>
-    <p id="fecha"></p> 
-    <script>
-        let fecha = new Date();
-        document.write(fecha); // mostra el dia, mes any i l'hora.
 
-        function mostrarTiempo(){
-            let fecha = new Date();
-            let parrafo = document.getElementById('fecha');  // declaramos el parrafo de la linea 9.
-            parrafo.innerHTML = fecha; //queremos mostrar un parrafo q tenga su codigo INNERHTML y q sea igual a la fecha.
+<body>
+    <p id="fecha"></p>
+    <script>
+        let fecha = new Date(); // 🔹 `new Date()` crea un **objeto fecha** con la fecha y hora actual del sistema
+        console.log(fecha);; // 🔹 Muestra en la página la fecha y hora actual (día, mes, año y hora)
+
+        // 🔹 Creamos una función para mostrar la hora actual cada segundo
+        function mostrarTiempo() {
+            let fecha = new Date(); // 🔹 Creamos un nuevo objeto Date dentro de la función para actualizar la hora
+            let parrafo = document.getElementById('fecha');  // 🔹 Buscamos el párrafo en el HTML donde mostraremos la fecha
+            parrafo.innerHTML = fecha; // 🔹 Cambiamos el contenido del párrafo por la fecha actual
         }
 
-        let intervarlo = setInterval(mostrarTiempo, 1000);
+        // 🔹 Ejecutamos la función cada 1000ms (1 segundo)
+        let intervarlo = setInterval(mostrarTiempo, 1000);// 🔹 Ejecuta la función mostrarTiempo cada 1000ms (1 segundo)
+        // 🔹 Devuelve un ID que se guarda en intervarlo, por si quieres detenerlo luego con clearInterval(intervarlo)
 
+        // 🔹 Mostramos en la consola la hora, minutos y segundos
+        console.log(fecha.getHours() + ' horas'); // 🔹 Hora en formato 24h. Para 12h restar 12
+        console.log(fecha.getMinutes() + ' minutos'); // 🔹 Minutos actuales
+        console.log(fecha.getSeconds() + ' segundos'); // 🔹 Segundos actuales
 
-        console.log(fecha.getHours() + ' horas'); //mostra la hora en format 24h per mostra-ho en format 12h seria: console.log(fecha.getHours() - 12);
-        console.log(fecha.getMinutes() + ' minutos'); //mostra els minuts.
-        console.log(fecha.getSeconds() + ' segundos'); //mostra els segons.
+        // 🔹 Array con los nombres de los días de la semana
+        let diasDeLaSemana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
-        let diasDeLaSemana = ['Domingo', 'Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+        // 🔹 Obtenemos el mes actual (getMonth() empieza en 0, por eso sumamos 1)
         let mes = fecha.getMonth() + 1;
-        console.log('Dia: ' + diasDeLaSemana[fecha.getDay()]);
-        console.log('Mes: ' + mes);
-        console.log('Año: ' + fecha.getFullYear());
+
+        // 🔹 Mostramos el día, mes y año en la consola
+        console.log('Día: ' + diasDeLaSemana[fecha.getDay()]); // 🔹 getDay() devuelve 0 (domingo) a 6 (sábado)
+        console.log('Mes: ' + mes); // 🔹 Mes actual del 1 al 12
+        console.log('Año: ' + fecha.getFullYear()); // 🔹 Año completo
+
+        /*
+        En otras palabras: JavaScript sabe qué día es gracias a la fecha del sistema de tu computadora,
+         y getDay() traduce eso en un número que usamos para buscar el nombre del día en el array.
+        */
+
     </script>
 </body>
+
 </html>

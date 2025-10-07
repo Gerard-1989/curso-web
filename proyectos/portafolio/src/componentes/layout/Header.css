@@ -1,0 +1,66 @@
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 40px 0px;
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .titulo {
+            font-size: 34px;
+            font-family: 'Merriweather', serif;
+            color: var(--shade-8);
+
+            .dark & { /* Aplica estilos cuando un contenedor padre tiene la clase .dark  en este caso el contenedor padre sería el .header (o cualquier elemento que esté por encima de .titulo y .subtitulo y que tenga la clase .dark).*/
+                color: var(--shade-1);
+            }
+        }
+
+        .subtitulo {
+            font-size: 16px;
+            color: var(--boton-primario);
+            font-weight: 500;
+
+            .dark & { /* Aplica estilos cuando un contenedor padre tiene la clase .dark */
+                color:gold;
+            }
+        }
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+        /* el & significa: "el mismo selector donde estoy escribiendo esto" (en este caso el HEADER) */
+        /*  dentro del Header accedemos al .logo*/
+        & { 
+            .logo {
+                grid-column: span 3; /* span 3 = abarca 3 columnas*/
+                text-align: center;
+            }
+
+            .navbar {
+                grid-column: span 2;
+                justify-content: flex-start;
+                gap: 15px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px){
+        & {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

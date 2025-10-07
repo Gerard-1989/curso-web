@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="cicloForEach.js"></script>
-    <title>JAVASCRIPT</title>
+    <title>Javascript</title>
+
+    <!-- Forma Numero #2 desde el head -->
+    <script defer> // defer: Dice al navegador que estamos escribiendo el codigo en el <HEAD> pero queremos que el navegador espere a que cargue todo el codigo HTML y luego cargue este codigo de aqui 
+        alert('Soy una alert desde el head');
+    </script>
+
+    <!-- Forma Numero #3 Archivo externo -->
+    <script defer src="holaMundo.js"></script>
 </head>
 <body>
-    <h1>Curs de Javascript</h1>
+    <h1>Hola Mundo</h1>
+
+    <!-- Varias formas de agregar codigo JS -->
+
+    <!-- Forma Numero #1 etiqueta <script> -->
+    <script>
+        document.write('<h2>Hola que tal soy un h2 desde JS</h2>');
+        alert('Hola, soy una alerta');
+        console.log('Hola desde la consola');
+    </script>
 </body>
 </html>

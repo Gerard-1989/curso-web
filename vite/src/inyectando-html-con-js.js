@@ -1,8 +1,9 @@
 console.log('Hola esportmaniacs');
 
-document.querySelector('#app').innerHTML = `
-    <h1>Hola Gerard</h1> `;
-// Accede al elemento que tiene id #app y reemplaza su contenido HTML por un título <h1> que diga ‘Hola Gerard’.
+document.querySelector('#app').innerHTML = `<h1>Hola Gerard</h1>`;
+//👉 Lo que hace:
+// Busca el elemento con id="app".
+// Cambia su contenido interno por <h1>Hola Gerard</h1>.
 
 
 

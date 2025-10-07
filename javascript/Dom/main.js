@@ -1,4 +1,4 @@
-let ramon = document.getElementsByTagName('div'); 
+let ramon = document.getElementsByTagName('div');
 /*accede al documento y obten todos los elementos por TAGNAME (tagname = nombre de etiquetas) 
 (es tenen q guardar dintre de una variable en aquest cas RAMON)
 ara aniriam a la web, inspecionar i a consola si escribim ramon i surtirien els divs, 
@@ -25,8 +25,8 @@ let firstbox = document.getElementById('primeraCaja') //accedeix als ID's
 //                          ---------------- CREAR NODOS - 5 PASOS ---------------
 
 //1º crear el elemento
-let caixa = document.createElement('div'); 
- //dintre dels parentesis fiquem quina etiqueta volem crear, fa falta guarda-ho dintre de una variable.
+let caixa = document.createElement('div');
+//dintre dels parentesis fiquem quina etiqueta volem crear, fa falta guarda-ho dintre de una variable.
 
 
 //2º crear un nodo de texto
@@ -39,7 +39,7 @@ caixa.appendChild(texte);
 
 
 //4º agregarli atributs
-caixa.setAttribute('class', 'caja naranja'); 
+caixa.setAttribute('class', 'caja naranja');
 /*quins atributs tenen les nostres caixes? tenen una CLASS q es diu CAJA, 
 li diem tenen una 'class' li fiquem el valor de 'caja'
 setAttritubte = agregar un atribut nou*/
@@ -77,23 +77,23 @@ padre.insertBefore(caixa, primeraCaja);
 EXPLICACIO: la variable PADRE que agafa tota la etiqueta <SECTION> i li estem dien amb 'INSERTBEFORE'
  volem insertar la caixa ABANS de 'primeraCaja'*/
 
- padre.insertBefore(caixa, ramon[2]);
- //aqui estem fican la caixa entre el 2.-LOREM IPSUM i el 3.-LOREM IPSUM llavors 'Holi Mundi' estaria entre la nº2 i nº3
+padre.insertBefore(caixa, ramon[2]);
+//aqui estem fican la caixa entre el 2.-LOREM IPSUM i el 3.-LOREM IPSUM llavors 'Holi Mundi' estaria entre la nº2 i nº3
 
 
 
- //            ---------------------- REEMPLAZAR NODO ----------------------
+//            ---------------------- REEMPLAZAR NODO ----------------------
 
- padre.replaceChild(caixa, ramon[3]);
- //aqui van 2 coses: 1º- quin element li volem insertar i 2º quin element volem reemplaçar
- //el 4.-LOREM IPSUM ja no estaria i en el seu lloc estaria la de Holi Mundi de color tronja
+padre.replaceChild(caixa, ramon[3]);
+//aqui van 2 coses: 1º- quin element li volem insertar i 2º quin element volem reemplaçar
+//el 4.-LOREM IPSUM ja no estaria i en el seu lloc estaria la de Holi Mundi de color tronja
 
 
- //            ---------------------- ELIMINAR NODOS ----------------------
+//            ---------------------- ELIMINAR NODOS ----------------------
 
- padre.removeChild(ramon[0]);
- //simplement estem eliminan la caixa de: 1.- LOREM IPSUM.  tambe es pot ser desde la consola aixi:
- //consola: padre - padre.removeChild(ramon[2]); i ja estaria borrat desde la consola.
+padre.removeChild(ramon[0]);
+//simplement estem eliminan la caixa de: 1.- LOREM IPSUM.  tambe es pot ser desde la consola aixi:
+//consola: padre - padre.removeChild(ramon[2]); i ja estaria borrat desde la consola.
 
 
 

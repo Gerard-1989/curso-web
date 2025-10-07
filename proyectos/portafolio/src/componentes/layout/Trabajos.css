@@ -1,0 +1,132 @@
+.trabajos {
+    .filtros {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        label {
+            display: flex;
+            /* Para que sea un "contendor" y pase a modo RESPONSIVE no esten apelotonados */
+        }
+
+        .opcion {
+            /* Es el SPAN que contiene el texto, Diseño-web, Desarrollo-web 
+            etc */
+            padding: 10px 20px;
+            border-radius: 100px;
+            cursor: pointer;
+            border: 1px solid var(--shade-3);
+            color: var(--shade-6);
+
+            .dark & {
+                color: var(--shade-4);
+                border: 1px solid var(--shade-7);
+            }
+        }
+
+        input[type="radio"] {
+            /* accedemos a todos los input que sean de tipo RADIO */
+            display: none;
+
+            &:checked+.opcion {
+                /* cuando el input este en su estado CHECKED queremos buscar el hermano (+) en nuestro caso es el <SPAN> con la class .opcion y darle estilos a .opcion */
+                background: var(--primario-hover);
+                color: #fff;
+                border: 1px solid transparent;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            & {
+                gap: 10px;
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 20px;
+
+        @media screen and (max-width: 768px) {
+            & {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            & {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .trabajo {
+            .thumb {
+                display: inline-block;
+                /* el THUMB es un <a> x eso le ponemos inline-block */
+                border-radius: 5px;
+                overflow: hidden;
+                /* el contenido que este afuera de nuestro THUMB se oculte (en este caso los bordes) */
+                margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                    /*Haz que la imagen ocupe el 100% del ancho del contenedor que la contiene.” width: 100% en la imagen → se ajusta al ancho de su padre (.thumb).*/
+                    vertical-align: top;
+                    /* coloca el elemento pegado arriba. */
+                    transform: scale(110%);
+                    /* agranda el elemento un 10% más de su tamaño normal. */
+                    transition: 0.5s ease all;
+                }
+            }
+
+            &:hover img {
+                /* Cuando pases el ratón por encima de .trabajo, aplica este estilo al img que está dentro. */
+                transform: scale(100%);
+            }
+
+            .info { /* .info contenedor q encierra Trabajo 1 Diseño web y el SVG */
+                display: flex;
+                gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+                /* el SVG queda centrado verticalmente */
+
+                .nombre {
+                    /* es el <a> q se llama Trabajo 1*/
+                    display: inline-block;
+                    color: var(--shade-10);
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+
+                    .dark & {
+                        color: var(--shade-1);
+                    }
+                }
+
+                .categoria {
+                    /* es el <p> q se llama Diseño Web */
+                    font-size: 14px;
+                    color: var(--shade-6);
+                }
+
+                .btn-ir {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    color: var(--boton-primario);
+
+                    svg {
+                        transition: 0.3s ease all;
+                    }
+                }
+            }
+        }
+    }
+}
