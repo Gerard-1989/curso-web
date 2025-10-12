@@ -6,11 +6,11 @@ const Hero = () => {
       <section className="hero">
         <div className="contenido">
           <h3 className="titulo">
-            <span>Hola!</span>Soy Gerard
+            <span>Hola,</span>Soy Gerard !
           </h3>
           <p className="subtitutlo">
             Intento de dearrollador frontend, Freelancer y autor <br />
-            de multiples proyectos de internet.
+            de multiples proyectos de internet y una bestia del gaming.
           </p>
           <div className="botones">
             <a href="#trabajos" className="boton transparente">

@@ -1,0 +1,120 @@
+.acerca-de {
+    display: flex;
+    justify-content: center;
+
+    .grid {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1.7fr 2fr;
+        /* 1.7 partes para la primera columna y 2 para la segunda. Cuantas más “fracciones” tenga, más ancho ocupa. */
+        gap: clamp(20px, 3vw, 40px);
+        /*
+        20px → el mínimo (nunca será menor que eso) 
+        3vw → el valor ideal o flexible, cambia según el ancho de la ventana (vw = ancho del viewport)
+        40px → el máximo, no crecerá más de eso
+        */
+
+        .col1 {
+
+            .fotos {
+                display: flex;
+                justify-content: flex-end;
+                /* Sirve cuando quieres que algo se pegue al lado derecho dentro de un contenedor flex. */
+                position: sticky;
+                /* Hace que el elemento se quede fijo temporalmente cuando haces scroll. */
+                top: 20px;
+                /* Indica a partir de qué punto se pega el elemento al hacer scroll. */
+
+                .foto {
+                    padding: 6px;
+                    border-radius: 6px;
+                    border: 1px solid var(--shade-2);
+
+                    &:nth-child(1) {
+                        /* <img src="./assets/gerard.jpg" className="foto" />*/
+                        width: 80%;
+                    }
+
+                    &:nth-child(2) {
+                        /* <img src="./assets/acerca-de-2.png" className="foto" /> */
+                        width: 40%;
+                        position: absolute;
+                        left: 0;
+                        bottom: -15%;
+                    }
+
+                    .dark & {
+                        border: 1px solid var(--shade-8);
+                    }
+                }
+            }
+        }
+
+        .col2 {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            /* → alinea todo a la izquierda y no estira los hijos, por eso el botón se queda más pequeño. */
+            gap: 20px;
+
+            .acerca-de-mi {
+                color: var(--boton-primario);
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .titulo {
+                font-size: 30px;
+            }
+
+            .resumen {
+                color: var(--shade-6);
+                line-height: 32px;
+
+                .dark & {
+                    color: var(--shade-4);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        & {
+            .grid {
+                grid-template-columns: 1fr;
+
+                .col1 {
+
+                    .fotos {
+                        margin-bottom: 60px;
+                        /* añade espacio debajo de las fotos, separándolas del texto. */
+                        justify-content: center;
+
+                        .foto {
+                            &:nth-child(1) {
+                                width: 60%;
+                            }
+
+                            &:nth-child(2) {
+                                /* la segunda foto se coloca encima y se desplazada a la derecha, creando efecto de superposición. */
+                                width: 40%;
+                                left: 55%;
+                                bottom: -20%;
+                            }
+                        }
+                    }
+                }
+
+                .col2 {
+                    align-items: center;
+                    /* Centra los elementos (títulos, texto, botón...) en horizontal dentro de la columna. */
+
+                    .acerca-de-mi,
+                    .titulo {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

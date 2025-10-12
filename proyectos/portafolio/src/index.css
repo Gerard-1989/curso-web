@@ -6,6 +6,10 @@
     padding: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
     --shade-1: #F2F2F2;
     --shade-2: #D9D9D9;
@@ -82,7 +86,9 @@ a {
 }
 
 .clientes,
-.trabajos {
+.trabajos,
+.contacto,
+.footer {
     display: flex;
     flex-direction: column;
     gap: 40px;

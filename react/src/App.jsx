@@ -20,8 +20,8 @@ function App() {
   let familia = [
     { nombre: "Gerard", telefono: "123-456-789" }, //importante: recordar poner la , en cada objeto (en el ultimo no hace falta.)
     { nombre: "Ramon", telefono: "123-456-789" },
-    { nombre: "Aran", telefono: "123-456-789" },
-    { nombre: "Nuria", telefono: "123-456-789" },
+    { nombre: "Papa", telefono: "123-456-789" },
+    { nombre: "Mama", telefono: "123-456-789" },
   ];
   let amigos = [
     { nombre: "Lidia", telefono: "123-456-789" },
