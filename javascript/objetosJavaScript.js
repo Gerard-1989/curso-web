@@ -18,7 +18,7 @@ const persona = {
 
 console.log(persona);
 /*tambe podem accedir a algo mes en detall:
-console.log(persona.noombre)
+console.log(persona.nombre)
 console.log(persona.coche.color)*/
 
 
